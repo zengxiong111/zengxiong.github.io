@@ -24,7 +24,7 @@ author:
   avatar           : "zx.jpg"
   name             : "Xiong Zeng (曾雄)"
   # pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  # bio              : "Short biography for the left-hand sidebar"
   location         : "Ann Arbor, Michigan"
   employer         : "University of Michigan"
   # uri              : # URL
