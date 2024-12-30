@@ -5,6 +5,7 @@ category: conferences
 permalink: /publication/2023-11-18-paper-title-number-1
 excerpt: 'This paper is about the statistical hardness of learning to stabilize linear time-invariant system.'
 date: 2023-11-18
+slidesurl: 'http://academicpages.github.io/files/hard_learn_stabilize_present.pdf'
 paperurl: 'http://academicpages.github.io/files/hard_learn_to_stabilize.pdf'
 ---
 
