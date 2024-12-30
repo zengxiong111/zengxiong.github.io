@@ -7,7 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+士不可以不弘毅，任重而道远。非淡泊无以明志，非宁静无以致远。从群众中来，到群众中去。
+
+I'm a Ph.D. Candidate of UMich EECS department. I'm broadly interested in machine coffee, optimization, control theory, statistical learning theory, and robotics. I'm an active marathon and trail runner for Michigan AA Next Level Running Club. My personal best record for the full marathon is 03:28:08 in the Indianapolis Monumental Marathon 2022.
+
+English version of the three famous Chinese quotes (by Chatgpt): "A scholar must have a broad mind and strong resolve, for the responsibilities are heavy and the path is long. Without being indifferent to worldly desires, one cannot clarify one's purpose; without remaining calm and composed, one cannot reach far. From the people, for the people."
 
 A data-driven personal website
 ======
