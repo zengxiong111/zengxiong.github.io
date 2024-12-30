@@ -24,7 +24,7 @@ author:
   avatar           : "zx.jpg"
   name             : "Xiong Zeng (曾雄)"
   # pronouns         : # example: "she/her"  
-   bio              : "I'm a Ph.D. Candidate of UMich EECS department."
+  bio              : "I'm a Ph.D. Candidate of UMich EECS department."
   location         : "Ann Arbor, Michigan"
   employer         : "University of Michigan"
   # uri              : # URL
