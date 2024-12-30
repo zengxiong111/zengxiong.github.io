@@ -6,7 +6,7 @@ permalink: /publication/2024-12-27-paper-title-number-1
 excerpt: 'This paper is about the noise sensitivity of the semidefinite program (SDP) proposed for direct data-driven infinite-horizon linear quadratic regulator (LQR) problem for discrete-time linear time-invariant systems.'
 date: 2024-12-27
 venue: 'arXiv'
-paperurl: 'http://academicpages.github.io/files/Noise Sensitivity of the Semidefinite Programs for Direct Data-Driven LQR.pdf'
+paperurl: 'https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/Noise Sensitivity of the Semidefinite Programs for Direct Data-Driven LQR.pdf'
 ---
 
  In this paper, we study the noise sensitiv-
