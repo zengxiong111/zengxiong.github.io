@@ -1,14 +1,13 @@
 ---
-title: "Teaching experience 2"
+title: "ECE 501 (Probability Theory and Random Process)"
 collection: teaching
-type: "Workshop"
-permalink: /teaching/2015-spring-teaching-1
-venue: "University 1, Department"
-date: 2015-01-01
-location: "City, Country"
+type: "Graduate Student Instructor"
+permalink: "https://bulletin.engin.umich.edu/courses/eecs/"
+venue: "University of Michigan, Department"
+date: Sep. 2024 - Dec. 2024
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+With Prof. <a href="https://pradhan.engin.umich.edu/" target="_blank">Sandeep Pradhan</a>.
 
 Heading 1
 ======
