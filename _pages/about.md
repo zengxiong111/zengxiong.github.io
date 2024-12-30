@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I'm working with Prof. Necmiye Ozay. I'm broadly interested in machine coffee, optimization, control theory, statistical learning theory, and robotics. I'm studying the theoretical and practical fundamental limits of learning-based control algorithms.  
+I'm working with Prof. Necmiye Ozay. <a href="[https://www.example.com](https://web.eecs.umich.edu/~necmiye/)" target="_blank">Necmiye Ozay</a> I'm broadly interested in machine coffee, optimization, control theory, statistical learning theory, and robotics. I'm studying the theoretical and practical fundamental limits of learning-based control algorithms.  
 
 I'm an active marathon and trail runner for Michigan AA Next Level Running Club. My personal best record for the full marathon is 03:28:08 in the Indianapolis Monumental Marathon 2022.
 
