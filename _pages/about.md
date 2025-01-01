@@ -9,9 +9,7 @@ redirect_from:
 
 I'm working with Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a>. I'm broadly interested in machine coffee, optimization, control theory, statistical learning theory, and robotics. I'm studying the theoretical and practical fundamental limits of learning-based control algorithms.  
 
-<div style="box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 15px; border-radius: 8px;">
-  这是一个带阴影效果的框内文字。
-</div>
+> 这是一个灰色阴影框内的文字。
 
 
 
