@@ -14,9 +14,9 @@ I'm working with Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_b
 > 
 > [Noise Sensitivity of the Semidefinite Programs for Direct Data-Driven LQR](https://arxiv.org/abs/2412.19705)
 > 
-> Zeng, Xiong, Laurent Bako, and Necmiye Ozay. In arXiv, 2024.
+> Zeng, Xiong, Laurent Bako, and Necmiye Ozay. In arXiv, 2024. [<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/Noise%20Sensitivity%20of%20the%20Semidefinite%20Programs%20for%20Direct%20Data-Driven%20LQR.pdf" target="_blank">pdf</a>]
 > 
 > [On the Hardness of Learning to Stabilize Linear Systems](https://arxiv.org/abs/2311.11151)
 > 
-> Zeng, Xiong, Zexiang Liu, Zhe Du, Necmiye Ozay, and Mario Sznaier. In 2023 62nd IEEE Conference on Decision and Control (CDC), pp. 6622-6628. IEEE, 2023.
+> Zeng, Xiong, Zexiang Liu, Zhe Du, Necmiye Ozay, and Mario Sznaier. In 2023 62nd IEEE Conference on Decision and Control (CDC), pp. 6622-6628. IEEE, 2023. [<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/hard_learn_to_stabilize.pdf" target="_blank">pdf</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/hard_learn_stabilize_present.pdf" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/On%20The%20Hardness%20of%20Learning%20to%20Stabilize%20Linear%20Systems_Poster.pdf" target="_blank">poster</a>]
 
