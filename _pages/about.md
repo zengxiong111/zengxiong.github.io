@@ -14,7 +14,8 @@ I'm working with Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_b
 > 
 > [Noise Sensitivity of the Semidefinite Programs for Direct Data-Driven LQR](https://arxiv.org/abs/2412.19705)
 > 
-> Zeng, Xiong, Laurent Bako, and Necmiye Ozay. In arXiv, 2024. [<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/Noise%20Sensitivity%20of%20the%20Semidefinite%20Programs%20for%20Direct%20Data-Driven%20LQR.pdf" target="_blank">pdf</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/Poster_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" target="_blank">poster</a>](short version is accepted to ACC 2025)
+> Zeng, Xiong, Laurent Bako, and Necmiye Ozay. In arXiv, 2024. [<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/Noise%20Sensitivity%20of%20the%20Semidefinite%20Programs%20for%20Direct%20Data-Driven%20LQR.pdf" target="_blank">pdf</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/Poster_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" target="_blank">poster</a>]
+> (short version is accepted to ACC 2025)
 > 
 > [On the Hardness of Learning to Stabilize Linear Systems](https://arxiv.org/abs/2311.11151)
 > 
