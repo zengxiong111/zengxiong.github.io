@@ -38,3 +38,5 @@ English version of the above famous Chinese quotes (by ChatGPT): "A scholar must
 
 ![Markdown Logo](https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/grand_canyon.jpg "Grand Canyon")
 
+<img src="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/grand_canyon.jpg" alt="Grand Canyon" width="170" height="120" />
+
