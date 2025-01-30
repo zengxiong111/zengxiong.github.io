@@ -36,7 +36,6 @@ I'm an active marathon and trail runner for Michigan AA Next Level Running Club.
 
 English version of the above famous Chinese quotes (by ChatGPT): "A scholar must cultivate broad-mindedness and resilience, as the responsibilities are heavy and the journey is long. Without detachment, one cannot clarify one's aspirations; without tranquility, one cannot reach far. From people, for people."
 
-![Markdown Logo](https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/grand_canyon.jpg "Grand Canyon")
 
-<img src="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/grand_canyon.jpg" alt="Grand Canyon" width="170" height="120" />
+<img src="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/grand_canyon.jpg" alt="Grand Canyon" width="170*2" height="120*2" />
 
