@@ -38,7 +38,7 @@ English version of the above famous Chinese quotes (by ChatGPT): "A scholar must
 
 
 <div style="text-align: center;">
-    <img src="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/grand_canyon.jpg" alt="Grand Canyon" width="340" height="240" />
-    <p>Grand Canyon</p>
+    <img src="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/grand_canyon.jpg" alt="Grand Canyon" style="display: block; margin: 0 auto; width: 340px; height: 240px;" />
+    <p style="text-align: center; font-size: 18px; font-weight: bold; color: #333; margin-top: 10px;">Grand Canyon</p>
 </div>
 
