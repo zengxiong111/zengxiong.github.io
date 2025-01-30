@@ -35,12 +35,3 @@ I'm an active marathon and trail runner for Michigan AA Next Level Running Club.
 “士不可以不弘毅，任重而道远。非淡泊无以明志，非宁静无以致远。从群众中来，到群众中去。”
 
 English version of the above famous Chinese quotes (by ChatGPT): "A scholar must cultivate broad-mindedness and resilience, as the responsibilities are heavy and the journey is long. Without detachment, one cannot clarify one's aspirations; without tranquility, one cannot reach far. From people, for people."
-
-
-<p align="center">
-    <img src="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/grand_canyon.jpg" alt="Grand Canyon" width="340" height="240" />
-</p>
-
-<div align="center">
-    Grand Canyon
-</div>
