@@ -40,3 +40,7 @@ English version of the above famous Chinese quotes (by ChatGPT): "A scholar must
 <p align="center">
     <img src="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/grand_canyon.jpg" alt="Grand Canyon" width="340" height="240" />
 </p>
+
+<div align="center">
+    Grand Canyon
+</div>
