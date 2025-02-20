@@ -23,9 +23,9 @@ I'm a fourth-year Ph.D. candidate in UMich EECS department, working with Prof. <
 >
 > Zeng, Xiong, Laurent Bako, and Necmiye Ozay, Proc. American Control Conference (ACC), Denver, CO, July 2025 (to appear).
 >
-> 
 > [On the Hardness of Learning to Stabilize Linear Systems](https://arxiv.org/abs/2311.11151)
-> Zeng, Xiong, Zexiang Liu, Zhe Du, Necmiye Ozay, and Mario Sznaier. In 2023 62nd IEEE Conference on Decision and Control (CDC), pp. 6622-6628. IEEE, 2023. [<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/hard_learn_to_stabilize.pdf" target="_blank">pdf</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/hard_learn_stabilize_present.pdf" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/On%20The%20Hardness%20of%20Learning%20to%20Stabilize%20Linear%20Systems_Poster.pdf" target="_blank">poster</a>]
+> 
+> Zeng, Xiong, Zexiang Liu, Zhe Du, Necmiye Ozay, and Mario Sznaier. In 2023 62nd IEEE Conference on Decision and Control (CDC), pp. 6622-6628. IEEE, 2023[<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/hard_learn_to_stabilize.pdf" target="_blank">pdf</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/hard_learn_stabilize_present.pdf" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/On%20The%20Hardness%20of%20Learning%20to%20Stabilize%20Linear%20Systems_Poster.pdf" target="_blank">poster</a>].
 
 **Bio**
 
