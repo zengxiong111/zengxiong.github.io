@@ -13,12 +13,14 @@ I'm a fourth-year Ph.D. candidate in UMich EECS department, working with Prof. <
 > **Preprints**
 > 
 > [Noise Sensitivity of the Semidefinite Programs for Direct Data-Driven LQR](https://arxiv.org/abs/2412.19705)
+> 
 > Zeng, Xiong, Laurent Bako, and Necmiye Ozay. Submitted for journal publication, January 2025. [<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/Noise%20Sensitivity%20of%20the%20Semidefinite%20Programs%20for%20Direct%20Data-Driven%20LQR.pdf" target="_blank">pdf</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/slides_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/Poster_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" target="_blank">poster</a>]
 > 
 >
 > **Peer-reviewed Conference Papers**
 > 
->> [Noise Sensitivity of Direct Data-Driven Linear Quadratic Regulator by Semidefinite Programming](https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf)
+> [Noise Sensitivity of Direct Data-Driven Linear Quadratic Regulator by Semidefinite Programming](https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf)
+>
 > Zeng, Xiong, Laurent Bako, and Necmiye Ozay, Proc. American Control Conference (ACC), Denver, CO, July 2025 (to appear).
 >
 > 
