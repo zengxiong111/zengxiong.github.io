@@ -17,7 +17,7 @@ I'm a fourth-year Ph.D. student in UMich EECS department starting in 2021 Fall. 
 
 <span style="color:orange">**Preprints**</span>
 
-[System Identification Under Bounded Noise: Optimal Rates Beyond Least Squares](https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/System_Identification_Under_Bounded_Noise__Optimal_Rates_Beyond_Least_Squares-27.pdf)<br><br>
+[System Identification Under Bounded Noise: Optimal Rates Beyond Least Squares](https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/System_Identification_Under_Bounded_Noise__Optimal_Rates_Beyond_Least_Squares-27.pdf)<br>
 **Xiong Zeng**, Jing Yu, and Necmiye Ozay. Submitted for journal publication, March 2025[<a href="https://github.com/jy-cds/Bounded-Noise-SysID-Minimax-Lowerbound" target="_blank">codes</a>].
  
  [Noise Sensitivity of the Semidefinite Programs for Direct Data-Driven LQR](https://arxiv.org/abs/2412.19705)
