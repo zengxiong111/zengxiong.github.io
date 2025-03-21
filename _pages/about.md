@@ -11,7 +11,7 @@ I'm a fourth-year Ph.D. student in UMich EECS department starting in 2021 Fall. 
 
 &nbsp;
 
-###**Publications**
+###Publications
 
 ***
 
