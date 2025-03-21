@@ -38,7 +38,7 @@ I'm a fourth-year Ph.D. student in UMich EECS department starting in 2021 Fall. 
 
 &nbsp;
 
-**Service**
+### Service
 
 ***
 
@@ -46,7 +46,7 @@ Reviewer for NAHS, L-CSS, CDC, and ACC.
 
 &nbsp;
 
-**Bio**
+### Bio
 
 ***
 
@@ -56,7 +56,7 @@ I was born and grew up in <a href="https://en.wikipedia.org/wiki/Loudi" target="
 
 &nbsp;
 
-**Misc**
+### Misc
 
 ***
 
