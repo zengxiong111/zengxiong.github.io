@@ -24,7 +24,7 @@ I'm a fourth-year Ph.D. student in UMich EECS department starting in 2021 Fall. 
 **Xiong Zeng**, Laurent Bako, and Necmiye Ozay. Submitted for journal publication, January 2025.
 
 
- <span style="color:red">**Conference Papers**</span>
+ <span style="color:orange">**Conference Papers**</span>
 
  
  [Noise Sensitivity of Direct Data-Driven Linear Quadratic Regulator by Semidefinite Programming](https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf)<br>
