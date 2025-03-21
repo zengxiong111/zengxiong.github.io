@@ -10,38 +10,45 @@ redirect_from:
 I'm a fourth-year Ph.D. student in UMich EECS department starting in 2021 Fall. I'm working with Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a> and studying **some theoretical and practical fundamental limits of learning-based control algorithms**. I'm broadly interested in machine coffee, optimization, control theory, statistical learning theory, and robotics.
 
 **Publications**
-><span style="color:orange">**Preprints**</span>
->
-> [System Identification Under Bounded Noise: Optimal Rates Beyond Least Squares](https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/System_Identification_Under_Bounded_Noise__Optimal_Rates_Beyond_Least_Squares-27.pdf)
-> 
-> **Zeng, Xiong**, Jing Yu, and Necmiye Ozay. Submitted for journal publication, March 2025[<a href="https://github.com/jy-cds/Bounded-Noise-SysID-Minimax-Lowerbound" target="_blank">codes</a>].
-> 
-> [Noise Sensitivity of the Semidefinite Programs for Direct Data-Driven LQR](https://arxiv.org/abs/2412.19705)
-> 
-> **Zeng, Xiong**, Laurent Bako, and Necmiye Ozay. Submitted for journal publication, January 2025[<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/Noise%20Sensitivity%20of%20the%20Semidefinite%20Programs%20for%20Direct%20Data-Driven%20LQR.pdf" target="_blank">pdf</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/slides_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/Poster_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" target="_blank">poster</a>].
-> 
->
-> <span style="color:blue">**Conference Papers**</span> 
-> 
-> [Noise Sensitivity of Direct Data-Driven Linear Quadratic Regulator by Semidefinite Programming](https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf)
->
-> **Zeng, Xiong**, Laurent Bako, and Necmiye Ozay, American Control Conference (ACC) 2025 (to appear).
->
-> [On the Hardness of Learning to Stabilize Linear Systems](https://arxiv.org/abs/2311.11151)
-> 
-> **Zeng, Xiong**, Zexiang Liu, Zhe Du, Necmiye Ozay, and Mario Sznaier. IEEE Conference on Decision and Control (CDC) 2023[<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/hard_learn_to_stabilize.pdf" target="_blank">pdf</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/hard_learn_stabilize_present.pdf" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/On%20The%20Hardness%20of%20Learning%20to%20Stabilize%20Linear%20Systems_Poster.pdf" target="_blank">poster</a>].
+***
+<span style="color:orange">**Preprints**</span>
+
+[System Identification Under Bounded Noise: Optimal Rates Beyond Least Squares](https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/System_Identification_Under_Bounded_Noise__Optimal_Rates_Beyond_Least_Squares-27.pdf)
+ 
+ **Zeng, Xiong**, Jing Yu, and Necmiye Ozay. Submitted for journal publication, March 2025[<a href="https://github.com/jy-cds/Bounded-Noise-SysID-Minimax-Lowerbound" target="_blank">codes</a>].
+ 
+ [Noise Sensitivity of the Semidefinite Programs for Direct Data-Driven LQR](https://arxiv.org/abs/2412.19705)
+
+ **Zeng, Xiong**, Laurent Bako, and Necmiye Ozay. Submitted for journal publication, January 2025[<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/Noise%20Sensitivity%20of%20the%20Semidefinite%20Programs%20for%20Direct%20Data-Driven%20LQR.pdf" target="_blank">pdf</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/slides_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/Poster_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" target="_blank">poster</a>].
+
+
+ <span style="color:blue">**Conference Papers**</span> 
+ 
+ [Noise Sensitivity of Direct Data-Driven Linear Quadratic Regulator by Semidefinite Programming](https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf)
+
+ **Zeng, Xiong**, Laurent Bako, and Necmiye Ozay, American Control Conference (ACC) 2025 (to appear).
+
+ [On the Hardness of Learning to Stabilize Linear Systems](https://arxiv.org/abs/2311.11151)
+ 
+ **Zeng, Xiong**, Zexiang Liu, Zhe Du, Necmiye Ozay, and Mario Sznaier. IEEE Conference on Decision and Control (CDC) 2023[<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/hard_learn_to_stabilize.pdf" target="_blank">pdf</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/hard_learn_stabilize_present.pdf" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/On%20The%20Hardness%20of%20Learning%20to%20Stabilize%20Linear%20Systems_Poster.pdf" target="_blank">poster</a>].
 
 **Service**
+
+***
 
 Reviewer for NAHS, L-CSS, CDC, and ACC.
 
 **Bio**
+
+***
 
 I obtained my bachelor's degree from <a href="http://english.hust.edu.cn/" target="_blank">Huazhong University of Science and Technology</a> in 2020, where I was advised by Prof. <a href="http://yy311.github.io/" target="_blank">Ye Yuan</a>. After graduation, I took a gap year with my undergraduate advisor and Prof. <a href="https://uwaterloo.ca/applied-mathematics/profiles/jun-liu" target="_blank">Jun Liu</a> from University of Waterloo.
 
 I was born and grew up in <a href="https://en.wikipedia.org/wiki/Loudi" target="_blank">Loudi</a>, Hunan (湖南娄底), China.
 
 **Misc**
+
+***
 
 I'm an active marathon and trail runner for Michigan AA Next Level Running Club. My personal best record for the full marathon is 03:28:08 in the Indianapolis Monumental Marathon 2022. I have completed 2 great <a href="https://www.alltrails.com/explore/recording/rim2rim2rim--2" target="_blank">Rim-to-Rim-to-Rim (R2R2R)</a> runs in <a href="https://www.nps.gov/grca/planyourvisit/index.htm" target="_blank">Grand Canyon</a> with my friends. 
 
