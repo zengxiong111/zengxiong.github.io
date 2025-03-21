@@ -43,7 +43,7 @@ I was born and grew up in <a href="https://en.wikipedia.org/wiki/Loudi" target="
 
 **Misc**
 
-I'm an active marathon and trail runner for Michigan AA Next Level Running Club. My personal best record for the full marathon is 03:28:08 in the Indianapolis Monumental Marathon 2022. I have completed 2 <a href="https://www.alltrails.com/explore/recording/rim2rim2rim--2" target="_blank">Rim-to-Rim-to-Rim (R2R2R)</a> runs of <a href="https://www.nps.gov/grca/planyourvisit/index.htm" target="_blank">Grand Canyon</a> with my friends. 
+I'm an active marathon and trail runner for Michigan AA Next Level Running Club. My personal best record for the full marathon is 03:28:08 in the Indianapolis Monumental Marathon 2022. I have completed 2 great <a href="https://www.alltrails.com/explore/recording/rim2rim2rim--2" target="_blank">Rim-to-Rim-to-Rim (R2R2R)</a> runs in <a href="https://www.nps.gov/grca/planyourvisit/index.htm" target="_blank">Grand Canyon</a> with my friends. 
 
 “士不可以不弘毅，任重而道远。非淡泊无以明志，非宁静无以致远。从群众中来，到群众中去。”
 
