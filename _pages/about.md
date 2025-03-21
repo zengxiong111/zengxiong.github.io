@@ -11,7 +11,7 @@ I'm a fourth-year Ph.D. student in UMich EECS department starting in 2021 Fall. 
 
 &nbsp;
 
-### Publications
+## Publications
 
 ***
 
@@ -22,7 +22,7 @@ I'm a fourth-year Ph.D. student in UMich EECS department starting in 2021 Fall. 
 **Xiong Zeng**, Jing Yu, and Necmiye Ozay. Submitted for journal publication, March 2025.
 
  
-[Noise Sensitivity of the Semidefinite Programs for Direct Data-Driven LQR](https://arxiv.org/abs/2412.19705)[<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/Noise%20Sensitivity%20of%20the%20Semidefinite%20Programs%20for%20Direct%20Data-Driven%20LQR.pdf" style="color: blue;" target="_blank">pdf</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/slides_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" style="color: blue;" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/Poster_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" style="color: blue;" target="_blank">poster</a>]<br>
+[Noise Sensitivity of the Semidefinite Programs for Direct Data-Driven LQR](https://arxiv.org/abs/2412.19705)[<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/slides_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" style="color: blue;" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/Poster_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" style="color: blue;" target="_blank">poster</a>]<br>
 **Xiong Zeng**, Laurent Bako, and Necmiye Ozay. Submitted for journal publication, January 2025.
 
 
@@ -33,12 +33,12 @@ I'm a fourth-year Ph.D. student in UMich EECS department starting in 2021 Fall. 
  **Xiong Zeng**, Laurent Bako, and Necmiye Ozay, American Control Conference (ACC) 2025 (to appear).
 
  
- [On the Hardness of Learning to Stabilize Linear Systems](https://arxiv.org/abs/2311.11151)[<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/hard_learn_to_stabilize.pdf" style="color: blue;" target="_blank">pdf</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/hard_learn_stabilize_present.pdf" style="color: blue;" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/On%20The%20Hardness%20of%20Learning%20to%20Stabilize%20Linear%20Systems_Poster.pdf" style="color: blue;" target="_blank">poster</a>]<br>
+ [On the Hardness of Learning to Stabilize Linear Systems](https://arxiv.org/abs/2311.11151)[<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/hard_learn_stabilize_present.pdf" style="color: blue;" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/On%20The%20Hardness%20of%20Learning%20to%20Stabilize%20Linear%20Systems_Poster.pdf" style="color: blue;" target="_blank">poster</a>]<br>
  **Xiong Zeng**, Zexiang Liu, Zhe Du, Necmiye Ozay, and Mario Sznaier. IEEE Conference on Decision and Control (CDC) 2023.
 
 &nbsp;
 
-### Service
+## Service
 
 ***
 
@@ -46,7 +46,7 @@ Reviewer for NAHS, L-CSS, CDC, and ACC.
 
 &nbsp;
 
-### Bio
+## Bio
 
 ***
 
@@ -56,7 +56,7 @@ I was born and grew up in <a href="https://en.wikipedia.org/wiki/Loudi" target="
 
 &nbsp;
 
-### Misc
+## Misc
 
 ***
 
