@@ -13,8 +13,6 @@ I'm a fourth-year Ph.D. student in UMich EECS department starting in 2021 Fall. 
 
 ## Publications
 
-***
-
 <span style="color:orange">**Preprints**</span>
 
 
@@ -40,15 +38,11 @@ I'm a fourth-year Ph.D. student in UMich EECS department starting in 2021 Fall. 
 
 ## Service
 
-***
-
 Reviewer for NAHS, L-CSS, CDC, and ACC.
 
 &nbsp;
 
 ## Bio
-
-***
 
 I obtained my bachelor's degree from <a href="http://english.hust.edu.cn/" target="_blank">Huazhong University of Science and Technology</a> in 2020, where I was advised by Prof. <a href="http://yy311.github.io/" target="_blank">Ye Yuan</a>. After graduation, I took a gap year with my undergraduate advisor and Prof. <a href="https://uwaterloo.ca/applied-mathematics/profiles/jun-liu" target="_blank">Jun Liu</a> from University of Waterloo.
 
@@ -57,8 +51,6 @@ I was born and grew up in <a href="https://en.wikipedia.org/wiki/Loudi" target="
 &nbsp;
 
 ## Misc
-
-***
 
 I'm an active marathon and trail runner for Michigan AA Next Level Running Club. My personal best record for the full marathon is 03:28:08 in the Indianapolis Monumental Marathon 2022. I have completed 2 great <a href="https://www.alltrails.com/explore/recording/rim2rim2rim--2" target="_blank">Rim-to-Rim-to-Rim (R2R2R)</a> runs in <a href="https://www.nps.gov/grca/planyourvisit/index.htm" target="_blank">Grand Canyon</a> with my friends. 
 
