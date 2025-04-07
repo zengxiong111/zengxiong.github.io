@@ -38,7 +38,7 @@ I'm a fourth-year Ph.D. student in UMich EECS department starting in 2021 Fall. 
 
 ## Service
 
-Reviewer for NAHS, L-CSS, CDC, and ACC.
+Reviewer for Transactions on Signal Processing (TSP), Nonlinear Analysis: Hybrid Systems (NAHS), Control Systems Letters (L-CSS), Conference on Decision and Control (CDC), and American Control Conference (ACC).
 
 &nbsp;
 
