@@ -31,7 +31,7 @@ I'm a fourth-year Ph.D. student in UMich EECS department starting in 2021 Fall. 
  **Xiong Zeng**, Laurent Bako, and Necmiye Ozay, American Control Conference (ACC) 2025 (to appear).
 
  
- [On the Hardness of Learning to Stabilize Linear Systems](https://arxiv.org/abs/2311.11151)[<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/hard_learn_stabilize_present.pdf" style="color: blue;" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/On%20The%20Hardness%20of%20Learning%20to%20Stabilize%20Linear%20Systems_Poster.pdf" style="color: blue;" target="_blank">poster</a>][<a href=" https://www.youtube.com/watch?v=eP5KKam834w" style="color: blue;" target="_blank">video</a>]<br>
+ [On the Hardness of Learning to Stabilize Linear Systems](https://arxiv.org/abs/2311.11151)[<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/hard_learn_stabilize_present.pdf" style="color: blue;" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/On%20The%20Hardness%20of%20Learning%20to%20Stabilize%20Linear%20Systems_Poster.pdf" style="color: blue;" target="_blank">poster</a>][<a href="https://www.youtube.com/watch?v=eP5KKam834w" style="color: blue;" target="_blank">video</a>]<br>
  **Xiong Zeng**, Zexiang Liu, Zhe Du, Necmiye Ozay, and Mario Sznaier. IEEE Conference on Decision and Control (CDC) 2023.
 
 &nbsp;
