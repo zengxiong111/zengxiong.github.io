@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I'm a fourth-year Ph.D. student in UMich EECS department starting in 2021 Fall. I'm working with Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a> and studying **some statistical fundamental limitations of learning-based control algorithms and how to break these statistical limitations by changing the system structure and algorithm design**. I'm also broadly interested in machine coffee, control theory, statistical learning theory, optimization, and robotics.
+I'm a fourth-year Ph.D. student in UMich EECS department starting in 2021 Fall. I'm working with Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a> and studying **some statistical fundamental limits of learning-based control algorithms and how to break these statistical limits by changing the dynamical system structure or the controller algorithm design**. I'm also broadly interested in machine coffee, control theory, statistical learning theory, optimization, and robotics.
 
 &nbsp;
 
