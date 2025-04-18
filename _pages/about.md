@@ -7,11 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-I'm a fourth-year Ph.D. student in UMich EECS department starting from 2021 Fall. I'm advised by Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a>.  I'm studying **some statistical fundamental limits of learning-based control algorithms and how to break these statistical limits by changing the dynamical system structure or the controller algorithm design**. Generally, I think about the statistical limits of learning algorithms in three ways:
-- Statistical Consistency
-- Statistical Hardness
-- Statistical Optimality
-
+I'm a fourth-year Ph.D. student in UMich EECS department starting from 2021 Fall. I'm advised by Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a>.  I'm studying **some statistical fundamental limits of learning-based control algorithms and how to break these statistical limits by changing the dynamical system structure or the controller algorithm design**. Generally, I think about the statistical limits of learning-based control algorithms in the following three ways:
+- **Statistical Consistency**
+- **Statistical Hardness**
+- **Statistical Optimality
+**
 I'm also broadly interested in machine coffee, control theory, statistical learning theory, optimization, and robotics.
 
 
