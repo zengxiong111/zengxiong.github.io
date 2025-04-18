@@ -20,7 +20,7 @@ I'm a fourth-year Ph.D. student in UMich EECS department starting in 2021 Fall. 
 **Xiong Zeng**, Jing Yu, and Necmiye Ozay. Submitted for journal publication, March 2025.
 
  
-[Noise Sensitivity of the Semidefinite Programs for Direct Data-Driven LQR](https://arxiv.org/abs/2412.19705)[<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/slides_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" style="color: blue;" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/Poster_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" style="color: blue;" target="_blank">poster</a>][<a href="https://x.com/necozay/status/1885844662381879360" style="color: blue;" target="_blank">A thread on X</a>]<br> 
+[Noise Sensitivity of the Semidefinite Programs for Direct Data-Driven LQR](https://arxiv.org/abs/2412.19705)[<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/slides_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" style="color: blue;" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/Poster_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" style="color: blue;" target="_blank">poster</a>][<a href="https://x.com/necozay/status/1885844662381879360" style="color: blue;" target="_blank">a thread on X</a>]<br> 
 **Xiong Zeng**, Laurent Bako, and Necmiye Ozay. Submitted for journal publication, January 2025.
 
 
