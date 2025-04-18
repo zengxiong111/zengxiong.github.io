@@ -11,6 +11,7 @@ I'm a fourth-year Ph.D. student in UMich EECS department starting from 2021 Fall
 - **Statistical Consistency**
 - **Statistical Hardness**
 - **Statistical Optimality**
+  
 I'm also broadly interested in machine coffee, control theory, statistical learning theory, optimization, and robotics.
 
 
