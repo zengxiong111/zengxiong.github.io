@@ -8,9 +8,9 @@ redirect_from:
 ---
 
 I'm a fourth-year Ph.D. student in UMich EECS department starting from 2021 Fall. I'm advised by Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a> and studying **some statistical fundamental limits of learning-based control algorithms and how to break these statistical limits by changing the dynamical system structure or the controller algorithm design**. Generally, we think about the statistical limits of a learning algorithm from the following three perspectives:
-- **Statistical Consistency**: Does the algorithm converge to the ground-truth solution with respect to sample size?[<a href="https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf" style="color: blue;" target="_blank">ACC 2025</a>][<a href="https://arxiv.org/abs/2412.19705" style="color: blue;" target="_blank">arXiv 2024</a>]
-- **Statistical Optimality**: Does the algorithm achieve the minimax sample complexity lower bound?[<a href="https://arxiv.org/abs/2503.16817" style="color: blue;" target="_blank">arXiv 2025</a>]
-- **Statistical Hardness**: Does the optimal sample complexity of the algorithm increase moderately with the system complexity?[<a href="https://arxiv.org/abs/2311.11151" style="color: blue;" target="_blank">CDC 2023</a>]
+- **Statistical consistency**: Does the algorithm converge to the ground-truth solution with respect to sample size?[<a href="https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf" style="color: blue;" target="_blank">ACC 2025</a>][<a href="https://arxiv.org/abs/2412.19705" style="color: blue;" target="_blank">arXiv 2024</a>]
+- **Statistical optimality**: Does the algorithm achieve the minimax sample complexity lower bound?[<a href="https://arxiv.org/abs/2503.16817" style="color: blue;" target="_blank">arXiv 2025</a>]
+- **Statistical hardness**: Does the optimal sample complexity of the algorithm increase moderately with the system complexity?[<a href="https://arxiv.org/abs/2311.11151" style="color: blue;" target="_blank">CDC 2023</a>]
   
 I'm also broadly interested in machine coffee, control theory, statistical learning theory, optimization, and robotics.
 
