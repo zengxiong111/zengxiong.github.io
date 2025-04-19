@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I'm a fourth-year Ph.D. student in UMich EECS department starting from 2021 Fall. I'm advised by Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a> and studying **some statistical fundamental limits of learning-based control algorithms and how to break these statistical limits by changing the dynamical system structure or the controller algorithm design**. Generally, we think about the statistical fundamental limits of learning-based control algorithms from the following three perspectives:
+I'm a fourth-year Ph.D. student in UMich EECS department starting from 2021 Fall. I'm advised by Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a> and studying **some statistical fundamental limits of learning-based control algorithms and how to break these statistical limits by changing the dynamical system structure or the controller algorithm design**. Generally, we think about the statistical limits of a learning algorithm from the following three perspectives:
 - **Statistical Consistency: Does the algorithm converge to the ground truth solution with respect to sample size?**
 - **Statistical Optimality: Does the algorithm achieve the minimax sample complexity lower bound?**
 - **Statistical Hardness: Does the sample complexity of the algorithm increase moderately with the system complexity?**
