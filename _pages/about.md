@@ -7,10 +7,10 @@ redirect_from:
   - /about.html
 ---
 
-I'm a fourth-year Ph.D. student in UMich EECS department starting from 2021 Fall. I'm advised by Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a> and studying **some statistical fundamental limits of system identification and learning-based control algorithms and how to break these fundamental limits by changing the dynamical system structure or the learning framework**. Generally, we think about the statistical limits of a learning algorithm from the following three perspectives in order:
+I'm a fourth-year Ph.D. student in UMich EECS department since Fall 2021. I'm advised by Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a> and studying **some statistical fundamental limits of system identification and learning-based control algorithms and how to break these fundamental limits by changing the dynamical system structure or the learning framework**. Generally, we think about the statistical limits of a learning algorithm from the following three perspectives in order:
 - **Statistical consistency**: Does the algorithm converge to the ground-truth solution with respect to sample size?[<a href="https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf" style="color: blue;" target="_blank">ACC 2025</a>][<a href="https://arxiv.org/abs/2412.19705" style="color: blue;" target="_blank">ArXiv 2024</a>]
-- **Statistical optimality**: Does the algorithm achieve the minimax sample complexity lower bound?[<a href="https://arxiv.org/abs/2503.16817" style="color: blue;" target="_blank">ArXiv 2025</a>]
-- **Statistical hardness**: Does the optimal sample complexity of the algorithm increase moderately with the system complexity?[<a href="https://arxiv.org/abs/2311.11151" style="color: blue;" target="_blank">CDC 2023</a>]
+- **Statistical optimality**: If the algorithm is statistically consistent, does it achieve the minimax sample complexity lower bound?[<a href="https://arxiv.org/abs/2503.16817" style="color: blue;" target="_blank">ArXiv 2025</a>]
+- **Statistical hardness**: If the algorithm is statistically optimal, does the optimal sample complexity increase moderately with the system complexity?[<a href="https://arxiv.org/abs/2311.11151" style="color: blue;" target="_blank">CDC 2023</a>]
   
 I'm also broadly interested in machine coffee, control theory, statistical learning theory, optimization, and robotics.
 
@@ -58,7 +58,7 @@ I was born and grew up in <a href="https://en.wikipedia.org/wiki/Loudi" target="
 
 ## Misc
 
-I like trail running, and people can often find me on the trails in Ann Arbor, day or night. My personal best record for the full marathon is 03:28:08 in the Indianapolis Monumental Marathon 2022. I have completed 2 <a href="https://www.alltrails.com/explore/recording/rim2rim2rim--2" target="_blank">Rim-to-Rim-to-Rim (R2R2R)</a> runs in the great <a href="https://www.nps.gov/grca/planyourvisit/index.htm" target="_blank">Grand Canyon</a> with my friends. 
+I like trail running, and people can often find me on the trails and hills in Ann Arbor, day or night. My personal best record for the full marathon is 03:28:08 in the Indianapolis Monumental Marathon 2022. I have completed 2 <a href="https://www.alltrails.com/explore/recording/rim2rim2rim--2" target="_blank">Rim-to-Rim-to-Rim (R2R2R)</a> runs in the great <a href="https://www.nps.gov/grca/planyourvisit/index.htm" target="_blank">Grand Canyon</a> with my friends. 
 
 “士不可以不弘毅，任重而道远。非淡泊无以明志，非宁静无以致远。从群众中来，到群众中去。”
 
