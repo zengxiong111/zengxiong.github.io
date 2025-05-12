@@ -62,4 +62,4 @@ I like trail running, and people can often find me on the trails and hills in An
 
 “士不可以不弘毅，任重而道远。非淡泊无以明志，非宁静无以致远。从群众中来，到群众中去。”
 
-English version of the above famous Chinese quotes (by ChatGPT): "A scholar must cultivate broad-mindedness and resilience, as the responsibilities are heavy and the journey is long. Without detachment, one cannot clarify one's aspirations; without tranquility, one cannot reach far. From people, for people."
+English version of the above famous Chinese quotes (by ChatGPT): "A scholar must cultivate broad-mindedness and resilience, as the responsibilities are heavy and the journey is long. Without nonattachment, one cannot clarify one's aspirations; without tranquility, one cannot reach far. From people, for people."
