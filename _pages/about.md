@@ -13,7 +13,7 @@ I'm a fourth-year Ph.D. student in UMich EECS department since Fall 2021. I'm ad
 - **Statistical hardness**: If the algorithm is statistically optimal, does the optimal sample complexity increase moderately with the system complexity?[<a href="https://arxiv.org/abs/2311.11151" style="color: blue;" target="_blank">CDC 2023</a>]
 
 <div style="text-align: center;">
-  <img src="fundamental.jpg" style="width: 400px;" />
+  <img src="fundamental.jpg" style="width: 600px;" />
 </div>
 
 <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
