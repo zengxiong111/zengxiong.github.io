@@ -11,6 +11,12 @@ I'm a fourth-year Ph.D. student in UMich EECS department since Fall 2021. I'm ad
 - **Statistical consistency**: Does the algorithm converge to the ground-truth solution with respect to sample size?[<a href="https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf" style="color: blue;" target="_blank">ACC 2025</a>][<a href="https://arxiv.org/abs/2412.19705" style="color: blue;" target="_blank">ArXiv 2024</a>]
 - **Statistical optimality**: If the algorithm is statistically consistent, does it achieve the minimax sample complexity lower bound?[<a href="https://arxiv.org/abs/2503.16817" style="color: blue;" target="_blank">ArXiv 2025</a>]
 - **Statistical hardness**: If the algorithm is statistically optimal, does the optimal sample complexity increase moderately with the system complexity?[<a href="https://arxiv.org/abs/2311.11151" style="color: blue;" target="_blank">CDC 2023</a>]
+
+<img src="fundamental.jpg" alt="Fundamental Limits" width="600">
+
+<br><br>
+
+<img src="robot.png" alt="Robot Failure" width="400">
   
 You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/phd_propsoal_Xiong_Zeng_part.pdf" style="color: blue;" target="_blank">my PhD proposal slides</a> to have a detailed overview. I'm also broadly interested in machine coffee, control theory, statistical learning theory, optimization, and robotics.
 
