@@ -12,6 +12,8 @@ I'm a fourth-year Ph.D. student in UMich EECS department since Fall 2021. I'm ad
 - **Statistical optimality**: If the algorithm is statistically consistent, does it achieve the minimax sample complexity lower bound?[<a href="https://arxiv.org/abs/2503.16817" style="color: blue;" target="_blank">ArXiv 2025</a>]
 - **Statistical hardness**: If the algorithm is statistically optimal, does the optimal sample complexity increase moderately with the system complexity?[<a href="https://arxiv.org/abs/2311.11151" style="color: blue;" target="_blank">CDC 2023</a>]
 
+<img src="fundamental.jpg"/>
+
 <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
 
   <img src="fundamental.jpg" 
