@@ -18,11 +18,6 @@ I'm a fourth-year Ph.D. student in UMich EECS department since Fall 2021. I'm ad
        alt="Fundamental Limits" 
        style="border: 2px solid #888;" 
        width="600">
-
-  <img src="robot.png" 
-       alt="Robot Failure" 
-       width="200">
-
 </div>
 
 
