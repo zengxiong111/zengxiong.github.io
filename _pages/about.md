@@ -16,6 +16,8 @@ I'm a fourth-year Ph.D. student in UMich EECS department since Fall 2021. I'm ad
   <img src="fundamental.jpg" style="width: 600px;" />
 </div>
 
+![test](fundamental.jpg) 
+
 
   
 You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/phd_propsoal_Xiong_Zeng_part.pdf" style="color: blue;" target="_blank">my PhD proposal slides</a> to have a detailed overview. I'm also broadly interested in machine coffee, control theory, statistical learning theory, optimization, and robotics.
