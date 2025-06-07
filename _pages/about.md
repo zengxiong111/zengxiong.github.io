@@ -9,7 +9,7 @@ redirect_from:
 
 I'm a fourth-year Ph.D. student in UMich EECS department since Fall 2021. I'm advised by Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a> and studying **some statistical fundamental limits of learning for dynamics and control and how to break these fundamental limits by changing the dynamical system structure or the control paradigm**. Generally, we think about the statistical limits of a learning-based algorithm from the following three perspectives in order:
 - **Statistical consistency**: Does the algorithm converge to the ground-truth solution with respect to sample size?[<a href="https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf" style="color: blue;" target="_blank">ACC 2025</a>][<a href="https://arxiv.org/abs/2412.19705" style="color: blue;" target="_blank">ArXiv 2024</a>]
-- **Statistical optimality**: If the algorithm is statistically consistent, does it achieve the minimax sample complexity lower bound?[<a href="https://arxiv.org/abs/2503.16817" style="color: blue;" target="_blank">ArXiv 2025</a>]
+- **Statistical optimality**: If the algorithm is statistically consistent, does it achieve the minimax sample complexity lower bound?[<a href="https://arxiv.org/abs/2503.16817" style="color: blue;" target="_blank">L-CSS 2025</a>]
 - **Statistical hardness**: If the algorithm is statistically optimal, does the optimal sample complexity increase moderately with the system complexity?[<a href="https://arxiv.org/abs/2311.11151" style="color: blue;" target="_blank">CDC 2023</a>]
   
 You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/phd_propsoal_Xiong_Zeng_part.pdf" style="color: blue;" target="_blank">my PhD proposal slides</a> to have a detailed overview. I'm also broadly interested in machine coffee, control theory, statistical learning theory, optimization, and robotics.
@@ -23,7 +23,7 @@ You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/
 
 
 [System Identification Under Bounded Noise: Optimal Rates Beyond Least Squares](https://arxiv.org/abs/2503.16817)[<a href="https://github.com/jy-cds/Bounded-Noise-SysID-Minimax-Lowerbound" style="color: blue;" target="_blank">codes</a>]<br>
-**Xiong Zeng**, Jing Yu, and Necmiye Ozay. Submitted for journal publication, March 2025.
+**Xiong Zeng**, Jing Yu, and Necmiye Ozay. Accepted by IEEE Control Systems Letters (L-CSS), June 2025.
 
  
 [Noise Sensitivity of the Semidefinite Programs for Direct Data-Driven LQR](https://arxiv.org/abs/2412.19705)[<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/slides_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" style="color: blue;" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/Poster_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" style="color: blue;" target="_blank">poster</a>][<a href="https://x.com/necozay/status/1885844662381879360" style="color: blue;" target="_blank">a thread on X</a>]<br> 
