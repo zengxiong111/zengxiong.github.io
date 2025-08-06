@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I'm a fourth-year Ph.D. student in UMich EECS department since Fall 2021. I'm advised by Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a>. 
+I'm a fourth-year Ph.D. student in UMich ECE department since Fall 2021. I'm advised by Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a>. 
 
 Unlike ChatGPT, for the physical world with **continuous** state space, **infinitesimal error** can lead to catastrophic 
 failures in **stability and safety**, while learning for infinitesimal error might be **arbitrarily hard**.
