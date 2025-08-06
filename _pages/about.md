@@ -9,7 +9,7 @@ redirect_from:
 
 I'm a fourth-year Ph.D. student in UMich EECS department since Fall 2021. I'm advised by Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a>. 
 
-For the physical world with **continuous** state space, **infinitesimal error** can lead to catastrophic 
+Unlike ChatGPT, for the physical world with **continuous** state space, **infinitesimal error** can lead to catastrophic 
 failures in **stability and safety**, while learning for infinitesimal error might be **arbitrarily hard**.
 We focus on studying some **statistical fundamental limits** of learning for **dynamics and control**, and how to break these fundamental limits by changing the dynamical system structure or the control paradigm. Generally, we think about the statistical limits of a learning-based algorithm from the following three perspectives in order:
 - **Statistical consistency**: Does the algorithm converge to the ground-truth solution with respect to sample size?[<a href="https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf" style="color: blue;" target="_blank">ACC 2025</a>][<a href="https://arxiv.org/abs/2412.19705" style="color: blue;" target="_blank">Journal Submission 2025</a>]
