@@ -40,23 +40,17 @@ You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/
  
  [On the Hardness of Learning to Stabilize Linear Systems](https://arxiv.org/abs/2311.11151)[<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/hard_learn_stabilize_present.pdf" style="color: blue;" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/On%20The%20Hardness%20of%20Learning%20to%20Stabilize%20Linear%20Systems_Poster.pdf" style="color: blue;" target="_blank">poster</a>][<a href="https://www.youtube.com/watch?v=eP5KKam834w" style="color: blue;" target="_blank">video</a>]<br>
  **Xiong Zeng**, Zexiang Liu, Zhe Du, Necmiye Ozay, and Mario Sznaier. IEEE Conference on Decision and Control (CDC) 2023.
-
 &nbsp;
-
 ## Academic Service
 
 Reviewer for IEEE Transactions on Automatic Control (TAC), IEEE Transactions on Signal Processing (TSP), Nonlinear Analysis: Hybrid Systems (NAHS), Control Systems Letters (L-CSS), Conference on Decision and Control (CDC), and American Control Conference (ACC).
-
 &nbsp;
-
 ## Bio
 
 I obtained my bachelor's degree from Automation Department of <a href="http://english.hust.edu.cn/" target="_blank">Huazhong University of Science and Technology</a> in 2020, where I was advised by Prof. <a href="http://yy311.github.io/" target="_blank">Ye Yuan</a>. After graduation, I took a gap year with my undergraduate advisor and Prof. <a href="https://uwaterloo.ca/applied-mathematics/profiles/jun-liu" target="_blank">Jun Liu</a> from University of Waterloo.
 
 I was born and grew up in <a href="https://en.wikipedia.org/wiki/Loudi" target="_blank">Loudi</a>, Hunan (湖南娄底), China.
-
 &nbsp;
-
 ## Misc
 
 I like trail running, and people can often find me on the trails and hills in Ann Arbor, day or night. My personal best record for the full marathon is 03:28:08 in the Indianapolis Monumental Marathon 2022. I have completed 2 <a href="https://www.alltrails.com/explore/recording/rim2rim2rim--2" target="_blank">Rim-to-Rim-to-Rim (R2R2R)</a> runs in the great <a href="https://www.nps.gov/grca/planyourvisit/index.htm" target="_blank">Grand Canyon</a> with my friends. 
