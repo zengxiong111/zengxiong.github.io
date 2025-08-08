@@ -16,10 +16,7 @@ failures in **stability and safety**. However, learning for infinitesimal error 
 - **Statistical hardness**: If the algorithm is statistically optimal, does the optimal sample complexity increase moderately with the system complexity?[<a href="https://arxiv.org/abs/2311.11151" style="color: blue;" target="_blank">CDC 2023</a>]
   
 You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/phd_propsoal_Xiong_Zeng_part.pdf" style="color: blue;" target="_blank">my PhD proposal slides</a> to have a detailed overview. I'm also passionate about **machine coffee** and **learning-based control system design** on any scale.
-
-
 &nbsp;
-
 ## Publications
 
 <span style="color:orange">**Preprints**</span>
