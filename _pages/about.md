@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I'm a fourth-year Ph.D. student in UMich ECE department since Fall 2021. I'm advised by Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a>. 
+I‘m a fifth-year Ph.D. student in UMich ECE department starting in the fall of 2021. I'm advised by Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a>. 
 
 Unlike the cyberspace of ChatGPT, in the physical world, **infinitesimal error** might lead to catastrophic 
 failures in **stability and safety**. However, learning for infinitesimal error might be **arbitrarily hard**. Motivated by these, we focus on studying some **statistical fundamental limits** of learning for **dynamics and control**, and how to break these fundamental limits by changing the dynamical system structure or the algorithm paradigm. Generally, we think about the statistical limits of a learning-based algorithm from the following three perspectives in order:
@@ -47,7 +47,7 @@ Reviewer for IEEE Transactions on Automatic Control (TAC), IEEE Transactions on 
 &nbsp;
 ## Bio
 
-I obtained my bachelor's degree from Automation Department of <a href="http://english.hust.edu.cn/" target="_blank">Huazhong University of Science and Technology</a> in 2020, where I was advised by Prof. <a href="http://yy311.github.io/" target="_blank">Ye Yuan</a>. After graduation, I took a gap year with my undergraduate advisor and Prof. <a href="https://uwaterloo.ca/applied-mathematics/profiles/jun-liu" target="_blank">Jun Liu</a> from University of Waterloo.
+I obtained my bachelor's degree from the Automation Department of <a href="http://english.hust.edu.cn/" target="_blank">Huazhong University of Science and Technology</a> in 2020, where I was advised by Prof. <a href="http://yy311.github.io/" target="_blank">Ye Yuan</a>. After graduation, I took a gap year with my undergraduate advisor and Prof. <a href="https://uwaterloo.ca/applied-mathematics/profiles/jun-liu" target="_blank">Jun Liu</a> from University of Waterloo.
 
 I was born and grew up in <a href="https://en.wikipedia.org/wiki/Loudi" target="_blank">Loudi</a>, Hunan (湖南娄底), China.
 &nbsp;
