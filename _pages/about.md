@@ -9,7 +9,7 @@ redirect_from:
 
 I‘m a fifth-year Ph.D. student in UMich ECE department starting in the fall of 2021. I'm advised by Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a>. 
 
-**Research:** Unlike the cyberspace of ChatGPT, in the physical world, **infinitesimal error** might lead to catastrophic 
+**Research statement:** Unlike the cyberspace of ChatGPT, in the physical world, **infinitesimal error** might lead to catastrophic 
 failures in **stability and safety**. However, learning for infinitesimal error might be **arbitrarily hard**. Motivated by these, we focus on studying some **statistical fundamental limits** of learning for **dynamics and control**, and how to break these fundamental limits by changing the dynamical system structure or the algorithm paradigm. Generally, we think about the statistical limits of a learning-based algorithm from the following three perspectives in order:
 - **Statistical consistency**: Does the algorithm converge to the ground-truth solution with respect to sample size?[<a href="https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf" style="color: blue;" target="_blank">ACC 2025</a>][<a href="https://arxiv.org/abs/2412.19705" style="color: blue;" target="_blank">Journal Submission 2025</a>]
 - **Statistical optimality**: If the algorithm is statistically consistent, does it achieve the minimax sample complexity lower bound?[<a href="https://arxiv.org/abs/2503.16817" style="color: blue;" target="_blank">L-CSS and CDC 2025</a>]
