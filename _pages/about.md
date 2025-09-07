@@ -48,7 +48,6 @@ You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/
 Reviewer for IEEE Transactions on Automatic Control (TAC), IEEE Transactions on Signal Processing (TSP), Nonlinear Analysis: Hybrid Systems (NAHS), Control Systems Letters (L-CSS), Conference on Decision and Control (CDC), and American Control Conference (ACC).
 
 Technical Committee Member of IEEE CSS Hybrid Systems.
-
 &nbsp;
 ## Bio
 
