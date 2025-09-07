@@ -9,7 +9,7 @@ redirect_from:
 
 I‘m a fifth-year Ph.D. student in UMich ECE department starting in the fall of 2021. I'm advised by Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a>. 
 
-<span style="color:orange">**Research**</span>
+## Research
 
 Unlike the cyberspace of ChatGPT, in the physical world, **infinitesimal error** might lead to catastrophic 
 failures in **stability and safety**. However, learning for infinitesimal error might be **arbitrarily hard**. Motivated by these, we focus on studying some **statistical fundamental limits** of learning for **dynamics and control**, and how to break these fundamental limits by changing the dynamical system structure or the algorithm paradigm. Generally, we think about the statistical limits of a learning-based algorithm from the following three perspectives in order:
