@@ -29,7 +29,7 @@ You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/
 
  <span style="color:orange">**Journal Papers**</span>
 
- [System Identification Under Bounded Noise: Optimal Rates Beyond Least Squares](https://arxiv.org/abs/2503.16817)[<a href="https://github.com/jy-cds/Bounded-Noise-SysID-Minimax-Lowerbound" style="color: blue;" target="_blank">codes</a>]<br>
+ [System Identification Under Bounded Noise: Optimal Rates Beyond Least Squares](https://arxiv.org/abs/2503.16817)[<a href="https://github.com/jy-cds/Bounded-Noise-SysID-Minimax-Lowerbound" style="color: blue;" target="_blank">code</a>]<br>
 **Xiong Zeng**, Jing Yu, and Necmiye Ozay, IEEE Control Systems Letters (L-CSS) and Conference on Decision and Control (CDC) 2025 (to appear).
 
 
