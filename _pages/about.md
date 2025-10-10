@@ -27,10 +27,10 @@ You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/
  <span style="color:orange">**Journal Papers**</span>
 
  [Noise Sensitivity of the Semidefinite Programs for Direct Data-Driven LQR](https://arxiv.org/abs/2412.19705)[<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/slides_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" style="color: blue;" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/Poster_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" style="color: blue;" target="_blank">poster</a>][<a href="https://x.com/necozay/status/1885844662381879360" style="color: blue;" target="_blank">a thread on X</a>]<br> 
-**Xiong Zeng**, Laurent Bako, and Necmiye Ozay. Accepted by Transactions on Automatic Control, August 2025.
+**Xiong Zeng**, Laurent Bako, and Necmiye Ozay. Accepted by Transactions on Automatic Control, August 2025 (to appear).
 
  [System Identification Under Bounded Noise: Optimal Rates Beyond Least Squares](https://arxiv.org/abs/2503.16817)[<a href="https://github.com/jy-cds/Bounded-Noise-SysID-Minimax-Lowerbound" style="color: blue;" target="_blank">code</a>]<br>
-**Xiong Zeng**, Jing Yu, and Necmiye Ozay. IEEE Control Systems Letters (L-CSS) and Conference on Decision and Control (CDC) 2025 (to appear).
+**Xiong Zeng**, Jing Yu, and Necmiye Ozay. IEEE Control Systems Letters (L-CSS) and Conference on Decision and Control (CDC) 2025.
 
 
  <span style="color:orange">**Conference Papers**</span>
