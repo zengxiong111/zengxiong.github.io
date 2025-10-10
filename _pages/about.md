@@ -23,7 +23,7 @@ You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/
 
 <span style="color:orange">**Preprints**</span>
  
-</u> Non-Asymptotic Learning of Koopman Observables with Process Noise</u>. **Xiong Zeng<sup>*</sup>**, Hyunjae Kim<sup>*</sup>, and Necmiye Ozay. In Preparation.
+<u>Non-Asymptotic Learning of Koopman Observables with Process Noise</u>. **Xiong Zeng<sup>*</sup>**, Hyunjae Kim<sup>*</sup>, and Necmiye Ozay. In Preparation.
 
 
  <span style="color:orange">**Journal Papers**</span>
