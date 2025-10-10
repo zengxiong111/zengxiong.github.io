@@ -19,11 +19,11 @@ failures in **stability and safety**. Therefore, our **system design and algorit
   
 You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/phd_propsoal_Xiong_Zeng_part.pdf" style="color: blue;" target="_blank">my PhD proposal slides</a> to have a detailed overview. I'm also passionate about **machine coffee** and **learning-based control system design** on any scale.
 &nbsp;
-## Publications
+## Publications (<sup>*</sup> denotes equal contribution)
 
 <span style="color:orange">**Preprints**</span>
 
-Non-Asymptotic Learning of Koopman Observables with Process Noise. **Xiong Zeng<sup>^*</sup>**, Hyunjae Kim<sup>^*</sup>, and Necmiye Ozay. In Preparation.
+Non-Asymptotic Learning of Koopman Observables with Process Noise. **Xiong Zeng<sup>*</sup>**, Hyunjae Kim<sup>*</sup>, and Necmiye Ozay. In Preparation.
 
 
  <span style="color:orange">**Journal Papers**</span>
