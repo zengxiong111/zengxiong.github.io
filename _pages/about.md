@@ -23,10 +23,10 @@ You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/
 
 <span style="color:orange">**Preprints**</span>
 
- [Non-Asymptotic Learning of Koopman Observables with Process Noise](https://zengxiong111.github.io/zengxiong.github.io/). 
+ [Non-Asymptotic Learning of Koopman Observables with Process Noise](https://zengxiong111.github.io/zengxiong.github.io/).<br> 
  **Xiong Zeng<sup>*</sup>**, Hyunjae Kim<sup>*</sup>, and Necmiye Ozay. In Preparation.
  
- [Sample Complexity of Learning Koopman Bilinear Observables](https://zengxiong111.github.io/zengxiong.github.io/). 
+ [Sample Complexity of Learning Koopman Bilinear Observables](https://zengxiong111.github.io/zengxiong.github.io/).<br> 
  **Xiong Zeng<sup>*</sup>**, Hyunjae Kim<sup>*</sup>, and Necmiye Ozay. In Preparation.
 
 
