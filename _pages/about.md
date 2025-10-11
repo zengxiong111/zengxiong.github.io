@@ -36,7 +36,7 @@ You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/
 **Xiong Zeng**, Laurent Bako, and Necmiye Ozay. Accepted by **Transactions on Automatic Control (TAC)**, August 2025 (to appear).
 
  [System Identification Under Bounded Noise: Optimal Rates Beyond Least Squares](https://arxiv.org/abs/2503.16817)[<a href="https://github.com/jy-cds/Bounded-Noise-SysID-Minimax-Lowerbound" style="color: blue;" target="_blank">code</a>]<br>
-**Xiong Zeng**, Jing Yu, and Necmiye Ozay. IEEE **Control Systems Letters (L-CSS)** and Conference on Decision and Control (CDC) 2025.
+**Xiong Zeng**, Jing Yu, and Necmiye Ozay. IEEE **Control Systems Letters (L-CSS)** （with presentation at CDC 2025).
 
 
  <span style="color:orange">**Conference Papers**</span>
