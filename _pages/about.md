@@ -26,10 +26,6 @@ You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/
  [Non-Asymptotic Learning of Koopman Observables with Process Noise](https://zengxiong111.github.io/zengxiong.github.io/).<br> 
  **Xiong Zeng<sup>*</sup>**, Hyunjae Kim<sup>*</sup>, and Necmiye Ozay. In Preparation.
  
- [Sample Complexity of Learning Koopman Bilinear Observables](https://zengxiong111.github.io/zengxiong.github.io/).<br> 
- **Xiong Zeng<sup>*</sup>**, Hyunjae Kim<sup>*</sup>, and Necmiye Ozay. In Preparation.
-
-
  <span style="color:orange">**Journal Papers**</span>
 
  [Noise Sensitivity of the Semidefinite Programs for Direct Data-Driven LQR](https://arxiv.org/abs/2412.19705)[<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/slides_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" style="color: blue;" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/Poster_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" style="color: blue;" target="_blank">poster</a>][<a href="https://x.com/necozay/status/1885844662381879360" style="color: blue;" target="_blank">a thread on X</a>]<br> 
