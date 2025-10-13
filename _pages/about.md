@@ -68,7 +68,7 @@ English version of the above famous Chinese quotes (by ChatGPT): "A scholar must
 ## Useful links
 
 <a href="https://www.cs.virginia.edu/~robins/YouAndYourResearch.html" style="color: blue;" target="_blank">You and Your Research</a> by Richard Hamming 
-(Chinse version: <a href="https://dominich.notion.site/6bbb616bba2b45649f46e30e6ac8c493" style="color: blue;" target="_blank">你和你的研究</a>)
+(Chinese version: <a href="https://dominich.notion.site/6bbb616bba2b45649f46e30e6ac8c493" style="color: blue;" target="_blank">你和你的研究</a>)
 
 <a href="https://www.linkedin.com/feed/update/urn:li:activity:7198555643308314624/" style="color: blue;" target="_blank">Zen of Research by Prof. Todd Austin</a> 
 
