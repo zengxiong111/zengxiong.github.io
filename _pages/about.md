@@ -48,13 +48,13 @@ You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/
 ## Academic Service
 
 Reviewer for <br>
-IEEE Transactions on Automatic Control (TAC)  <br>
+IEEE Transactions on Automatic Control  <br>
 Automatica  <br>
-IEEE Transactions on Signal Processing (TSP) <br>
-Nonlinear Analysis: Hybrid Systems (NAHS)  <br>
-Control Systems Letters (L-CSS)  <br>
-Conference on Decision and Control (CDC) <br>
-American Control Conference (ACC) <br>
+IEEE Transactions on Signal Processing  <br>
+Nonlinear Analysis: Hybrid Systems   <br>
+Control Systems Letters  <br>
+Conference on Decision and Control   <br>
+American Control Conference   <br>
 
 Technical Committee Member of IEEE CSS Hybrid Systems.
 &nbsp;
