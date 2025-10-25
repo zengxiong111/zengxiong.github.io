@@ -20,10 +20,7 @@ You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/
 &nbsp;
 ## Publications (<sup>*</sup> denotes equal contribution)
 
-<span style="color:orange">**Preprints**</span>
 
- [Non-Asymptotic Learning of Koopman Observables with Process Noise](https://zengxiong111.github.io/zengxiong.github.io/).<br> 
- **Xiong Zeng<sup>*</sup>**, Hyunjae Kim<sup>*</sup>, and Necmiye Ozay. In Preparation.
  
  <span style="color:orange">**Journal Papers**</span>
 
