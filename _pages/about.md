@@ -43,14 +43,18 @@ You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/
 &nbsp;
 ## Academic Service
 
-Reviewer for <br>
+Journal Reviewer for <br>
 IEEE Transactions on Automatic Control  <br>
 Automatica  <br>
 IEEE Transactions on Signal Processing  <br>
 Nonlinear Analysis: Hybrid Systems   <br>
-Control Systems Letters  <br>
+IEEE Control Systems Letters  <br>
+
+Conference Reviewer for <br>
 Conference on Decision and Control   <br>
 American Control Conference   <br>
+ACM International Conference on Hybrid Systems: Computation and Control <br>
+ACM/IEEE International Conference on Cyber-Physical Systems <br>
 
 Technical Committee Member of IEEE CSS Hybrid Systems.
 &nbsp;
