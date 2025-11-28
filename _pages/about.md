@@ -44,17 +44,17 @@ You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/
 ## Academic Service
 
 Journal Reviewer for <br>
-IEEE Transactions on Automatic Control  <br>
+IEEE Transactions on Automatic Control (TAC)  <br>
 Automatica  <br>
-IEEE Transactions on Signal Processing  <br>
-Nonlinear Analysis: Hybrid Systems   <br>
-IEEE Control Systems Letters  <br>
+IEEE Transactions on Signal Processing (TSP)  <br>
+Nonlinear Analysis: Hybrid Systems (NAHS)   <br>
+IEEE Control Systems Letters (L-CSS) <br>
 
 Conference Reviewer for <br>
-Conference on Decision and Control   <br>
-American Control Conference   <br>
-ACM International Conference on Hybrid Systems: Computation and Control <br>
-ACM/IEEE International Conference on Cyber-Physical Systems <br>
+Conference on Decision and Control (CDC)  <br>
+American Control Conference (ACC)  <br>
+ACM International Conference on Hybrid Systems: Computation and Control (HSCC) <br>
+ACM/IEEE International Conference on Cyber-Physical Systems (ICCPS)<br>
 
 Technical Committee Member of IEEE CSS Hybrid Systems.
 &nbsp;
