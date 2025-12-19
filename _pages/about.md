@@ -56,7 +56,10 @@ American Control Conference (ACC)  <br>
 ACM International Conference on Hybrid Systems: Computation and Control (HSCC) <br>
 ACM/IEEE International Conference on Cyber-Physical Systems (ICCPS)<br>
 
-**Technical Committee Member** of IEEE CSS Hybrid Systems.
+**Technical Committee Member** of <br>
+IEEE CSS Hybrid Systems   <br>
+IEEE CSS Robust and Complex Systems <br>
+
 &nbsp;
 ## Bio
 
