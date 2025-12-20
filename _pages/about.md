@@ -58,7 +58,7 @@ ACM/IEEE International Conference on Cyber-Physical Systems (ICCPS)<br>
 
 **Technical Committee Member** of <br>
 IEEE CSS Hybrid Systems   <br>
-IEEE CSS Robust and Complex Systems <br>
+IEEE CSS Robust and Complex Systems  
 &nbsp;
 ## Bio
 
