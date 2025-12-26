@@ -76,6 +76,8 @@ English version of the above famous Chinese quotes (by ChatGPT): "A scholar must
 
 ## Useful links
 
+<a href="https://panchaoyi.com/missing-lesson-how-to-navigate-through-a-cs-research-project" style="color: blue;" target="_blank">Missing Lesson: How to Navigate Through a CS Research Project</a> by Chaoyi Pan
+
 <a href="https://www.cs.virginia.edu/~robins/YouAndYourResearch.html" style="color: blue;" target="_blank">You and Your Research</a> by Richard Hamming 
 (Chinese version: <a href="https://dominich.notion.site/6bbb616bba2b45649f46e30e6ac8c493" style="color: blue;" target="_blank">你和你的研究</a>)
 
