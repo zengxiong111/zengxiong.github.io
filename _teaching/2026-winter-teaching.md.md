@@ -1,9 +1,9 @@
 ---
-title: "ECE 560 (Linear System Theory)"
+title: "ECE 562 (Nonlinear Systems and Control)"
 collection: teaching
 type: "Graduate Student Instructor"
 venue: "University of Michigan, Department"
-date: Sep. 2025 - Dec. 2025
+date: Jan. 2026 - Appil. 2026
 ---
 
-With Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a>.
+With Prof. <a href="https://iincer.github.io/" target="_blank">Inigo Incer</a>.
