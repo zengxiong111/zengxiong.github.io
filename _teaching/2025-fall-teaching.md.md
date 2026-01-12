@@ -2,7 +2,7 @@
 title: "ECE 560 (Linear System Theory)"
 collection: teaching
 type: "Graduate Student Instructor"
-venue: "University of Michigan, Department"
+venue: "University of Michigan, ECE"
 date: Sep. 2025 - Dec. 2025
 ---
 
