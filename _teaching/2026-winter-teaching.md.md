@@ -2,7 +2,7 @@
 title: "ECE 562 (Nonlinear Systems and Control)"
 collection: teaching
 type: "Graduate Student Instructor"
-venue: "University of Michigan, Department"
+venue: "University of Michigan, ECE"
 date: Jan. 2026 - Appil. 2026
 ---
 
