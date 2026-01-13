@@ -33,7 +33,7 @@ Feedback](https://zengxiong111.github.io/zengxiong.github.io/)<br>
 
 
  
- <span style="color:orange">**Journal Papers**</span>
+ <span style="color:orange">**Journal**</span>
 
  [Noise Sensitivity of the Semidefinite Programs for Direct Data-Driven LQR](https://arxiv.org/abs/2412.19705)[<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/slides_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" style="color: blue;" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/Poster_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" style="color: blue;" target="_blank">poster</a>][<a href="https://x.com/necozay/status/1885844662381879360" style="color: blue;" target="_blank">a thread on X</a>]<br> 
 **Xiong Zeng**, Laurent Bako, and Necmiye Ozay. Accepted by Transactions on Automatic Control (**TAC**), August 2025 (to appear).
@@ -42,7 +42,7 @@ Feedback](https://zengxiong111.github.io/zengxiong.github.io/)<br>
 **Xiong Zeng**, Jing Yu, and Necmiye Ozay. IEEE Control Systems Letters (**L-CSS**) （with presentation at CDC 2025).
 
 
- <span style="color:orange">**Conference Papers**</span>
+ <span style="color:orange">**Conference**</span>
 
  
  [Noise Sensitivity of Direct Data-Driven Linear Quadratic Regulator by Semidefinite Programming](https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf)<br>
@@ -56,7 +56,7 @@ Feedback](https://zengxiong111.github.io/zengxiong.github.io/)<br>
 
 
 &nbsp;
-## Teaching Experiences
+## Teaching
 
 Graduate Instructor for EECS 562 Nonlinear Systems and Control (Winter 2026)<br>
 Graduate Instructor for EECS 560 Linear Systems Theory (Fall 2025)<br>
