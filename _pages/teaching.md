@@ -1,37 +1,91 @@
 ---
-layout: archive
-title: "Sitemap"
-permalink: /sitemap/
+layout: single
+title: "Teaching"
+permalink: /teaching/
 author_profile: true
 ---
 
-{% include base_path %}
+<style>
+  .teaching-section-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid #000;
+    margin-bottom: 16px;
+    padding-bottom: 4px;
+  }
 
-A list of all the posts and pages found on the site. For you robots out there, there is an [XML version]({{ base_path }}/sitemap.xml) available for digesting as well.
+  .teaching-entry { margin-bottom: 20px; }
 
-<h2>Pages</h2>
-{% for post in site.pages %}
-  {% include archive-single.html %}
-{% endfor %}
+  .teaching-entry-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    gap: 16px;
+  }
 
-<h2>Posts</h2>
-{% for post in site.posts %}
-  {% include archive-single.html %}
-{% endfor %}
+  .teaching-entry-subheader {
+    display: flex;
+    justify-content: space-between;
+    font-style: italic;
+    margin-top: 2px;
+    gap: 16px;
+  }
 
-{% capture written_label %}'None'{% endcapture %}
+  .teaching-entry-description {
+    margin-top: 6px;
+    margin-left: 14px;
+  }
 
-{% for collection in site.collections %}
-{% unless collection.output == false or collection.label == "posts" %}
-  {% capture label %}{{ collection.label }}{% endcapture %}
-  {% if label != written_label %}
-  <h2>{{ label }}</h2>
-  {% capture written_label %}{{ label }}{% endcapture %}
-  {% endif %}
-{% endunless %}
-{% for post in collection.docs %}
-  {% unless collection.output == false or collection.label == "posts" %}
-  {% include archive-single.html %}
-  {% endunless %}
-{% endfor %}
-{% endfor %}
+  /* Small-screen fallback so flex rows don't overflow */
+  @media (max-width: 700px) {
+    .teaching-entry-header,
+    .teaching-entry-subheader {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>
+
+<div class="teaching-section-title">Teaching Experience</div>
+
+<div class="teaching-entry">
+  <div class="teaching-entry-header">
+    <span>Graduate Student Instructor of UMich ECE 501</span>
+    <span>Sep. 2024 – Dec. 2024</span>
+  </div>
+  <div class="teaching-entry-subheader">
+    <span>Instructor: Prof. Sandeep Pradhan</span>
+    <span>Ann Arbor, Michigan</span>
+  </div>
+  <div class="teaching-entry-description">
+    • Teaching assistant for a graduate-level course ECE 501 (Probability Theory and Random Process).
+  </div>
+</div>
+
+<div class="teaching-entry">
+  <div class="teaching-entry-header">
+    <span>Graduate Student Instructor of UMich ECE 560</span>
+    <span>Sep. 2025 – Dec. 2025</span>
+  </div>
+  <div class="teaching-entry-subheader">
+    <span>Instructor: Prof. Necmiye Ozay</span>
+    <span>Ann Arbor, Michigan</span>
+  </div>
+  <div class="teaching-entry-description">
+    • Teaching assistant for a graduate-level course ECE 560 (Linear System Theory).
+  </div>
+</div>
+
+<div class="teaching-entry">
+  <div class="teaching-entry-header">
+    <span>Graduate Student Instructor of UMich ECE 562</span>
+    <span>Jan. 2025 – May 2026</span>
+  </div>
+  <div class="teaching-entry-subheader">
+    <span>Instructor: Prof. Inigo Incer</span>
+    <span>Ann Arbor, Michigan</span>
+  </div>
+  <div class="teaching-entry-description">
+    • Teaching assistant for a graduate-level course ECE 562 (Nonlinear Systems and Control).
+  </div>
+</div>
