@@ -18,7 +18,7 @@ Unlike the cyberspace of ChatGPT, in the physical world, even infinitesimal para
   
 You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/phd_propsoal_Xiong_Zeng_part.pdf" style="color: blue;" target="_blank">my PhD proposal slides</a> to have a detailed overview. I'm also passionate about **machine coffee** and **practical learning-based control system design** on any scale.
 &nbsp;
-## Publications (<sup>*</sup> denotes equal contribution)
+## Publications 
 
 <span style="color:orange">**Working Papers**</span>
 
