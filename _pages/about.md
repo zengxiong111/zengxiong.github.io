@@ -9,7 +9,7 @@ redirect_from:
 
 I‘m a fifth-year Ph.D. student in UMich ECE department starting in the fall of 2021. I'm advised by Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a>. 
 
-## Research
+## Research Interests
 
 Unlike the cyberspace of ChatGPT, in the physical world, even infinitesimal parameter errors or noise can lead to **catastrophic failures** of **stability and safety**. This reality underscores the necessity for system and algorithm design to be inherently robust to **system uncertainties and parameter perturbations**. Motivated by these challenges, my research focuses on understanding the **statistical fundamental limits** of learning for **dynamical systems and control**, and on exploring strategies to transcend these limits by modifying either the structure of the dynamical system or the algorithmic paradigm. More specifically, I investigate statistical limits of data-driven algorithms from the following three perspectives, in order:
 - **Statistical consistency**: Does the algorithm converge to the ground-truth solution under noise?[<a href="https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf" style="color: blue;" target="_blank">ACC 2025</a>][<a href="https://arxiv.org/abs/2412.19705" style="color: blue;" target="_blank">TAC 2025</a> (direct data-driven control)]
@@ -19,6 +19,17 @@ Unlike the cyberspace of ChatGPT, in the physical world, even infinitesimal para
 You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/phd_propsoal_Xiong_Zeng_part.pdf" style="color: blue;" target="_blank">my PhD proposal slides</a> to have a detailed overview. I'm also passionate about **machine coffee** and **practical learning-based control system design** on any scale.
 &nbsp;
 ## Publications (<sup>*</sup> denotes equal contribution)
+
+<span style="color:orange">**Working Papers**</span>
+
+ 
+ [Non-Asymptotic Learning of Koopman Observables with Process
+Noise](https://zengxiong111.github.io/zengxiong.github.io/)<br>
+ **Xiong Zeng**, Hyunjae Kim and Necmiye Ozay. In Preparation.
+
+  [Rethinking Learning to Stabilize: Benefits of Linear Dynamical State
+Feedback](https://zengxiong111.github.io/zengxiong.github.io/)<br>
+ **Xiong Zeng**, Necmiye Ozay and Mario Sznaier. In Preparation.
 
 
  
@@ -40,6 +51,21 @@ You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/
 
  [On the Hardness of Learning to Stabilize Linear Systems](https://arxiv.org/abs/2311.11151)[<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/hard_learn_stabilize_present.pdf" style="color: blue;" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/On%20The%20Hardness%20of%20Learning%20to%20Stabilize%20Linear%20Systems_Poster.pdf" style="color: blue;" target="_blank">poster</a>][<a href="https://www.youtube.com/watch?v=eP5KKam834w" style="color: blue;" target="_blank">video</a>]<br>
  **Xiong Zeng**, Zexiang Liu, Zhe Du, Necmiye Ozay, and Mario Sznaier. IEEE Conference on Decision and Control (**CDC**) 2023.
+
+&nbsp;
+## Other Writings
+
+<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/A_Tutorial_for_MPPI-s.pdf" style="color: blue;" target="_blank">A Short Tutorial for Model Predictive Path Integral Control</a>  
+
+<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/chapter2-noted.pdf" style="color: blue;" target="_blank">Qualitative Behavior of Second-Order Nonlinear systems</a>, based on the lecture note by Prof. J. Grizzle, Prof. D. Panagou, and Prof. I. Incer.
+
+
+&nbsp;
+## Teaching Experiences
+Graduate Instructor for EECS 562 Nonlinear Systems and Control (Winter 2026)
+Graduate Instructor for EECS 560 Linear Systems Theory (Fall 2025)
+Graduate Instructor for EECS 501 Probability Theory and Random Process (Fall 2024)
+ 
 &nbsp;
 ## Academic Service
 
