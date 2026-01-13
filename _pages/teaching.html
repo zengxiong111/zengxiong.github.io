@@ -1,96 +1,91 @@
-
-
-
 ---
-layout: archive
+layout: single
 title: "Teaching"
 permalink: /teaching/
 author_profile: true
 ---
-
-{% include base_path %}
-
-{% for post in site.teaching reversed %}
-  {% include archive-single.html %}
-{% endfor %}
-
-<!-- ---
-layout: archive
-title: "Teaching"
-permalink: /teaching/
-author_profile: true
---- -->
 
 <style>
-  .section-title {
+  .teaching-section-title {
     font-weight: bold;
     text-transform: uppercase;
     border-bottom: 1px solid #000;
     margin-bottom: 16px;
     padding-bottom: 4px;
   }
-  .entry { margin-bottom: 20px; }
-  .entry-header {
+
+  .teaching-entry { margin-bottom: 20px; }
+
+  .teaching-entry-header {
     display: flex;
     justify-content: space-between;
     font-weight: bold;
+    gap: 16px;
   }
-  .entry-subheader {
+
+  .teaching-entry-subheader {
     display: flex;
     justify-content: space-between;
     font-style: italic;
     margin-top: 2px;
+    gap: 16px;
   }
-  .entry-description {
+
+  .teaching-entry-description {
     margin-top: 6px;
     margin-left: 14px;
   }
+
+  /* Small-screen fallback so flex rows don't overflow */
+  @media (max-width: 700px) {
+    .teaching-entry-header,
+    .teaching-entry-subheader {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
 </style>
 
-<div class="section-title">Teaching Experience</div>
+<div class="teaching-section-title">Teaching Experience</div>
 
-<div class="entry">
-  <div class="entry-header">
+<div class="teaching-entry">
+  <div class="teaching-entry-header">
     <span>Graduate Student Instructor of UMich ECE 501</span>
     <span>Sep. 2024 – Dec. 2024</span>
   </div>
-  <div class="entry-subheader">
+  <div class="teaching-entry-subheader">
     <span>Instructor: Prof. Sandeep Pradhan</span>
     <span>Ann Arbor, Michigan</span>
   </div>
-  <div class="entry-description">
-    • Teaching assistant for a graduate-level course ECE 501
-    (Probability Theory and Random Process).
+  <div class="teaching-entry-description">
+    • Teaching assistant for a graduate-level course ECE 501 (Probability Theory and Random Process).
   </div>
 </div>
 
-<div class="entry">
-  <div class="entry-header">
+<div class="teaching-entry">
+  <div class="teaching-entry-header">
     <span>Graduate Student Instructor of UMich ECE 560</span>
     <span>Sep. 2025 – Dec. 2025</span>
   </div>
-  <div class="entry-subheader">
+  <div class="teaching-entry-subheader">
     <span>Instructor: Prof. Necmiye Ozay</span>
     <span>Ann Arbor, Michigan</span>
   </div>
-  <div class="entry-description">
-    • Teaching assistant for a graduate-level course ECE 560
-    (Linear System Theory).
+  <div class="teaching-entry-description">
+    • Teaching assistant for a graduate-level course ECE 560 (Linear System Theory).
   </div>
 </div>
 
-<div class="entry">
-  <div class="entry-header">
+<div class="teaching-entry">
+  <div class="teaching-entry-header">
     <span>Graduate Student Instructor of UMich ECE 562</span>
     <span>Jan. 2025 – May 2026</span>
   </div>
-  <div class="entry-subheader">
+  <div class="teaching-entry-subheader">
     <span>Instructor: Prof. Inigo Incer</span>
     <span>Ann Arbor, Michigan</span>
   </div>
-  <div class="entry-description">
-    • Teaching assistant for a graduate-level course ECE 562
-    (Nonlinear Systems and Control).
+  <div class="teaching-entry-description">
+    • Teaching assistant for a graduate-level course ECE 562 (Nonlinear Systems and Control).
   </div>
 </div>
-
