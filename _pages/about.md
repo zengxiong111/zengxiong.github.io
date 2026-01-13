@@ -9,7 +9,7 @@ redirect_from:
 
 I‘m a fifth-year Ph.D. student in UMich ECE department starting in the fall of 2021. I'm advised by Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a>. 
 
-## Research Interests
+## Research
 
 Unlike the cyberspace of ChatGPT, in the physical world, even infinitesimal parameter errors or noise can lead to **catastrophic failures** of **stability and safety**. This reality underscores the necessity for system and algorithm design to be inherently robust to **system uncertainties and parameter perturbations**. Motivated by these challenges, my research focuses on understanding the **statistical fundamental limits** of learning for **dynamical systems and control**, and on exploring strategies to transcend these limits by modifying either the structure of the dynamical system or the algorithmic paradigm. More specifically, I investigate statistical limits of data-driven algorithms from the following three perspectives, in order:
 - **Statistical consistency**: Does the algorithm converge to the ground-truth solution under noise?[<a href="https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf" style="color: blue;" target="_blank">ACC 2025</a>][<a href="https://arxiv.org/abs/2412.19705" style="color: blue;" target="_blank">TAC 2025</a> (direct data-driven control)]
