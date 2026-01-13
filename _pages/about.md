@@ -20,7 +20,7 @@ You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/
 &nbsp;
 ## Publications 
 
-<span style="color:orange">**Working Papers**</span>
+<span style="color:orange">**Working**</span>
 
  
  [Non-Asymptotic Learning of Koopman Observables with Process
