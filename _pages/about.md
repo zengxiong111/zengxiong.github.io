@@ -73,8 +73,7 @@ A Short Tutorial for Model Predictive Path Integral Control
    target="_blank"
    style="color: blue;">
 Qualitative Behavior of Second-Order Nonlinear Systems
-</a>
-
+</a>, based on the lecture note by Prof. J. Grizzle, Prof. D. Panagou, and Prof. I. Incer.
 &nbsp;
 ## Academic Service
 
