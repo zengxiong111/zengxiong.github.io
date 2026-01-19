@@ -62,7 +62,7 @@ Graduate Instructor for EECS 501 **Probability Theory and Random Process** (Fall
 
 <a href="https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/A_Tutorial_for_MPPI-s.pdf" style="color: blue;" target="_blank">A Short Tutorial for Model Predictive Path Integral Control</a>  
 
-<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/chapter2-noted.pdf" style="color: blue;" target="_blank">Qualitative Behavior of Second-Order Nonlinear Systems</a>, based on the lecture note by Prof. J. Grizzle, Prof. D. Panagou, and Prof. I. Incer.
+<a href="https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/chapter2-noted.pdf" style="color: blue;" target="_blank">Qualitative Behavior of Second-Order Nonlinear Systems</a>, based on the lecture note by Prof. J. Grizzle, Prof. D. Panagou, and Prof. I. Incer.  
 &nbsp;
 ## Academic Service
 
