@@ -16,11 +16,11 @@ Unlike the cyberspace of ChatGPT, in the physical world, even infinitesimal para
 - **Statistical optimality**: If the algorithm is statistically consistent, does it achieve the minimax sample complexity lower bound?[<a href="https://arxiv.org/abs/2503.16817" style="color: blue;" target="_blank">L-CSS and CDC 2025</a> (system identification)]
 - **Statistical hardness**: If the algorithm is statistically optimal, does the optimal sample complexity increase moderately with the system complexity?[<a href="https://arxiv.org/abs/2311.11151" style="color: blue;" target="_blank">CDC 2023</a> (learning to stabilize)]
   
-You can check [<a href="https://docs.google.com/gview?url=https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/phd_propsoal_Xiong_Zeng_part.pdf&embedded=true"
+You can check <a href="https://docs.google.com/gview?url=https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/phd_propsoal_Xiong_Zeng_part.pdf&embedded=true"
    target="_blank"
    style="color: blue;">
 my PhD proposal slides
-</a>] to have a detailed overview. I'm also passionate about **machine coffee** and **practical learning-based control system design** on any scale (Feel free to send me emails!).
+</a> to have a detailed overview. I'm also passionate about **machine coffee** and **practical learning-based control system design** on any scale (Feel free to send me emails!).
 &nbsp;
 ## Publications 
 
