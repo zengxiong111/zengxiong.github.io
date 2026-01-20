@@ -50,8 +50,16 @@ Feedback](https://zengxiong111.github.io/zengxiong.github.io/)<br>
 
 
  [On the Hardness of Learning to Stabilize Linear Systems](https://arxiv.org/abs/2311.11151)
- [<!-- <a href="https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/hard_learn_stabilize_present.pdf" style="color: blue;" target="_blank">slides</a>   -->]
- [<!-- <a href="https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/On.The.Hardness.of.Learning.to.Stabilize.Linear.Systems_Poster.pdf" style="color: blue;" target="_blank">poster</a>   -->]
+[<a href="https://docs.google.com/gview?url=https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/hard_learn_stabilize_present.pdf&embedded=true"
+   target="_blank"
+   style="color: blue;">
+poster
+</a>]
+ [<a href="https://docs.google.com/gview?url=https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/On.The.Hardness.of.Learning.to.Stabilize.Linear.Systems_Poster.pdf&embedded=true"
+   target="_blank"
+   style="color: blue;">
+poster
+</a>]
  [<a href="https://www.youtube.com/watch?v=eP5KKam834w" style="color: blue;" target="_blank">video</a>]<br>
  **Xiong Zeng**, Zexiang Liu, Zhe Du, Necmiye Ozay, and Mario Sznaier. IEEE Conference on Decision and Control (**CDC**) 2023.
 &nbsp;
@@ -63,9 +71,6 @@ Graduate Instructor for EECS 501 **Probability Theory and Random Process** (Fall
 &nbsp;
 ## Other Writings
 
-<!-- <a href="https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/A_Tutorial_for_MPPI-s.pdf" style="color: blue;" target="_blank">A Short Tutorial for Model Predictive Path Integral Control</a>   -->
-
-<!-- <a href="https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/chapter2-noted.pdf" style="color: blue;" target="_blank">Qualitative Behavior of Second-Order Nonlinear Systems</a>, based on the lecture note by Prof. J. Grizzle, Prof. D. Panagou, and Prof. I. Incer.   -->
 <a href="https://docs.google.com/gview?url=https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/A_Tutorial_for_MPPI-s.pdf&embedded=true"
    target="_blank"
    style="color: blue;">
