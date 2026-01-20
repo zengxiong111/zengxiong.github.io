@@ -16,7 +16,11 @@ Unlike the cyberspace of ChatGPT, in the physical world, even infinitesimal para
 - **Statistical optimality**: If the algorithm is statistically consistent, does it achieve the minimax sample complexity lower bound?[<a href="https://arxiv.org/abs/2503.16817" style="color: blue;" target="_blank">L-CSS and CDC 2025</a> (system identification)]
 - **Statistical hardness**: If the algorithm is statistically optimal, does the optimal sample complexity increase moderately with the system complexity?[<a href="https://arxiv.org/abs/2311.11151" style="color: blue;" target="_blank">CDC 2023</a> (learning to stabilize)]
   
-You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/phd_propsoal_Xiong_Zeng_part.pdf" style="color: blue;" target="_blank">my PhD proposal slides</a> to have a detailed overview. I'm also passionate about **machine coffee** and **practical learning-based control system design** on any scale (Feel free to send me emails!).
+You can check [<a href="https://docs.google.com/gview?url=https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/phd_propsoal_Xiong_Zeng_part.pdf&embedded=true"
+   target="_blank"
+   style="color: blue;">
+my PhD proposal slides
+</a>] to have a detailed overview. I'm also passionate about **machine coffee** and **practical learning-based control system design** on any scale (Feel free to send me emails!).
 &nbsp;
 ## Publications 
 
@@ -35,7 +39,18 @@ Feedback](https://zengxiong111.github.io/zengxiong.github.io/)<br>
  
  <span style="color:orange">**Journal**</span>
 
- [Noise Sensitivity of the Semidefinite Programs for Direct Data-Driven LQR](https://arxiv.org/abs/2412.19705)[<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/slides_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" style="color: blue;" target="_blank">slides</a>][<a href="https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/Poster_Noise%20Sensitivity%20of%20DDD%20LQR%20by%20Semidefinite%20Programming.pdf" style="color: blue;" target="_blank">poster</a>][<a href="https://x.com/necozay/status/1885844662381879360" style="color: blue;" target="_blank">a thread on X</a>]<br> 
+ [Noise Sensitivity of the Semidefinite Programs for Direct Data-Driven LQR](https://arxiv.org/abs/2412.19705)
+ [<a href="https://docs.google.com/gview?url=https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/slides_Noise.Sensitivity.of.DDD.LQR.by.Semidefinite.Programming.pdf&embedded=true"
+   target="_blank"
+   style="color: blue;">
+slides
+</a>]
+[<a href="https://docs.google.com/gview?url=https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/Poster_Noise.Sensitivity.of.DDD.LQR.by.Semidefinite.Programming.pdf&embedded=true"
+   target="_blank"
+   style="color: blue;">
+poster
+</a>]
+ [<a href="https://x.com/necozay/status/1885844662381879360" style="color: blue;" target="_blank">a thread on X</a>]<br> 
 **Xiong Zeng**, Laurent Bako, and Necmiye Ozay. Accepted by Transactions on Automatic Control (**TAC**), August 2025 (to appear).
 
  [System Identification Under Bounded Noise: Optimal Rates Beyond Least Squares](https://arxiv.org/abs/2503.16817)[<a href="https://github.com/jy-cds/Bounded-Noise-SysID-Minimax-Lowerbound" style="color: blue;" target="_blank">code</a>]<br>
