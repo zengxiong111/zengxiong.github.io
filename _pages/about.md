@@ -53,7 +53,7 @@ Feedback](https://zengxiong111.github.io/zengxiong.github.io/)<br>
 [<a href="https://docs.google.com/gview?url=https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/hard_learn_stabilize_present.pdf&embedded=true"
    target="_blank"
    style="color: blue;">
-poster
+slides
 </a>]
  [<a href="https://docs.google.com/gview?url=https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/On.The.Hardness.of.Learning.to.Stabilize.Linear.Systems_Poster.pdf&embedded=true"
    target="_blank"
