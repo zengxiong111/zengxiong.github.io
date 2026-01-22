@@ -65,23 +65,16 @@ poster
 
 
  [On the Hardness of Learning to Stabilize Linear Systems](https://arxiv.org/abs/2311.11151)
-[<a href="https://docs.google.com/gview?url=https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/hard_learn_stabilize_present.pdf&embedded=true"
+[<a href="https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/hard_learn_stabilize_present.pdf"
    target="_blank"
    style="color: blue;">
 slides
-</a>]
- [<a href="https://docs.google.com/gview?url=https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/On.The.Hardness.of.Learning.to.Stabilize.Linear.Systems_Poster.pdf&embedded=true"
-   target="_blank"
-   style="color: blue;">
-poster
 </a>]
 [<a href="https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/On.The.Hardness.of.Learning.to.Stabilize.Linear.Systems_Poster.pdf"
    target="_blank"
    style="color: blue;">
 poster
 </a>]
-
-
  [<a href="https://www.youtube.com/watch?v=eP5KKam834w" style="color: blue;" target="_blank">video</a>]<br>
  **Xiong Zeng**, Zexiang Liu, Zhe Du, Necmiye Ozay, and Mario Sznaier. IEEE Conference on Decision and Control (**CDC**) 2023.
 &nbsp;
