@@ -16,7 +16,7 @@ Unlike the cyberspace of ChatGPT, in the physical world, even infinitesimal para
 - **Statistical optimality**: If the algorithm is statistically consistent, does it achieve the minimax sample complexity lower bound?[<a href="https://arxiv.org/abs/2503.16817" style="color: blue;" target="_blank">L-CSS and CDC 2025</a> (system identification)]
 - **Statistical hardness**: If the algorithm is statistically optimal, does the optimal sample complexity increase moderately with the system complexity?[<a href="https://arxiv.org/abs/2311.11151" style="color: blue;" target="_blank">CDC 2023</a> (learning to stabilize)]
   
-You can check <a href="https://docs.google.com/gview?url=https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/phd_propsoal_Xiong_Zeng_part.pdf&embedded=true"
+You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/phd_propsoal_Xiong_Zeng_part.pdf"
    target="_blank"
    style="color: blue;">
 my PhD proposal slides
@@ -40,12 +40,12 @@ Feedback](https://zengxiong111.github.io/zengxiong.github.io/)<br>
  <span style="color:orange">**Journal**</span>
 
  [Noise Sensitivity of the Semidefinite Programs for Direct Data-Driven LQR](https://arxiv.org/abs/2412.19705)
- [<a href="https://docs.google.com/gview?url=https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/slides_Noise.Sensitivity.of.DDD.LQR.by.Semidefinite.Programming.pdf&embedded=true"
+ [<a href="https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/slides_Noise.Sensitivity.of.DDD.LQR.by.Semidefinite.Programming.pdf"
    target="_blank"
    style="color: blue;">
 slides
 </a>]
-[<a href="https://docs.google.com/gview?url=https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/Poster_Noise.Sensitivity.of.DDD.LQR.by.Semidefinite.Programming.pdf&embedded=true"
+[<a href="https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/Poster_Noise.Sensitivity.of.DDD.LQR.by.Semidefinite.Programming.pdf"
    target="_blank"
    style="color: blue;">
 poster
