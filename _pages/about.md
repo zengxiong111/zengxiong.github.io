@@ -75,6 +75,13 @@ slides
    style="color: blue;">
 poster
 </a>]
+[<a href="https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/On.The.Hardness.of.Learning.to.Stabilize.Linear.Systems_Poster.pdf"
+   target="_blank"
+   style="color: blue;">
+poster
+</a>]
+
+
  [<a href="https://www.youtube.com/watch?v=eP5KKam834w" style="color: blue;" target="_blank">video</a>]<br>
  **Xiong Zeng**, Zexiang Liu, Zhe Du, Necmiye Ozay, and Mario Sznaier. IEEE Conference on Decision and Control (**CDC**) 2023.
 &nbsp;
