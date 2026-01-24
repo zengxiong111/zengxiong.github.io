@@ -86,7 +86,7 @@ Graduate Instructor for EECS 501 **Probability Theory and Random Process** (Fall
 &nbsp;
 ## Other Writings
 
-<a href="https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/A_Tutorial_for_MPPI-s.pdf"
+<a href="https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/A_Tutorial_for_MPPI-s.pdf?raw=1"
    target="_blank"
    style="color: blue;">
 A Short Tutorial for Model Predictive Path Integral Control
