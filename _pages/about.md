@@ -151,18 +151,7 @@ English version of the above famous Chinese quotes (by ChatGPT): "A scholar must
 
 <a href="https://www.mit.edu/~dimitrib/Ten_Rules.html" style="color: blue;" target="_blank">Ten Simple Rules for Mathematical Writing</a> by Prof. Dimitri Bertsekas.
 
-<a href="https://raw.githubusercontent.com/zengxiong111/zengxiong.github.io/master/files/A_Tutorial_for_MPPI-s.pdf"
-   target="_blank"
-   style="color: blue;">
-A Short Tutorial for Model Predictive Path Integral Control
-</a>
-
-<iframe
-  src="https://raw.githubusercontent.com/zengxiong111/zengxiong.github.io/master/files/A_Tutorial_for_MPPI-s.pdf"
-  width="100%"
-  height="800px"
-  style="border: none;">
-</iframe>
+ 
 
 
 <!-- <a href="https://www.marxists.org/chinese/linbiao/mia-chinese-linbiao-193612.htm" style="color: blue;" target="_blank">About Management and Leadership</a> -->
