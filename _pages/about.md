@@ -134,7 +134,7 @@ English version of the above famous Chinese quotes (by ChatGPT): "A scholar must
 &nbsp;
 ## Useful links
 
-<a href="https://www.rwr.ethz.ch/slides/2025/01_Slides_Project_Management_Focus_Talk.pdf" style="color: blue;" target="_blank">Missing Lesson: How to Navigate Through a CS Research Project</a> by Prof. Robert Katzschmann.
+<a href="https://www.rwr.ethz.ch/slides/2025/01_Slides_Project_Management_Focus_Talk.pdf" style="color: blue;" target="_blank">Project Management</a> by Prof. Robert Katzschmann.
 
 <a href="https://panchaoyi.com/missing-lesson-how-to-navigate-through-a-cs-research-project" style="color: blue;" target="_blank">Missing Lesson: How to Navigate Through a CS Research Project</a> by Chaoyi Pan.
 
