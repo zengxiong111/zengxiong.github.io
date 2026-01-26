@@ -134,20 +134,22 @@ English version of the above famous Chinese quotes (by ChatGPT): "A scholar must
 &nbsp;
 ## Useful links
 
-<a href="https://panchaoyi.com/missing-lesson-how-to-navigate-through-a-cs-research-project" style="color: blue;" target="_blank">Missing Lesson: How to Navigate Through a CS Research Project</a> by Chaoyi Pan
+<a href="https://www.rwr.ethz.ch/slides/2025/01_Slides_Project_Management_Focus_Talk.pdf" style="color: blue;" target="_blank">Missing Lesson: How to Navigate Through a CS Research Project</a> by Prof. Robert Katzschmann.
+
+<a href="https://panchaoyi.com/missing-lesson-how-to-navigate-through-a-cs-research-project" style="color: blue;" target="_blank">Missing Lesson: How to Navigate Through a CS Research Project</a> by Chaoyi Pan.
 
 <a href="https://www.cs.virginia.edu/~robins/YouAndYourResearch.html" style="color: blue;" target="_blank">You and Your Research</a> by Richard Hamming 
-(Chinese version: <a href="https://dominich.notion.site/6bbb616bba2b45649f46e30e6ac8c493" style="color: blue;" target="_blank">你和你的研究</a>)
+(Chinese version: <a href="https://dominich.notion.site/6bbb616bba2b45649f46e30e6ac8c493" style="color: blue;" target="_blank">你和你的研究</a>).
 
-<a href="https://lavalle.pl/bio.html" style="color: blue;" target="_blank">The Story of Prof. Steven M. LaValle</a>, the inventor of rapidly exploring random tree (RRT)
+<a href="https://lavalle.pl/bio.html" style="color: blue;" target="_blank">The Story of Prof. Steven M. LaValle</a>, the inventor of rapidly exploring random tree (RRT).
 
-<a href="https://www.linkedin.com/feed/update/urn:li:activity:7198555643308314624/" style="color: blue;" target="_blank">Zen of Research</a> by Prof. Todd Austin
+<a href="https://www.linkedin.com/feed/update/urn:li:activity:7198555643308314624/" style="color: blue;" target="_blank">Zen of Research</a> by Prof. Todd Austin.
 
-<a href="https://www.eecs.harvard.edu/~michaelm/postscripts/ReadPaper.pdf" style="color: blue;" target="_blank">How to Read a Research Paper</a> by Prof. Michael Mitzenmacher
+<a href="https://www.eecs.harvard.edu/~michaelm/postscripts/ReadPaper.pdf" style="color: blue;" target="_blank">How to Read a Research Paper</a> by Prof. Michael Mitzenmacher.
 
-<a href="https://docs.google.com/document/u/1/d/1_q-gOj2v06kOq1NHeZXWr2gBwEephvOcpCewSYSmMwc/pub" style="color: blue;" target="_blank">How to Write a Conference Paper</a> by Prof. Dmitry Berenson
+<a href="https://docs.google.com/document/u/1/d/1_q-gOj2v06kOq1NHeZXWr2gBwEephvOcpCewSYSmMwc/pub" style="color: blue;" target="_blank">How to Write a Conference Paper</a> by Prof. Dmitry Berenson.
 
-<a href="https://www.mit.edu/~dimitrib/Ten_Rules.html" style="color: blue;" target="_blank">Ten Simple Rules for Mathematical Writing</a> by Prof. Dimitri Bertsekas
+<a href="https://www.mit.edu/~dimitrib/Ten_Rules.html" style="color: blue;" target="_blank">Ten Simple Rules for Mathematical Writing</a> by Prof. Dimitri Bertsekas.
 
 <!-- <a href="https://www.marxists.org/chinese/linbiao/mia-chinese-linbiao-193612.htm" style="color: blue;" target="_blank">About Management and Leadership</a> -->
 
