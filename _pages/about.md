@@ -20,7 +20,7 @@ You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/relea
    target="_blank"
    style="color: blue;">
 my PhD proposal slides
-</a> to have a detailed overview. I'm also passionate about **machine coffee** and **practical learning-based control system design** on any scale (Feel free to send me emails!).
+</a> to have a detailed overview. I'm also passionate about **machine coffee** and **large-scale  learning-based control system design** (Feel free to send me emails!).
 &nbsp;
 ## Publications 
 
@@ -51,7 +51,7 @@ slides
 poster
 </a>]
  [<a href="https://x.com/necozay/status/1885844662381879360" style="color: blue;" target="_blank">a thread on X</a>]<br> 
-**Xiong Zeng**, Laurent Bako, and Necmiye Ozay. Accepted by Transactions on Automatic Control (**TAC**), August 2025 (to appear).
+**Xiong Zeng**, Laurent Bako, and Necmiye Ozay. Accepted by Transactions on Automatic Control (**TAC**) 2025.
 
  [System Identification Under Bounded Noise: Optimal Rates Beyond Least Squares](https://arxiv.org/abs/2503.16817)[<a href="https://github.com/jy-cds/Bounded-Noise-SysID-Minimax-Lowerbound" style="color: blue;" target="_blank">code</a>]<br>
 **Xiong Zeng**, Jing Yu, and Necmiye Ozay. IEEE Control Systems Letters (**L-CSS**) （with presentation at CDC 2025).
