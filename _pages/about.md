@@ -11,16 +11,14 @@ I‘m a fifth-year Ph.D. student in UMich ECE department starting in the fall of
 
 ## Research
 
-Unlike the cyberspace of ChatGPT, in the physical world, even infinitesimal parameter errors or noise can lead to **catastrophic failures** of **stability and safety**. This reality underscores the necessity for system and algorithm design to be robust to **system uncertainties and parameter perturbations**. Motivated by these challenges, my research focuses on the **statistical fundamental limits** of learning for **dynamical systems and control**, and on exploring strategies to transcend these limits by modifying either the structure of the dynamical system or the algorithmic paradigm. More specifically, I investigate statistical limits of data-driven algorithms from the following three perspectives:
-- **Statistical consistency**: Does the algorithm converge to the ground-truth solution under noise?[<a href="https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf" style="color: blue;" target="_blank">ACC 2025</a>][<a href="https://arxiv.org/abs/2412.19705" style="color: blue;" target="_blank">TAC 2025</a> (direct data-driven control)]
-- **Statistical optimality**: If the algorithm is statistically consistent, does it achieve the minimax sample complexity lower bound?[<a href="https://arxiv.org/abs/2503.16817" style="color: blue;" target="_blank">L-CSS and CDC 2025</a> (system identification)]
-- **Statistical hardness**: If the algorithm is statistically optimal, does the optimal sample complexity increase moderately with the system complexity?[<a href="https://arxiv.org/abs/2311.11151" style="color: blue;" target="_blank">CDC 2023</a> (learning to stabilize)]
-  
+Currently, I focus on rigorous robot learning system design.  
+
+My PhD study is about the statistical fundamental limits for **Koopman observable learning**[<a href="https://scholar.google.com/citations?user=v4lWTTwAAAAJ&hl=en" style="color: blue;" target="_blank">To Appear</a>], **direct data-driven control**[<a href="https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf" style="color: blue;" target="_blank">ACC 2025</a>, <a href="https://arxiv.org/abs/2412.19705" style="color: blue;" target="_blank">TAC 2025</a>], **system identification** [<a href="https://arxiv.org/abs/2503.16817" style="color: blue;" target="_blank">L-CSS and CDC 2025</a>], and **learning to stabilize** [<a href="https://arxiv.org/abs/2311.11151" style="color: blue;" target="_blank">CDC 2023</a>].
 You can check <a href="https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/phd_propsoal_Xiong_Zeng_part.pdf"
    target="_blank"
    style="color: blue;">
 my PhD proposal slides
-</a> to have a detailed overview. I'm also passionate about **machine coffee** and **large-scale  learning-based control system design** (Feel free to send me emails!).
+</a> to have a detailed overview. I'm also passionate about **machine coffee**. Feel free to send me emails!
 &nbsp;
 ## Publications 
 
