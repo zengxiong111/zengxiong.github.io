@@ -49,7 +49,7 @@ slides
 poster
 </a>]
  [<a href="https://x.com/necozay/status/1885844662381879360" style="color: blue;" target="_blank">a thread on X</a>]<br> 
-**Xiong Zeng**, Laurent Bako, and Necmiye Ozay. Accepted by Transactions on Automatic Control (**TAC**) 2025.
+**Xiong Zeng**, Laurent Bako, and Necmiye Ozay. IEEE Transactions on Automatic Control (**TAC**) 2025.
 
 
 
