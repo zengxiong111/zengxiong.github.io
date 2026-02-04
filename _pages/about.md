@@ -18,7 +18,7 @@ Currently, I focus on rigorous robot learning system design:
 
 My PhD studies are about some statistical fundamental limits for Koopman observable learning[<a href="https://scholar.google.com/citations?user=v4lWTTwAAAAJ&hl=en" style="color: blue;" target="_blank">To Appear</a>], direct data-driven control[<a href="https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf" style="color: blue;" target="_blank">ACC 2025</a>, <a href="https://arxiv.org/abs/2412.19705" style="color: blue;" target="_blank">TAC 2025</a>], system identification [<a href="https://arxiv.org/abs/2503.16817" style="color: blue;" target="_blank">L-CSS and CDC 2025</a>], and learning to stabilize [<a href="https://arxiv.org/abs/2311.11151" style="color: blue;" target="_blank">CDC 2023</a>].
 You can check <a href="https://zengxiong111.github.io/zengxiong.github.io/files/phd_propsoal_Xiong_Zeng_part.pdf"
-   target="_blank">
+   target="_blank"style="color: blue;">
 my PhD proposal slides
 </a> to have a detailed overview. I'm also passionate about machine coffee. Feel free to send me emails!
 &nbsp;
@@ -41,11 +41,11 @@ Feedback](https://zengxiong111.github.io/zengxiong.github.io/)<br>
 
  [Noise Sensitivity of the Semidefinite Programs for Direct Data-Driven LQR](https://arxiv.org/abs/2412.19705)
  [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/slides_Noise.Sensitivity.of.DDD.LQR.by.Semidefinite.Programming.pdf"
-   target="_blank">
+   target="_blank"style="color: blue;">
 slides
 </a>]
 [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Poster_Noise.Sensitivity.of.DDD.LQR.by.Semidefinite.Programming.pdf"
-   target="_blank">
+   target="_blank"style="color: blue;">
 poster
 </a>]
  [<a href="https://x.com/necozay/status/1885844662381879360" style="color: blue;" target="_blank">a thread on X</a>]<br> 
@@ -55,7 +55,7 @@ poster
 
 
  [System Identification Under Bounded Noise: Optimal Rates Beyond Least Squares](https://arxiv.org/abs/2503.16817)[<a href="https://github.com/jy-cds/Bounded-Noise-SysID-Minimax-Lowerbound" style="color: blue;" target="_blank">code</a>][<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Poster_system_id_bounded_noise.pdf"
-   target="_blank">
+   target="_blank"style="color: blue;">
 poster
 </a>]<br>
 **Xiong Zeng**, Jing Yu, and Necmiye Ozay. IEEE Control Systems Letters (**L-CSS**) （with presentation at CDC 2025).
@@ -70,11 +70,11 @@ poster
 
  [On the Hardness of Learning to Stabilize Linear Systems](https://arxiv.org/abs/2311.11151)
 [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/hard_learn_stabilize_present.pdf"
-   target="_blank">
+   target="_blank"style="color: blue;">
 slides
 </a>]
 [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/On.The.Hardness.of.Learning.to.Stabilize.Linear.Systems_Poster.pdf"
-   target="_blank">
+   target="_blank"style="color: blue;">
 poster
 </a>]
  [<a href="https://www.youtube.com/watch?v=eP5KKam834w" style="color: blue;" target="_blank">video</a>]<br>
@@ -91,12 +91,12 @@ Graduate Instructor for EECS 501 **Probability Theory and Random Process** (Fall
  
 
 <a href="https://zengxiong111.github.io/zengxiong.github.io/files/A_Tutorial_for_MPPI-s.pdf"
-   target="_blank">
+   target="_blank"style="color: blue;">
   A Short Tutorial for Model Predictive Path Integral Control
 </a>
 
 <a href="https://zengxiong111.github.io/zengxiong.github.io/files/chapter2-noted.pdf"
-   target="_blank">
+   target="_blank"style="color: blue;">
   Qualitative Behavior of Second-Order Nonlinear Systems
 </a>, based on the lecture note by Prof. J. Grizzle, Prof. D. Panagou, and Prof. I. Incer.
 &nbsp;
