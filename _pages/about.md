@@ -78,9 +78,8 @@ poster
    style="color: blue;">
 slides
 </a>]
-[<a href="https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/On.The.Hardness.of.Learning.to.Stabilize.Linear.Systems_Poster.pdf"
-   target="_blank"
-   style="color: blue;">
+[<a href="https://zengxiong111.github.io/zengxiong.github.io/files/On.The.Hardness.of.Learning.to.Stabilize.Linear.Systems_Poster.pdf"
+   target="_blank">
 poster
 </a>]
  [<a href="https://www.youtube.com/watch?v=eP5KKam834w" style="color: blue;" target="_blank">video</a>]<br>
