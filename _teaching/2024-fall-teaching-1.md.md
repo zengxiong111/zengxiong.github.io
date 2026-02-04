@@ -2,7 +2,7 @@
 title: "ECE 501 (Probability Theory and Random Process)"
 collection: teaching
 type: "Graduate Student Instructor"
-venue: "University of Michigan, Department"
+venue: "University of Michigan, ECE"
 date: Sep. 2024 - Dec. 2024
 ---
 

@@ -8,6 +8,7 @@ date: 2023-11-18
 venue: '2023 62nd IEEE Conference on Decision and Control (CDC)'
 slidesurl: 'https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/hard_learn_stabilize_present.pdf'
 paperurl: 'https://github.com/zengxiong111/zengxiong.github.io/blob/master/files/hard_learn_to_stabilize.pdf'
+citation: 'X. Zeng, Z. Liu, Z. Du, N. Ozay, and M. Sznaier, “On the Hardness of Learning to Stabilize Linear Systems”, Proc. 62nd IEEE Conference on Decision and Control (CDC), Singapore, December 2023.'
 ---
 
  Inspired by the work of Tsiamis et al. [1], in this
