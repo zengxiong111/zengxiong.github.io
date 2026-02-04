@@ -100,7 +100,7 @@ Graduate Instructor for EECS 501 **Probability Theory and Random Process** (Fall
 A Short Tutorial for Model Predictive Path Integral Control
 </a>
 
-<a href="{{ site.baseurl }}/files/A_Tutorial_for_MPPI.pdf" target="_blank">
+<a href="{{ site.baseurl }}files/A_Tutorial_for_MPPI-s.pdf" target="_blank">
   A Short Tutorial for Model Predictive Path Integral Control
 </a>
 
