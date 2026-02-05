@@ -13,7 +13,7 @@ I'm a fifth-year Ph.D. student in UMich ECE department starting in the fall of 2
 
 Currently, I focus on rigorous robot learning system design:
 
-<div align="center"><strong>Real2Sim2Real = System Identification + Learning-based Control.</strong></div> 
+<div align="center"><strong>Real2Sim2Real ≈ System Identification + Learning-based Control.</strong></div> 
 <br>
 
 My PhD studies are about some statistical fundamental limits for Koopman observable learning[<a href="https://scholar.google.com/citations?user=v4lWTTwAAAAJ&hl=en" style="color: blue;" target="_blank">To Appear</a>], direct data-driven control[<a href="https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf" style="color: blue;" target="_blank">ACC 2025</a>, <a href="https://arxiv.org/abs/2412.19705" style="color: blue;" target="_blank">TAC 2025</a>], system identification [<a href="https://arxiv.org/abs/2503.16817" style="color: blue;" target="_blank">L-CSS and CDC 2025</a>], and learning to stabilize [<a href="https://arxiv.org/abs/2311.11151" style="color: blue;" target="_blank">CDC 2023</a>].
