@@ -143,6 +143,7 @@ I like trail running, and people can often find me on the trails and hills in An
 English version of the above famous Chinese quotes (by ChatGPT): "A scholar must cultivate broad-mindedness and resilience, as the responsibilities are heavy and the journey is long. Without nonattachment, one cannot clarify one's aspirations; without tranquility, one cannot reach far. From people, for people."
 &nbsp;
 ## Useful links
+For academic research,
 
 <a href="https://www.rwr.ethz.ch/slides/2025/01_Slides_Project_Management_Workshop.pdf" style="color: blue;" target="_blank">Project Management</a> by Prof. Robert Katzschmann.
 
@@ -160,6 +161,8 @@ English version of the above famous Chinese quotes (by ChatGPT): "A scholar must
 <a href="https://docs.google.com/document/u/1/d/1_q-gOj2v06kOq1NHeZXWr2gBwEephvOcpCewSYSmMwc/pub" style="color: blue;" target="_blank">How to Write a Conference Paper</a> by Prof. Dmitry Berenson.
 
 <a href="https://www.mit.edu/~dimitrib/Ten_Rules.html" style="color: blue;" target="_blank">Ten Simple Rules for Mathematical Writing</a> by Prof. Dimitri Bertsekas.
+
+For business,
 
 <a href="https://playbook.samaltman.com/" style="color: blue;" target="_blank">Startup Playbook</a> by Y Combinator.
 
