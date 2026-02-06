@@ -161,6 +161,8 @@ English version of the above famous Chinese quotes (by ChatGPT): "A scholar must
 
 <a href="https://www.mit.edu/~dimitrib/Ten_Rules.html" style="color: blue;" target="_blank">Ten Simple Rules for Mathematical Writing</a> by Prof. Dimitri Bertsekas.
 
+<a href="https://playbook.samaltman.com/" style="color: blue;" target="_blank">Startup Playbook</a> by Y Combinator.
+
  
 
 
