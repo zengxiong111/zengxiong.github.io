@@ -171,6 +171,14 @@ English version of the above famous Chinese quotes (by ChatGPT): "A scholar must
 
 <a href="https://huggingface.co/docs/lerobot/index" style="color: blue;" target="_blank">LeRobot</a>.
 
+<a href="https://arxiv.org/pdf/2510.12403" style="color: blue;" target="_blank">Robot Learning: A Tutorial</a>.
+
+<a href="https://arxiv.org/pdf/2503.03464" style="color: blue;" target="_blank">Generative Artificial Intelligence in Robotic
+Manipulation: A Survey</a>.
+
+<a href="https://arxiv.org/pdf/2506.20487" style="color: blue;" target="_blank">A Survey of Behavior Foundation Model: Next-Generation
+Whole-Body Control System of Humanoid Robots</a>.
+
  
 
 
