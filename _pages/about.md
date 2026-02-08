@@ -167,6 +167,10 @@ English version of the above famous Chinese quotes (by ChatGPT): "A scholar must
 
 <a href="https://playbook.samaltman.com/" style="color: blue;" target="_blank">Startup Playbook</a> by Y Combinator.
 
+**Robot Learning**
+
+<a href="https://huggingface.co/docs/lerobot/index" style="color: blue;" target="_blank">LeRobot</a>.
+
  
 
 
