@@ -169,7 +169,7 @@ English version of the above famous Chinese quotes (by ChatGPT): "A scholar must
 
 **Robot Learning**
 
-<a href="https://huggingface.co/docs/lerobot/index" style="color: blue;" target="_blank">LeRobot</a>.
+<a href="https://huggingface.co/docs/lerobot/index" style="color: blue;" target="_blank">LeRobot</a>, an awesome open-source community for robot learning.
 
 <a href="https://arxiv.org/pdf/2510.12403" style="color: blue;" target="_blank">Robot Learning: A Tutorial</a>.
 
