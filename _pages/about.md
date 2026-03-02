@@ -32,7 +32,7 @@ my PhD proposal slides
 Noise](https://zengxiong111.github.io/zengxiong.github.io/)<br>
  **Xiong Zeng**, Hyunjae Kim and Necmiye Ozay. In Preparation.
 
-  [Rethinking Learning to Stabilize: Benefits of Linear Dynamical State
+  [Rethinking Learning to Stabilize: Benefits of Linear Dynamic State
 Feedback](https://zengxiong111.github.io/zengxiong.github.io/)<br>
  **Xiong Zeng**, Necmiye Ozay and Mario Sznaier. In Preparation.
 
