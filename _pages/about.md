@@ -163,26 +163,31 @@ English version of the above famous Chinese quotes (by ChatGPT): "A scholar must
 
 <a href="https://www.mit.edu/~dimitrib/Ten_Rules.html" style="color: blue;" target="_blank">Ten Simple Rules for Mathematical Writing</a> by Prof. Dimitri Bertsekas.
 
-**Business and Education**
+**Education and Business**
 
-<a href="https://playbook.samaltman.com/" style="color: blue;" target="_blank">Startup Playbook</a> by Y Combinator.
+<a href="https://interactive.zaobao.com.sg/future365/2026/li-zexiang-new-engineering-education-en.html" style="color: blue;" target="_blank">How New Engineering Education Powers Innovation?</a> of Prof. Zexiang Li.
 
 <a href="https://raffaello.name/business-research-art/" style="color: blue;" target="_blank">Website</a> of Prof. Raffaello D'Andrea.
 
-<a href="https://interactive.zaobao.com.sg/future365/2026/li-zexiang-new-engineering-education-en.html" style="color: blue;" target="_blank">How New Engineering Education
-Powers Innovation?</a> of Prof. Zexiang Li.
+<a href="https://playbook.samaltman.com/" style="color: blue;" target="_blank">Startup Playbook</a> by Y Combinator.
+
+
+
+
 
 **Robot Learning**
 
 <a href="https://huggingface.co/docs/lerobot/index" style="color: blue;" target="_blank">LeRobot</a>, an awesome open-source community for robot learning.
 
-<a href="https://arxiv.org/pdf/2510.12403" style="color: blue;" target="_blank">Robot Learning: A Tutorial</a>.
+<a href="https://github.com/YanjieZe/awesome-humanoid-robot-learning" style="color: blue;" target="_blank">Awesome-Humanoid-Robot-Learning</a> by Yanjie Ze.
+
+<!-- <a href="https://arxiv.org/pdf/2510.12403" style="color: blue;" target="_blank">Robot Learning: A Tutorial</a>.
 
 <a href="https://arxiv.org/pdf/2503.03464" style="color: blue;" target="_blank">Generative Artificial Intelligence in Robotic
 Manipulation: A Survey</a>.
 
 <a href="https://arxiv.org/pdf/2506.20487" style="color: blue;" target="_blank">A Survey of Behavior Foundation Model: Next-Generation
-Whole-Body Control System of Humanoid Robots</a>.
+Whole-Body Control System of Humanoid Robots</a>. -->
 
  
 
