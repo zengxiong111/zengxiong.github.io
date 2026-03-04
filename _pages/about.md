@@ -163,11 +163,14 @@ English version of the above famous Chinese quotes (by ChatGPT): "A scholar must
 
 <a href="https://www.mit.edu/~dimitrib/Ten_Rules.html" style="color: blue;" target="_blank">Ten Simple Rules for Mathematical Writing</a> by Prof. Dimitri Bertsekas.
 
-<a href="https://raffaello.name/business-research-art/" style="color: blue;" target="_blank">Website</a> of Prof. Raffaello D'Andrea.
-
-**Business**
+**Business and Education**
 
 <a href="https://playbook.samaltman.com/" style="color: blue;" target="_blank">Startup Playbook</a> by Y Combinator.
+
+<a href="https://raffaello.name/business-research-art/" style="color: blue;" target="_blank">Website</a> of Prof. Raffaello D'Andrea.
+
+<a href="https://interactive.zaobao.com.sg/future365/2026/li-zexiang-new-engineering-education-en.html" style="color: blue;" target="_blank">How New Engineering Education
+Powers Innovation?</a> of Prof. Zexiang Li.
 
 **Robot Learning**
 
