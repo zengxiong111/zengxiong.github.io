@@ -165,7 +165,7 @@ English version of the above famous Chinese quotes (by ChatGPT): "A scholar must
 
 **Education and Business**
 
-<a href="https://interactive.zaobao.com.sg/future365/2026/li-zexiang-new-engineering-education-en.html" style="color: blue;" target="_blank">How New Engineering Education Powers Innovation?</a> of Prof. Zexiang Li.
+<a href="https://interactive.zaobao.com.sg/future365/2026/li-zexiang-new-engineering-education-en.html" style="color: blue;" target="_blank">How New Engineering Education Powers Innovation?</a> by Prof. Zexiang Li.
 
 <a href="https://raffaello.name/business-research-art/" style="color: blue;" target="_blank">Website</a> of Prof. Raffaello D'Andrea.
 
