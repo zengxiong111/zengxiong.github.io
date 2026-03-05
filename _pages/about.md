@@ -181,6 +181,9 @@ English version of the above famous Chinese quotes (by ChatGPT): "A scholar must
 
 <a href="https://github.com/YanjieZe/awesome-humanoid-robot-learning" style="color: blue;" target="_blank">Awesome-Humanoid-Robot-Learning</a> by Yanjie Ze.
 
+<a href="https://github.com/BaiShuanghao/Awesome-Robotics-Manipulation" style="color: blue;" target="_blank">
+Awesome-Robotics-Manipulation</a>.
+
 <!-- <a href="https://arxiv.org/pdf/2510.12403" style="color: blue;" target="_blank">Robot Learning: A Tutorial</a>.
 
 <a href="https://arxiv.org/pdf/2503.03464" style="color: blue;" target="_blank">Generative Artificial Intelligence in Robotic
