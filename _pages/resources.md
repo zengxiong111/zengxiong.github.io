@@ -1,6 +1,5 @@
 ---
 layout: single
-title: "Useful Links"
 permalink: /resources/
 author_profile: true
 ---
