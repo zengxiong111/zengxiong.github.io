@@ -5,8 +5,6 @@ permalink: /resources/
 author_profile: true
 ---
 
-## Useful links
-
 ### Research
 
 - [Project Management](https://www.rwr.ethz.ch/slides/2025/01_Slides_Project_Management_Workshop.pdf) by Prof. Robert Katzschmann.
