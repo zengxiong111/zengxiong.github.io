@@ -2,8 +2,8 @@ main:
   - title: "Home"
     url: /
 
-  - title: "Research"
-    url: /research/
+  - title: "Bio"
+    url: /markdown/
 
   - title: "Publications"
     url: /publications/
@@ -16,9 +16,3 @@ main:
 
   - title: "Resources"
     url: /resources/
-
-  - title: "Bio"
-    url: /markdown/
-
-  - title: "CV"
-    url: /cv/
