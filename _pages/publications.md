@@ -18,11 +18,11 @@ You can also find my papers on [Google Scholar](https://scholar.google.com/citat
 ## Journal Papers
 
 - [Noise Sensitivity of the Semidefinite Programs for Direct Data-Driven LQR](https://arxiv.org/abs/2412.19705)  
-  Links: [Slides](https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/slides_Noise.Sensitivity.of.DDD.LQR.by.Semidefinite.Programming.pdf), [Poster](https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/Poster_Noise.Sensitivity.of.DDD.LQR.by.Semidefinite.Programming.pdf), [Thread on X](https://x.com/necozay/status/1885844662381879360)  
+  Links: [Slides](/files/slides_Noise.Sensitivity.of.DDD.LQR.by.Semidefinite.Programming.pdf), [Poster](/files/Poster_Noise.Sensitivity.of.DDD.LQR.by.Semidefinite.Programming.pdf), [Thread on X](https://x.com/necozay/status/1885844662381879360)  
   **Xiong Zeng**, Laurent Bako, and Necmiye Ozay. IEEE Transactions on Automatic Control (TAC), 2025.
 
 - [System Identification Under Bounded Noise: Optimal Rates Beyond Least Squares](https://arxiv.org/abs/2503.16817)  
-  Links: [Code](https://github.com/jy-cds/Bounded-Noise-SysID-Minimax-Lowerbound), [Poster](https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/Poster_system_id_bounded_noise.pdf)  
+  Links: [Code](https://github.com/jy-cds/Bounded-Noise-SysID-Minimax-Lowerbound), [Poster](/files/Poster_system_id_bounded_noise.pdf)  
   **Xiong Zeng**, Jing Yu, and Necmiye Ozay. IEEE Control Systems Letters (L-CSS), with presentation at CDC 2025.
 
 ## Conference Papers
@@ -31,5 +31,5 @@ You can also find my papers on [Google Scholar](https://scholar.google.com/citat
   **Xiong Zeng**, Laurent Bako, and Necmiye Ozay. American Control Conference (ACC), 2025.
 
 - [On the Hardness of Learning to Stabilize Linear Systems](https://arxiv.org/abs/2311.11151)  
-  Links: [Slides](https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/hard_learn_stabilize_present.pdf), [Poster](https://github.com/zengxiong111/zengxiong.github.io/releases/download/v1.0/On.The.Hardness.of.Learning.to.Stabilize.Linear.Systems_Poster.pdf), [Video](https://www.youtube.com/watch?v=eP5KKam834w)  
+  Links: [Slides](/files/hard_learn_stabilize_present.pdf), [Poster](/files/On.The.Hardness.of.Learning.to.Stabilize.Linear.Systems_Poster.pdf), [Video](https://www.youtube.com/watch?v=eP5KKam834w)  
   **Xiong Zeng**, Zexiang Liu, Zhe Du, Necmiye Ozay, and Mario Sznaier. IEEE Conference on Decision and Control (CDC), 2023.
