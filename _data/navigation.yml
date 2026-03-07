@@ -2,11 +2,11 @@ main:
   - title: "Home"
     url: /
 
-  - title: "Bio"
-    url: /markdown/
-
   - title: "Publications"
     url: /publications/
+
+  - title: "Bio"
+    url: /markdown/
 
   - title: "Teaching"
     url: /teaching/
