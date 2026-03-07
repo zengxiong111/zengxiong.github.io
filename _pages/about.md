@@ -7,9 +7,11 @@ redirect_from:
   - /about.html
 ---
 
-I am a Ph.D. student in the ECE Department at the University of Michigan (started Fall 2021), advised by [Prof. Necmiye Ozay](https://web.eecs.umich.edu/~necmiye/).
+I'm a fifth-year Ph.D. student in UMich ECE department starting in the fall of 2021. I'm advised by Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a>. 
 
 ## Research
+
+Currently, I focus on rigorous robot learning system design:
 
 <div align="center"><strong>Real2Sim2Real ≈ System Identification + Learning-based Control.</strong></div>
 <br>
