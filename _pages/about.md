@@ -10,7 +10,7 @@ I'm a fifth-year Ph.D. student in UMich ECE department starting in the fall of 2
 
 ## Research
 
-Currently, I focus on rigorous robot learning system design:
+Currently, I focus on rigorous **robot learning system design**:
 
 <div align="center"><strong>Real2Sim2Real ≈ System Identification + Learning-based Control.</strong></div>
 <br>
