@@ -1,27 +1,24 @@
-# The following is the order of the links in the header of the website.
-#
-# Changing the order here will adjust the order and you can also add additional
-# links. Removing a link prevents it from showing in the header, but does not
-# prevent it from being included in the site.
-
 main:
-  # - title: "Publications"
-  #   url: /publications/
+  - title: "Home"
+    url: /
 
-  # - title: "Talks"
-  #   url: /talks/    
+  - title: "Research"
+    url: /research/
 
-  # - title: "Teaching and Other Writings"
-    # url: /teaching/    
-    
-  # - title: "Portfolio"
-  #   url: /portfolio/
-        
-  # - title: "Blog"
-  #   url: /year-archive/
-    
-  # - title: "CV"
-  #   url: /cv/
-    
-  # - title: "Bio"
-  #   url: /markdown/
+  - title: "Publications"
+    url: /publications/
+
+  - title: "Teaching"
+    url: /teaching/
+
+  - title: "Service"
+    url: /service/
+
+  - title: "Resources"
+    url: /resources/
+
+  - title: "Bio"
+    url: /markdown/
+
+  - title: "CV"
+    url: /cv/
