@@ -4,7 +4,7 @@ permalink: /resources/
 author_profile: true
 ---
 
-### Research
+### Research and Management
 
 - [Project Management](https://www.rwr.ethz.ch/slides/2025/01_Slides_Project_Management_Workshop.pdf) by Prof. Robert Katzschmann.
 - [Missing Lesson: How to Navigate Through a CS Research Project](https://panchaoyi.com/blog.html#missing-lesson) by Chaoyi Pan.
@@ -21,7 +21,7 @@ author_profile: true
 - [Website](https://raffaello.name/business-research-art/) of Prof. Raffaello D'Andrea.
 - [Startup Playbook](https://playbook.samaltman.com/) by Y Combinator.
 
-### Robot Learning
+### Robot Learning and Control
 
 - [LeRobot](https://huggingface.co/docs/lerobot/index), an awesome open-source community for robot learning.
 - [Awesome-Humanoid-Robot-Learning](https://github.com/YanjieZe/awesome-humanoid-robot-learning) by Yanjie Ze.
