@@ -4,6 +4,8 @@ permalink: /resources/
 author_profile: true
 ---
 
+<p align="center"><strong><em>“Stay curious, stay young.”</em></strong></p>
+
 ### Research and Management
 
 - [Project Management](https://www.rwr.ethz.ch/slides/2025/01_Slides_Project_Management_Workshop.pdf) by Prof. Robert Katzschmann.
