@@ -11,6 +11,10 @@ author_profile: true
 - [LeRobot](https://huggingface.co/docs/lerobot/index), an awesome open-source community for robot learning.
 - [Awesome-Humanoid-Robot-Learning](https://github.com/YanjieZe/awesome-humanoid-robot-learning) by Yanjie Ze.
 - [Awesome-Robotics-Manipulation](https://github.com/BaiShuanghao/Awesome-Robotics-Manipulation).
+- [Robotic Manipulation Course](https://manipulation.csail.mit.edu/) by Prof. Russ Tedrake.
+- [Modern Robotics: Mechanics, Planning, and Control](https://hades.mech.northwestern.edu/images/7/7f/MR.pdf) by Prof. Kevin M. Lynch and Prof. Frank C. Park
+- [Introduction to Robot Learning](https://16-831-s24.github.io/lectures) by Prof. Guanya Shi
+
 
 
 ### Research and Management
