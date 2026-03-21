@@ -18,7 +18,7 @@ author_profile: true
 
 - [Noise Sensitivity of the Semidefinite Programs for Direct Data-Driven LQR](https://arxiv.org/abs/2412.19705)  
   [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/slides_Noise.Sensitivity.of.DDD.LQR.by.Semidefinite.Programming.pdf" target="_blank" style="color: blue;">Slides</a>], [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Poster_Noise.Sensitivity.of.DDD.LQR.by.Semidefinite.Programming.pdf" target="_blank" style="color: blue;">Poster</a>], [[Thread on X](https://x.com/necozay/status/1885844662381879360)]  
-  **Xiong Zeng**, Laurent Bako, and Necmiye Ozay. IEEE Transactions on Automatic Control (**TAC**), 2025.
+  **Xiong Zeng**, Laurent Bako, and Necmiye Ozay. IEEE Transactions on Automatic Control (**TAC**), 2026.
 
 - [System Identification Under Bounded Noise: Optimal Rates Beyond Least Squares](https://arxiv.org/abs/2503.16817)  
   [[Code](https://github.com/jy-cds/Bounded-Noise-SysID-Minimax-Lowerbound)], [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Poster_system_id_bounded_noise.pdf" target="_blank" style="color: blue;">Poster</a>]  
