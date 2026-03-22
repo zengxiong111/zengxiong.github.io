@@ -31,7 +31,7 @@ author_profile: true
 - [Website](https://raffaello.name/business-research-art/) of Prof. Raffaello D'Andrea.
 
 
-- [You and Your Research](https://www.cs.virginia.edu/~robins/YouAndYourResearch.html) by Richard Hamming (Chinese version: [你和你的研究](https://dominich.notion.site/6bbb616bba2b45649f46e30e6ac8c493)).
+- [You and Your Research](https://www.cs.virginia.edu/~robins/YouAndYourResearch.html) by Richard Hamming ([你和你的研究](https://dominich.notion.site/6bbb616bba2b45649f46e30e6ac8c493)).
 - [Zen of Research](https://www.linkedin.com/feed/update/urn:li:activity:7198555643308314624/) by Prof. Todd Austin.
 
 ### Management and Business
