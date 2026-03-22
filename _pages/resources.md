@@ -38,4 +38,5 @@ author_profile: true
 
 - [Project Management](https://www.rwr.ethz.ch/slides/2025/01_Slides_Project_Management_Workshop.pdf) by Prof. Robert Katzschmann.
 - [Startup Playbook](https://playbook.samaltman.com/) by Y Combinator.
+- [The Five Dysfunctions of a Team](https://static.sched.com/hosted_files/pa2023/8f/The%20Five%20Dysfunctions%20of%20a%20Team%20%281%29.pdf) ([团队协作的五大障碍](https://github.com/Maysjtu/books/blob/main/4.mobi%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C%E7%9A%84%E4%BA%94%E5%A4%A7%E9%9A%9C%E7%A2%8D%E5%8D%81%E5%B9%B4%E5%85%B8%E8%97%8F%E7%89%88.pdf))
 
