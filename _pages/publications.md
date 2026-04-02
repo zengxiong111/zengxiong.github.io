@@ -22,7 +22,7 @@ author_profile: true
 
 - [System Identification Under Bounded Noise: Optimal Rates Beyond Least Squares](https://arxiv.org/abs/2503.16817)  
   [[Code](https://github.com/jy-cds/Bounded-Noise-SysID-Minimax-Lowerbound)], [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/sys_id.pdf" target="_blank" style="color: blue;">Slides</a>], [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Poster_system_id_bounded_noise.pdf" target="_blank" style="color: blue;">Poster</a>]  
-  **Xiong Zeng**, Jing Yu, and Necmiye Ozay. IEEE Control Systems Letters (**L-CSS**), with presentation at **CDC** 2025.
+  **Xiong Zeng**, Jing Yu, and Necmiye Ozay. IEEE Control Systems Letters (**L-CSS**), 2025, with presentation at **CDC** 2025.
 
 ## Conference  
 
