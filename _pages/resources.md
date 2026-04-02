@@ -4,7 +4,7 @@ permalink: /resources/
 author_profile: true
 ---
 
-<p align="center"><strong><em>“Stay curious, stay young.”</em></strong></p>
+<p align="center"><strong><em>“Stay curious, stay young, stay brave.”</em></strong></p>
 
 ### Robot Learning and Control
 
