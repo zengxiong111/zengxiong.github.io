@@ -12,7 +12,7 @@ author_profile: true
   **Xiong Zeng**, Hyunjae Kim, and Necmiye Ozay. In preparation.
 
 - [Benefits of Linear Dynamic State Feedback in Co-stabilization](https://zengxiong111.github.io/zengxiong.github.io/)  
-  **Xiong Zeng**, Necmiye Ozay, and Mario Sznaier. Submitted to CDC 2026.
+  **Xiong Zeng**, Necmiye Ozay, and Mario Sznaier. Submitted to **CDC** 2026.
 
 ## Journal  
 
