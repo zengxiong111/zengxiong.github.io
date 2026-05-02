@@ -12,6 +12,7 @@ author_profile: true
 - [Awesome-Humanoid-Robot-Learning](https://github.com/YanjieZe/awesome-humanoid-robot-learning) by Yanjie Ze.
 - [Robotic Manipulation Course](https://manipulation.csail.mit.edu/) by Prof. Russ Tedrake.
 - [Modern Robotics: Mechanics, Planning, and Control](https://hades.mech.northwestern.edu/images/7/7f/MR.pdf) by Prof. Kevin M. Lynch and Prof. Frank C. Park.
+- [Mathematical Foundations of Reinforcement Learning](https://raw.githubusercontent.com/MathFoundationRL/Book-Mathematical-Foundation-of-Reinforcement-Learning/refs/heads/main/Book-all-in-one.pdf) by Prof. Shiyu Zhao.
 - [Introduction to Robot Learning](https://16-831-s24.github.io/lectures) by Prof. Guanya Shi.
 
 
@@ -24,7 +25,7 @@ author_profile: true
 - [How to Write a Conference Paper](https://docs.google.com/document/u/1/d/1_q-gOj2v06kOq1NHeZXWr2gBwEephvOcpCewSYSmMwc/pub) by Prof. Dmitry Berenson.
 - [Ten Simple Rules for Mathematical Writing](https://www.mit.edu/~dimitrib/Ten_Rules.html) by Prof. Dimitri Bertsekas.
   
-
+- [An Opinionated Guide to ML Research](http://joschu.net/blog/opinionated-guide-ml-research.html) by John Schulman.
 - [You and Your Research](https://www.cs.virginia.edu/~robins/YouAndYourResearch.html) by Richard Hamming ([你和你的研究](https://dominich.notion.site/6bbb616bba2b45649f46e30e6ac8c493)).
 - [Zen of Research](https://www.linkedin.com/feed/update/urn:li:activity:7198555643308314624/) by Prof. Todd Austin.
   
