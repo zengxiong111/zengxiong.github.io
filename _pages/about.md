@@ -12,7 +12,8 @@ I'm a fifth-year Ph.D. student in UMich ECE department starting in the fall of 2
 
 Currently, I focus on rigorous **robot learning system design**:
 
-<div align="center"><strong>Real2Sim2Real ≈ System Identification + Learning-based Control + <a href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html"
+<div align="center"><strong>
+Physical Intelligence ≈ System Identification (Real2Sim) + Learning-based Control (Sim2Real) + <a href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html"
    style="color: blue; text-decoration: none;" target="_blank">
 The Bitter Lesson</a>.</strong></div>
 <br>
