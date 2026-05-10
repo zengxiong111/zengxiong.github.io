@@ -8,7 +8,7 @@ author_profile: true
 
 ### Robot Learning and Control
 
-- [The Bitter Lesson](https://jiangranlv.notion.site/) by  Prof. Rich Sutton.
+- [The Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html) by  Prof. Rich Sutton.
 - [How to Get Started with Embodied AI Research](https://jiangranlv.notion.site/) by  Jiangran Lyu.
 - [Awesome-Humanoid-Robot-Learning](https://github.com/YanjieZe/awesome-humanoid-robot-learning) by Yanjie Ze.
 - [Robotic Manipulation Course](https://manipulation.csail.mit.edu/) by Prof. Russ Tedrake.
