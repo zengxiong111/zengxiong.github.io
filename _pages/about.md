@@ -13,9 +13,7 @@ I'm a fifth-year Ph.D. student in UMich ECE department starting in the fall of 2
 Currently, I focus on rigorous **robot learning system design**:
 
 <div align="center"><strong>
-Physical Intelligence ≈ System Identification (Real2Sim) + Learning-based Control (Sim2Real) + <a href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html"
-   style="color: blue; text-decoration: none;" target="_blank">
-The Bitter Lesson</a>.</strong></div>
+Physical Intelligence ≈ System Identification (Real2Sim) + Learning-based Control (Sim2Real).
 <br>
 
 My PhD research focuses on statistical fundamental limits and the relevant algorithm designs of learning for dynamics and control, including Koopman observable learning [<a href="https://scholar.google.com/citations?user=v4lWTTwAAAAJ&hl=en" style="color: blue;text-decoration: none;" target="_blank">To Appear</a>], co-stabilization [<a href="https://scholar.google.com/citations?user=v4lWTTwAAAAJ&hl=en" style="color: blue;text-decoration: none;" target="_blank">Submitted to CDC 2026</a>], direct data-driven control [<a href="https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf" style="color: blue;text-decoration: none;" target="_blank">ACC 2025</a>, <a href="https://arxiv.org/abs/2412.19705" style="color: blue;text-decoration: none;" target="_blank">TAC 2026</a>], system identification [<a href="https://arxiv.org/abs/2503.16817" style="color: blue;text-decoration: none;" target="_blank">L-CSS 2025 and CDC 2025</a>], and learning to stabilize [<a href="https://arxiv.org/abs/2311.11151" style="color: blue;text-decoration: none;" target="_blank">CDC 2023</a>].
