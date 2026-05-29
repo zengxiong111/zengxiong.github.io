@@ -27,7 +27,7 @@ author_profile: true
 ## Conference  
 
 - [Noise Sensitivity of Direct Data-Driven Linear Quadratic Regulator by Semidefinite Programming](https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf)  
-  **Xiong Zeng**, Laurent Bako, and Necmiye Ozay. American Control Conference (**ACC**) 2025.
+  **Xiong Zeng**, Laurent Bako, and Necmiye Ozay. American Control Conference (**ACC**) 2025 (**O. Hugo Schuck Best Paper Award**).
 
 - [On the Hardness of Learning to Stabilize Linear Systems](https://arxiv.org/abs/2311.11151)  
   [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/hard_learn_stabilize_present.pdf" target="_blank" style="color: blue;">Slides</a>], [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/On.The.Hardness.of.Learning.to.Stabilize.Linear.Systems_Poster.pdf" target="_blank" style="color: blue;">Poster</a>], [[Video](https://www.youtube.com/watch?v=eP5KKam834w)]  
