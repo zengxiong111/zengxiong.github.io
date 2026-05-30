@@ -8,7 +8,7 @@ redirect_from:
 
 ## Research
 
-Currently, I focus on rigorous **robot learning system design (dexterous hands, etc.)**:
+Currently, I focus on rigorous **robot learning system design**(dexterous hands, etc.):
 
 <div align="center"><strong>
 Physical Intelligence ≈ System Identification (Real2Sim) + Learning-based Control (Sim2Real).
