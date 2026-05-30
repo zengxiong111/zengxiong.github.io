@@ -15,6 +15,8 @@ author_profile: true
 - [Modern Robotics: Mechanics, Planning, and Control](https://hades.mech.northwestern.edu/images/7/7f/MR.pdf) by Prof. Kevin M. Lynch and Prof. Frank C. Park.
 - [Mathematical Foundations of Reinforcement Learning](https://raw.githubusercontent.com/MathFoundationRL/Book-Mathematical-Foundation-of-Reinforcement-Learning/refs/heads/main/Book-all-in-one.pdf) by Prof. Shiyu Zhao.
 - [Introduction to Robot Learning](https://16-831-s24.github.io/lectures) by Prof. Guanya Shi.
+- [Physical Intelligence](https://antonilo.github.io/PI_Spring_2026/) by Prof. Antonio Loquercio.
+- [Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse/) by Prof. Sergey Levine.
 
 
 
