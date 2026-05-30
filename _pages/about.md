@@ -6,8 +6,6 @@ redirect_from:
   - /about.html
 ---
 
-I'm a fifth-year Ph.D. student in UMich ECE department starting in the fall of 2021. I'm advised by Prof. <a href="https://web.eecs.umich.edu/~necmiye/" target="_blank">Necmiye Ozay</a>. 
-
 ## Research
 
 Currently, I focus on rigorous **robot learning system design (dexterous hands, etc.)**:
