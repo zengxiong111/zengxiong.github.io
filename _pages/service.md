@@ -9,6 +9,7 @@ author_profile: true
 - IEEE Transactions on Automatic Control (TAC)
 - Automatica
 - IEEE Transactions on Signal Processing (TSP)
+- Open Journal of Control Systems (OJ-CSYS)
 - Nonlinear Analysis: Hybrid Systems (NAHS)
 - IEEE Control Systems Letters (L-CSS)
 
