@@ -10,7 +10,7 @@ redirect_from:
 
 Currently, I focus on rigorous **robot learning system design** (E.g., dexterous hands, etc.):
 
-<div align="center" style="border: 2px solid #333; border-radius: 8px; padding: 12px 18px; margin: 18px auto; max-width: 1100px;">
+<div align="center" style="border: 2px solid #333; border-radius: 8px; padding: 12px 18px; margin: 18px auto; max-width: 1100px; font-size: 0.9em;">
 <strong>
 Physical Intelligence ≈ System Identification (Real2Sim) + Learning-based Control (Sim2Real).
 </strong>
