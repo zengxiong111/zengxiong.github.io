@@ -8,7 +8,7 @@ redirect_from:
 
 ## Research
 
-I'm a posdoctal researcher in [<a href="https://www.wzhanglab.site/" style="color: blue;text-decoration: none;" target="_blank">CLEAR Lab</a>]. Currently, I focus on rigorous **robot learning system design** (E.g., dexterous hands, etc.):
+I'm a posdoctal researcher in <a href="https://www.wzhanglab.site/" style="color: blue;text-decoration: none;" target="_blank">CLEAR Lab</a>. Currently, I focus on rigorous **robot learning system design** (E.g., dexterous hands, etc.):
 
 <div align="center" style="border: 2px solid #333; border-radius: 8px; padding: 12px 18px; margin: 18px auto; max-width: 1100px; font-size: 0.8em;">
 <strong>
