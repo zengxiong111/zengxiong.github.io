@@ -8,14 +8,11 @@ redirect_from:
 
 ## Research
 
-I'm a postdoctoral researcher in <a href="https://www.wzhanglab.site/" style="color: blue;text-decoration: none;" target="_blank">CLEAR Lab</a>. Currently, I focus on rigorous **robot learning system design** (E.g., dexterous hands, etc.):
+I'm a postdoctoral researcher at <a href="https://www.wzhanglab.site/" style="color: blue;text-decoration: none;" target="_blank">CLEAR Lab</a>. Currently, I focus on rigorous **robot learning system design** (E.g., dexterous hands, etc.):
 
-<div align="center" style="border: 2px solid #333; border-radius: 8px; padding: 12px 18px; margin: 18px auto; max-width: 1100px; font-size: 0.8em;">
-<strong>
-Physical Intelligence ≈ System Identification (Real2Sim) + Learning-based Control (Sim2Real).
-</strong>
-</div>
-
+- Dexterous hand system design and control (retargeting + trajectory tracking)
+- Efficient fine-tuning of generative action models
+- World models with contact
 
 
 My PhD research focuses on statistical fundamental limits and the relevant algorithm designs of learning for dynamics and control, including Koopman observable learning [<a href="https://scholar.google.com/citations?user=v4lWTTwAAAAJ&hl=en" style="color: blue;text-decoration: none;" target="_blank">To Appear</a>], co-stabilization [<a href="https://scholar.google.com/citations?user=v4lWTTwAAAAJ&hl=en" style="color: blue;text-decoration: none;" target="_blank">Submitted to CDC 2026</a>], direct data-driven control [<a href="https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf" style="color: blue;text-decoration: none;" target="_blank">ACC 2025</a>, <a href="https://arxiv.org/abs/2412.19705" style="color: blue;text-decoration: none;" target="_blank">TAC 2026</a>, <a href="https://a2c2.org/paper-award/o-hugo-schuck-best-paper-award#recipients" style="color: blue;text-decoration: none;" target="_blank">**O. Hugo Schuck Best Paper Award**</a>], system identification [<a href="https://arxiv.org/abs/2503.16817" style="color: blue;text-decoration: none;" target="_blank">L-CSS 2025 and CDC 2025</a>], and learning to stabilize [<a href="https://arxiv.org/abs/2311.11151" style="color: blue;text-decoration: none;" target="_blank">CDC 2023</a>].
