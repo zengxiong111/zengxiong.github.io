@@ -7,7 +7,7 @@
 # server process.
 
 # Basic Site Settings
-locale                   : "Ann Arbor, Michigan"
+locale                   : "Shenzhen, China"
 title                    : "Xiong Zeng"
 title_separator          : "-"
 name                     : &name "Xiong Zeng (曾雄)"
@@ -26,9 +26,9 @@ author:
   avatar           : "zx.jpg"
   name             : "Xiong Zeng (曾雄)"
   # pronouns         : # example: "she/her"  
-  # bio              : "I'm a Ph.D. Candidate of UMich EECS department."
-  location         : "Ann Arbor, Michigan"
-  employer         : "University of Michigan"
+  # bio              : "I'm a postdoc for robot learning."
+  location         : "Shenzhen, China"
+  employer         : "CLEAR Lab"
   # uri              : # URL
   email            : "zengxion@umich.edu" 
 
