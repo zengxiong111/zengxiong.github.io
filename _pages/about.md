@@ -10,8 +10,8 @@ redirect_from:
 
 I'm a postdoctoral researcher at <a href="https://www.wzhanglab.site/" style="color: blue;text-decoration: none;" target="_blank">CLEAR Lab</a>. Currently, I focus on rigorous **robot learning system design**:
 
-- Dexterous hand system design and control,
-- Efficient fine-tuning for generative control policies,
+- Dexterous hand system design and control;
+- Efficient fine-tuning for generative control policies;
 - <a href="https://clearlab-sustech.github.io/WorldModelSurvey/" style="color: blue;text-decoration: none;" target="_blank">World (action) models</a>.
 
 
