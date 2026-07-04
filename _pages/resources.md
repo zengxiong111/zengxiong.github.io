@@ -9,17 +9,11 @@ author_profile: true
 ### Robot Learning and Control
 
 - [The Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html) by  Prof. Rich Sutton.
-- [How to Get Started with Embodied AI Research](https://jiangranlv.notion.site/) by  Jiangran Lyu.
-- [Awesome-Humanoid-Robot-Learning](https://github.com/YanjieZe/awesome-humanoid-robot-learning) by Yanjie Ze.
 - [Robotic Manipulation Course](https://manipulation.csail.mit.edu/) by Prof. Russ Tedrake.
 - [Modern Robotics: Mechanics, Planning, and Control](https://hades.mech.northwestern.edu/images/7/7f/MR.pdf) by Prof. Kevin M. Lynch and Prof. Frank C. Park.
 - [Mathematical Foundations of Reinforcement Learning](https://raw.githubusercontent.com/MathFoundationRL/Book-Mathematical-Foundation-of-Reinforcement-Learning/refs/heads/main/Book-all-in-one.pdf) by Prof. Shiyu Zhao.
 - [Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse/) by Prof. Sergey Levine.
 - [Introduction to Flow Matching and Diffusion Models](https://diffusion.csail.mit.edu/2026/index.html) by Peter Holderrieth and Ezra Erives.
-
-- [Introduction to Robot Learning](https://16-831-s24.github.io/lectures) by Prof. Guanya Shi.
-- [Physical Intelligence](https://antonilo.github.io/PI_Spring_2026/) by Prof. Antonio Loquercio.
-
 
 
 ### Research and Education 
