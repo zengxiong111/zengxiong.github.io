@@ -11,8 +11,8 @@ author_profile: true
 - [Non-Asymptotic Learning of Koopman Observables with Process Noise](https://zengxiong111.github.io/zengxiong.github.io/)  
   **Xiong Zeng**, Hyunjae Kim, and Necmiye Ozay. In preparation.
 
-  - [From World Models to World Action Models: A Concise Tutorial for Robotics](https://arxiv.org/abs/2607.00836)  
-  **Xiong Zeng**, Hyunjae Kim, and Necmiye Ozay. ArXiv 2026.
+- [From World Models to World Action Models: A Concise Tutorial for Robotics](https://arxiv.org/abs/2607.00836)  
+  Xiaoxiong Zhang, **Xiong Zeng**, Wei Zhang. ArXiv 2026.
 
 
 
