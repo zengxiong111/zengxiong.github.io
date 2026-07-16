@@ -12,7 +12,7 @@ author_profile: true
   **Xiong Zeng**, Hyunjae Kim, and Necmiye Ozay. In preparation.
 
 - [From World Models to World Action Models: A Concise Tutorial for Robotics](https://arxiv.org/abs/2607.00836)  
-  Xiaoxiong Zhang, **Xiong Zeng**, Wei Zhang. ArXiv 2026.
+  Xiaoxiong Zhang, **Xiong Zeng**, and Wei Zhang. ArXiv 2026.
 
 
 
