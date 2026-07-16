@@ -6,13 +6,12 @@ author_profile: true
 
  
 
-## Working  
+## Working  and Preprints
 
 - [Non-Asymptotic Learning of Koopman Observables with Process Noise](https://zengxiong111.github.io/zengxiong.github.io/)  
   **Xiong Zeng**, Hyunjae Kim, and Necmiye Ozay. In preparation.
 
-- [Benefits of Linear Dynamic State Feedback in Co-stabilization](https://zengxiong111.github.io/zengxiong.github.io/)  
-  **Xiong Zeng**, Necmiye Ozay, and Mario Sznaier. Submitted to **CDC** 2026.
+
 
 ## Journal  
 
@@ -25,6 +24,9 @@ author_profile: true
   **Xiong Zeng**, Jing Yu, and Necmiye Ozay. IEEE Control Systems Letters (**L-CSS**) 2025, with presentation at **CDC** 2025.
 
 ## Conference  
+
+- [Benefits of Linear Dynamic State Feedback in Co-stabilization](https://zengxiong111.github.io/zengxiong.github.io/)  
+  **Xiong Zeng**, Necmiye Ozay, and Mario Sznaier. IEEE Conference on Decision and Control (**CDC**) 2026.
 
 - [Noise Sensitivity of Direct Data-Driven Linear Quadratic Regulator by Semidefinite Programming](https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf)  
   **Xiong Zeng**, Laurent Bako, and Necmiye Ozay. American Control Conference (**ACC**) 2025 (**O. Hugo Schuck Best Paper Award**).
