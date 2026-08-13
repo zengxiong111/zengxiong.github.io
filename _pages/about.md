@@ -10,9 +10,8 @@ redirect_from:
 
 I'm a postdoctoral researcher at <a href="https://www.wzhanglab.site/" style="color: blue;text-decoration: none;" target="_blank">CLEAR Lab</a>. Currently, I focus on rigorous **robot learning system design**:
 
-- Agent design for dexterous hand;
-- Data generation for dexterous hand;
-- Efficient post-training for dexterous generative control policies;
+- Vision-action data engine for dexterous hand;
+- Reinforcement learning post-training for embodied foundation models;
 - <a href="https://clearlab-sustech.github.io/WorldModelSurvey/" style="color: blue;text-decoration: none;" target="_blank">World (action) models</a>.
 
 **I am actively recruiting RAs!** Please send emails to zengx3@sustech.edu.cn!
