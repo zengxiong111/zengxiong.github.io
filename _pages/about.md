@@ -12,7 +12,7 @@ I'm a postdoctoral researcher at <a href="https://www.wzhanglab.site/" style="co
 
 - Vision-action data engine for dexterous hand;
 - Reinforcement learning post-training for embodied foundation models;
-- <a href="https://clearlab-sustech.github.io/WorldModelSurvey/" style="color: blue;text-decoration: none;" target="_blank">World (action) models</a>.
+- <a href="https://arxiv.org/abs/2607.00836" style="color: blue;text-decoration: none;" target="_blank">World (action) models</a>.
 
 **I am actively recruiting RAs!** Please send emails to zengx3@sustech.edu.cn!
 
