@@ -10,7 +10,7 @@ redirect_from:
 
 I'm a postdoctoral researcher at <a href="https://www.wzhanglab.site/" style="color: blue;text-decoration: none;" target="_blank">CLEAR Lab</a>. Currently, I focus on rigorous **robot learning system design**:
 
-- Egovideo-based controller design for dexterous hand;
+- Sim2Real training for dexterous hand;
 - Reinforcement learning post-training for embodied foundation models;
 - <a href="https://arxiv.org/abs/2607.00836" style="color: blue;text-decoration: none;" target="_blank">World (action) models</a>.
 
