@@ -28,7 +28,7 @@ author_profile: true
 
 ## Conference  
 
-- [Benefits of Linear Dynamic State Feedback in Co-stabilization](https://zengxiong111.github.io/zengxiong.github.io/)  
+- [Benefits of Linear Dynamic State Feedback in Co-stabilization](https://arxiv.org/abs/2609.23692)  
   **Xiong Zeng**, Necmiye Ozay, and Mario Sznaier. IEEE Conference on Decision and Control (**CDC**) 2026.
 
 - [Noise Sensitivity of Direct Data-Driven Linear Quadratic Regulator by Semidefinite Programming](https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf)  
