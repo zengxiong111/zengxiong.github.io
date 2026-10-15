@@ -23,10 +23,10 @@ Graduate Instructor for EECS 501 **Probability Theory and Random Process** (Fall
 <a href="https://zengxiong111.github.io/zengxiong.github.io/files/Flow_Matching_Step_by_Step_Derivation_EN.pdf"
    target="_blank">
   Flow Matching: A Step-by-Step Mathematical Derivation 
-</a> <a href="https://zengxiong111.github.io/zengxiong.github.io/files/Flow_Matching_详细推导_精简版.pdf"
+</a> [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Flow_Matching_详细推导_精简版.pdf"
    target="_blank">
   中文版
-</a>
+</a>]
 
 
 
