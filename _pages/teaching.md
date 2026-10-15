@@ -19,6 +19,14 @@ Graduate Instructor for EECS 501 **Probability Theory and Random Process** (Fall
 
 
 
+<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Embodied_RL_Tutorial_Full_EN.pdf"
+   target="_blank">
+  Reinforcement Learning for Embodied AI: Algorithms, Tasks, and Use Cases
+</a> [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Embodied_RL_Tutorial_Full_ZH.pdf"
+   target="_blank">
+  中文版
+</a>]
+
 <a href="https://zengxiong111.github.io/zengxiong.github.io/files/Flow_Matching_Step_by_Step_Derivation_EN.pdf"
    target="_blank">
   Flow Matching: A Step-by-Step Mathematical Derivation

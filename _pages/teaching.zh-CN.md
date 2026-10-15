@@ -20,6 +20,14 @@ EECS 501 **概率论与随机过程** 研究生课程讲师（2024 年秋季）<
 
 
 
+<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Embodied_RL_Tutorial_Full_EN.pdf"
+   target="_blank">
+  具身智能中的强化学习教程：算法分类、任务分类与应用场景
+</a> [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Embodied_RL_Tutorial_Full_ZH.pdf"
+   target="_blank">
+  中文版
+</a>]
+
 <a href="https://zengxiong111.github.io/zengxiong.github.io/files/Flow_Matching_Step_by_Step_Derivation_EN.pdf"
    target="_blank">
   Flow Matching：逐步数学推导
