@@ -20,6 +20,14 @@ EECS 501 **概率论与随机过程** 研究生课程讲师（2024 年秋季）<
 
 
 
+<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Robot_Camera_Calibration_Tutorial_EN.pdf"
+   target="_blank">
+  机器人学习中的相机标定教程
+</a> [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Robot_Camera_Calibration_Tutorial_ZH.pdf"
+   target="_blank">
+  中文版
+</a>]
+
 <a href="https://zengxiong111.github.io/zengxiong.github.io/files/ROS2_Robot_Learning_Tutorial_EN.pdf"
    target="_blank">
   机器人学习中的 ROS 2 完整教程
