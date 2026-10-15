@@ -21,7 +21,7 @@ Graduate Instructor for EECS 501 **Probability Theory and Random Process** (Fall
 
 <a href="https://zengxiong111.github.io/zengxiong.github.io/files/PPO_Complete_Derivation_EN.pdf"
    target="_blank">
-  PPO: A Complete Derivation and Its Design Motivations
+ Proximal Policy Optimization (PPO)
 </a> [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/PPO_Complete_Derivation_CN.pdf"
    target="_blank">
   中文版
@@ -29,7 +29,7 @@ Graduate Instructor for EECS 501 **Probability Theory and Random Process** (Fall
 
 <a href="https://zengxiong111.github.io/zengxiong.github.io/files/SAC_Complete_Derivation_EN.pdf"
    target="_blank">
-  Soft Actor-Critic (SAC): Complete Derivation and Design Motivations
+  Soft Actor-Critic (SAC) 
 </a> [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/SAC_Complete_Derivation_CN.pdf"
    target="_blank">
   中文版
@@ -37,7 +37,7 @@ Graduate Instructor for EECS 501 **Probability Theory and Random Process** (Fall
 
 <a href="https://zengxiong111.github.io/zengxiong.github.io/files/Embodied_Motion_Control_RL_Tutorial_EN.pdf"
    target="_blank">
-  Reinforcement Learning for Motion Control in Embodied AI: A Complete Tutorial
+  Reinforcement Learning for Motion Control 
 </a> [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Embodied_Motion_Control_RL_Tutorial_ZH.pdf"
    target="_blank">
   中文版
