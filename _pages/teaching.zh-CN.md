@@ -20,6 +20,14 @@ EECS 501 **概率论与随机过程** 研究生课程讲师（2024 年秋季）<
 
 
 
+<a href="https://zengxiong111.github.io/zengxiong.github.io/files/SAC_Complete_Derivation_EN.pdf"
+   target="_blank">
+  SAC（Soft Actor-Critic）完整推导与设计动机
+</a> [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/SAC_Complete_Derivation_CN.pdf"
+   target="_blank">
+  中文版
+</a>]
+
 <a href="https://zengxiong111.github.io/zengxiong.github.io/files/Embodied_Motion_Control_RL_Tutorial_EN.pdf"
    target="_blank">
   具身智能中的运动控制强化学习：完整教程
