@@ -6,8 +6,7 @@ author_profile: true
 
 # Teaching and Writings
 
-Courses and technical study notes. [简体中文]({{ site.baseurl }}/teaching/zh-CN/)
-
+ 
 ## Teaching
 
 Graduate Instructor for EECS 562 **Nonlinear Systems and Control** (Winter 2026)<br>
