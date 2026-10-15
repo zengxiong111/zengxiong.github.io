@@ -21,7 +21,7 @@ Graduate Instructor for EECS 501 **Probability Theory and Random Process** (Fall
 
 <a href="https://zengxiong111.github.io/zengxiong.github.io/files/Embodied_RL_Tutorial_Full_EN.pdf"
    target="_blank">
-  Reinforcement Learning for Embodied AI: Algorithms, Tasks, and Use Cases
+  Reinforcement Learning for Embodied AI 
 </a> [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Embodied_RL_Tutorial_Full_ZH.pdf"
    target="_blank">
   中文版
