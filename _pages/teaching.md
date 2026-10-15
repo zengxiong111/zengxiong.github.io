@@ -21,7 +21,7 @@ Graduate Instructor for EECS 501 **Probability Theory and Random Process** (Fall
 
 <a href="https://zengxiong111.github.io/zengxiong.github.io/files/Embodied_RL_Tutorial_Full_EN.pdf"
    target="_blank">
-  A Tutorial for Reinforcement Learning for Embodied AI 
+  Reinforcement Learning for Embodied AI 
 </a> [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Embodied_RL_Tutorial_Full_ZH.pdf"
    target="_blank">
   中文版
@@ -29,7 +29,7 @@ Graduate Instructor for EECS 501 **Probability Theory and Random Process** (Fall
 
 <a href="https://zengxiong111.github.io/zengxiong.github.io/files/Flow_Matching_Step_by_Step_Derivation_EN.pdf"
    target="_blank">
-  A Tutorial for Flow Matching 
+  Flow Matching 
 </a> [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Flow_Matching_CN.pdf"
    target="_blank">
   中文版
@@ -39,7 +39,7 @@ Graduate Instructor for EECS 501 **Probability Theory and Random Process** (Fall
 
 <a href="https://zengxiong111.github.io/zengxiong.github.io/files/A_Tutorial_for_MPPI-s.pdf"
    target="_blank">
-  A Tutorial for Model Predictive Path Integral Control
+  Model Predictive Path Integral Control
 </a>
 
 <a href="https://zengxiong111.github.io/zengxiong.github.io/files/chapter2-noted.pdf"
