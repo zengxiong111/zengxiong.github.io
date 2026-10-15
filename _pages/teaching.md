@@ -19,6 +19,14 @@ Graduate Instructor for EECS 501 **Probability Theory and Random Process** (Fall
 
 
 
+<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Git_Tutorial_EN.pdf"
+   target="_blank">
+  Git Tutorial: From First Commit to Research Collaboration
+</a> [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Git_Tutorial_CN.pdf"
+   target="_blank">
+  中文版
+</a>]
+
 <a href="https://zengxiong111.github.io/zengxiong.github.io/files/PPO_Complete_Derivation_EN.pdf"
    target="_blank">
  Proximal Policy Optimization (PPO)

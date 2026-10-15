@@ -20,6 +20,14 @@ EECS 501 **概率论与随机过程** 研究生课程讲师（2024 年秋季）<
 
 
 
+<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Git_Tutorial_EN.pdf"
+   target="_blank">
+  Git 使用教程：从零基础到科研项目协作
+</a> [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Git_Tutorial_CN.pdf"
+   target="_blank">
+  中文版
+</a>]
+
 <a href="https://zengxiong111.github.io/zengxiong.github.io/files/PPO_Complete_Derivation_EN.pdf"
    target="_blank">
   PPO 完整推导与设计动机
