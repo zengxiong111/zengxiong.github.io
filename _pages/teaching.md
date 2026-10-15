@@ -19,6 +19,14 @@ Graduate Instructor for EECS 501 **Probability Theory and Random Process** (Fall
 
 
 
+<a href="https://zengxiong111.github.io/zengxiong.github.io/files/ROS2_Robot_Learning_Tutorial_EN.pdf"
+   target="_blank">
+  ROS 2 for Robot Learning: A Complete Practical Tutorial
+</a> [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/ROS2_Robot_Learning_Tutorial_ZH.pdf"
+   target="_blank">
+  中文版
+</a>]
+
 <a href="https://zengxiong111.github.io/zengxiong.github.io/files/Git_Tutorial_EN.pdf"
    target="_blank">
   Git Tutorial: From First Commit to Research Collaboration
