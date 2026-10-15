@@ -22,8 +22,8 @@ Graduate Instructor for EECS 501 **Probability Theory and Random Process** (Fall
 
 <a href="https://zengxiong111.github.io/zengxiong.github.io/files/Flow_Matching_Step_by_Step_Derivation_EN.pdf"
    target="_blank">
-  Flow Matching: A Step-by-Step Mathematical Derivation 
-</a> [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Flow_Matching_详细推导_精简版.pdf"
+  Flow Matching: A Step-by-Step Mathematical Derivation
+</a> [<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Flow_Matching_CN.pdf"
    target="_blank">
   中文版
 </a>]
@@ -38,4 +38,4 @@ Graduate Instructor for EECS 501 **Probability Theory and Random Process** (Fall
 <a href="https://zengxiong111.github.io/zengxiong.github.io/files/chapter2-noted.pdf"
    target="_blank">
 Qualitative Behavior of Second-Order Nonlinear Systems
-</a> 
+</a>
