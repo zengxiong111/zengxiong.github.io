@@ -11,9 +11,9 @@ redirect_from:
 
 ## Teaching at SUSTech
 
-<a href="https://github.com/zengxiong111/Foundation_of_Emboadied_AI"
+<a href="https://github.com/zengxiong111/Foundation_of_Embodied_AI"
    target="_blank">
-  Foundation of Emboadied AI
+  Foundation of Embodied AI
 </a>
 
 ## Teaching at University of Michigan
