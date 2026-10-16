@@ -4,6 +4,8 @@ permalink: /teaching/zh-CN/
 author_profile: true
 ---
 
+<p align="center"><strong><em>“保持好奇，保持年轻，保持勇敢。”</em></strong></p>
+
 # 教学与学习笔记
 
 课程与技术学习笔记。[English]({{ site.baseurl }}/teaching/)
@@ -101,8 +103,6 @@ EECS 501 **概率论与随机过程** 研究生课程讲师（2024 年秋季）<
 </a>
 
 ## 其他资源
-
-<p align="center"><strong><em>“保持好奇，保持年轻，保持勇敢。”</em></strong></p>
 
 ### 机器人学习与控制
 

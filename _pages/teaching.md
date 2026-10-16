@@ -6,6 +6,7 @@ redirect_from:
   - /resources/
 ---
 
+<p align="center"><strong><em>“Stay curious, stay young, stay brave.”</em></strong></p>
 
 ## Teaching at University of Michigan
 
@@ -98,8 +99,6 @@ Qualitative Behavior of Second-Order Nonlinear Systems
 </a>
 
 ## Other Resources
-
-<p align="center"><strong><em>“Stay curious, stay young, stay brave.”</em></strong></p>
 
 ### Robot Learning and Control
 
