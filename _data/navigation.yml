@@ -5,8 +5,8 @@ main:
   - title: "Publications"
     url: /publications/
 
-  - title: "Bio and Service"
-    url: /markdown/
-
   - title: "Teaching"
     url: /teaching/
+
+  - title: "Bio and Service"
+    url: /markdown/
