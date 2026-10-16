@@ -28,10 +28,9 @@ TA for EECS 501 **Probability Theory and Random Process** (Fall 2024)<br>
 
 ### Robot Learning and Control
 
-<a href="https://zengxiong111.github.io/zengxiong.github.io/files/A_Tutorial_for_MPPI-s.pdf"
-   target="_blank">
-  MPPI
-</a>
+ 
+
+- [MPPI](https://zengxiong111.github.io/zengxiong.github.io/files/A_Tutorial_for_MPPI-s.pdf) by  Prof. Rich Sutton.
 
 
 - [The Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html) by  Prof. Rich Sutton.
