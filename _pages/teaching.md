@@ -11,7 +11,7 @@ redirect_from:
 
 ## Teaching at SUSTech
 
-<a href="https://zengxiong111.github.io/zengxiong.github.io/files/Robot_Camera_Calibration_Tutorial_EN.pdf"
+<a href="https://github.com/zengxiong111/Foundation_of_Emboadied_AI"
    target="_blank">
   Foundation of Emboadied AI
 </a>
