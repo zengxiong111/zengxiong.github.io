@@ -6,13 +6,6 @@ redirect_from:
   - /resources/
 ---
 
-# Teaching and Learning Notes
-
-Courses and technical learning notes. [中文]({{ site.baseurl }}/teaching/zh-CN/)
-
-- [Teaching at University of Michigan](#teaching-at-university-of-michigan)
-- [Other Writings for Robot Learning and Control](#other-writings-for-robot-learning-and-control)
-- [Other Resources](#other-resources)
 
 ## Teaching at University of Michigan
 
@@ -22,7 +15,7 @@ Graduate Instructor for EECS 501 **Probability Theory and Random Process** (Fall
 &nbsp;
 
 
-## Other Writings for Robot Learning and Control
+## Other Notes
 
 
 
