@@ -34,7 +34,11 @@ TA for EECS 501 **Probability Theory and Random Process** (Fall 2024)<br>
 - [Introduction to Flow Matching and Diffusion Models](https://diffusion.csail.mit.edu/2026/index.html) by Peter Holderrieth and Ezra Erives.
 - [Deep Reinforcement Learning](https://cs224r.stanford.edu/) by Prof. Chelsea Finn.
 - [Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse/) by Prof. Sergey Levine.
-- [MPPI](https://zengxiong111.github.io/zengxiong.github.io/files/A_Tutorial_for_MPPI-s.pdf).
+-
+<a href="https://zengxiong111.github.io/zengxiong.github.io/files/A_Tutorial_for_MPPI-s.pdf"
+   target="_blank">
+  MPPI
+</a>.
 
 
 
