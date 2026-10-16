@@ -4,7 +4,16 @@ author_profile: true
 redirect_from: 
   - /md/
   - /markdown.html
+  - /service/
 ---
+
+# Biography
+
+Education, personal interests, and academic service. [中文]({{ site.baseurl }}/markdown/zh-CN/)
+
+- [Bio](#bio)
+- [Misc](#misc)
+- [Service](#service)
 
 ## Bio
 
@@ -20,3 +29,26 @@ I like trail running, and people can often find me on the trails and hills in An
 “士不可以不弘毅，任重而道远。非淡泊无以明志，非宁静无以致远。从群众中来，到群众中去。”
 
 English version of the above famous Chinese quotes (by ChatGPT): "A scholar must cultivate broad-mindedness and resilience, as the responsibilities are heavy and the journey is long. Without nonattachment, one cannot clarify one's aspirations; without tranquility, one cannot reach far. From people, for people."
+
+## Service
+
+### Journal Reviewer
+
+- IEEE Transactions on Automatic Control (TAC)
+- Automatica
+- IEEE Transactions on Signal Processing (TSP)
+- Open Journal of Control Systems (OJ-CSYS)
+- Nonlinear Analysis: Hybrid Systems (NAHS)
+- IEEE Control Systems Letters (L-CSS)
+
+### Conference Reviewer
+
+- IEEE Conference on Decision and Control (CDC)
+- American Control Conference (ACC)
+- ACM International Conference on Hybrid Systems: Computation and Control (HSCC)
+- ACM/IEEE International Conference on Cyber-Physical Systems (ICCPS)
+
+### Technical Committees
+
+- IEEE CSS Hybrid Systems
+- IEEE CSS Robust and Complex Systems
