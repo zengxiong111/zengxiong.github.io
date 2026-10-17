@@ -8,20 +8,22 @@ redirect_from:
 
 <p align="center"><strong><em>“Stay curious, stay young, stay brave.”</em></strong></p>
 
+# Teaching
 
 ## Teaching at SUSTech
 
-<a href="https://github.com/zengxiong111/Foundation_of_Embodied_AI"
-   target="_blank">
-  Foundation of Embodied AI
-</a>
+<ul class="teaching-list">
+  <li class="teaching-entry"><span class="teaching-course"><a href="https://github.com/zengxiong111/Foundation_of_Embodied_AI"
+   target="_blank">Foundation of Embodied AI</a></span></li>
+</ul>
 
 ## Teaching at University of Michigan
 
-TA for EECS 562 **Nonlinear Systems and Control** (Winter 2026)<br>
-TA for EECS 560 **Linear Systems Theory** (Fall 2025)<br>
-TA for EECS 501 **Probability Theory and Random Process** (Fall 2024)<br>
-&nbsp;
+<ul class="teaching-list">
+  <li class="teaching-entry"><span class="teaching-course"><span class="teaching-role">TA for</span> EECS 562 <strong>Nonlinear Systems and Control</strong></span><span class="teaching-term">(Winter 2026)</span></li>
+  <li class="teaching-entry"><span class="teaching-course"><span class="teaching-role">TA for</span> EECS 560 <strong>Linear Systems Theory</strong></span><span class="teaching-term">(Fall 2025)</span></li>
+  <li class="teaching-entry"><span class="teaching-course"><span class="teaching-role">TA for</span> EECS 501 <strong>Probability Theory and Random Process</strong></span><span class="teaching-term">(Fall 2024)</span></li>
+</ul>
 
 
 ## Other Resources

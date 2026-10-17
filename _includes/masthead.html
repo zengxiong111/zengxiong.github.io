@@ -13,7 +13,16 @@
               {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            {% assign current_nav_url = page.url | replace: '/zh-CN/', '/' %}
+            {% assign nav_url = link.url %}
+            {% unless nav_url contains 'http' %}
+              {% assign nav_url = nav_url | prepend: base_path %}
+            {% endunless %}
+            {% if current_nav_url == link.url or current_nav_url == nav_url %}
+              <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}" aria-current="page">{{ link.title }}</a></li>
+            {% else %}
+              <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            {% endif %}
           {% endfor %}
         </ul>
         <ul class="hidden-links hidden"></ul>
