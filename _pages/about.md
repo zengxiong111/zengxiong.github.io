@@ -17,13 +17,12 @@ I'm a postdoctoral researcher at <a href="https://www.wzhanglab.site/" style="co
 - Recursive self-improvement for humanoid locomotion reinforcement learning training;
 - <a href="https://arxiv.org/abs/2607.00836" style="color: blue;text-decoration: none;" target="_blank">World (action) models</a>.
 
+</div>
+
 Based on our project experience, I maintain an open-source course: <ul class="teaching-list">
   <li class="teaching-entry"><span class="teaching-course"><a href="https://github.com/zengxiong111/Foundation_of_Embodied_AI"
-   target="_blank">Foundation of Embodied AI</a></span></li>
+   target="_blank">Foundation of Embodied AI</a></span></li>.
 </ul>
-.
-
-</div>
 
 <div class="recruitment-notice" markdown="1">
 
