@@ -1,12 +1,16 @@
 main:
   - title: "Home"
+    title_zh: "首页"
     url: /
 
   - title: "Publications"
+    title_zh: "论文"
     url: /publications/
 
   - title: "Teaching"
+    title_zh: "教学"
     url: /teaching/
 
   - title: "Bio and Service"
+    title_zh: "个人简介与学术服务"
     url: /markdown/

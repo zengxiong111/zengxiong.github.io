@@ -369,3 +369,49 @@ h3 {
     line-height: 1.4;
   }
 }
+
+/* Keep the language switch outside the collapsing navigation menu. */
+.masthead__menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .greedy-nav {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
+
+.language-switch {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 0.15em 0.75em;
+  border: 1px solid #245c91;
+  border-radius: 4px;
+  color: #245c91;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: nowrap;
+
+  &:visited {
+    color: #245c91;
+  }
+
+  &:hover {
+    color: #173f67;
+    background: #f1f6fb;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .masthead__menu {
+    gap: 0.65rem;
+  }
+
+  .masthead__menu-item--lg {
+    padding-right: 0.5em;
+  }
+}

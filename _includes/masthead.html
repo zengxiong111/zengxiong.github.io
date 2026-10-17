@@ -1,32 +1,58 @@
 {% include base_path %}
+{% assign is_chinese = false %}
+{% if page.url contains '/zh-CN/' %}
+  {% assign is_chinese = true %}
+{% endif %}
+{% assign current_nav_url = page.url | replace: '/zh-CN/', '/' %}
+{% assign home_url = '/' %}
+{% if is_chinese %}
+  {% assign home_url = '/zh-CN/' %}
+  {% assign alternate_url = current_nav_url %}
+{% else %}
+  {% assign alternate_url = current_nav_url | append: 'zh-CN/' %}
+{% endif %}
+{% assign alternate_page = site.pages | where: 'url', alternate_url | first %}
+{% unless alternate_page %}
+  {% if is_chinese %}
+    {% assign alternate_url = '/' %}
+  {% else %}
+    {% assign alternate_url = '/zh-CN/' %}
+  {% endif %}
+{% endunless %}
 
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
+        <button aria-label="{% if is_chinese %}打开导航菜单{% else %}Open navigation menu{% endif %}"><div class="navicon"></div></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/">{{ site.title }}</a></li>
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}{{ home_url }}">{{ site.title }}</a></li>
           {% for link in site.data.navigation.main %}
+            {% assign link_url = link.url %}
+            {% assign link_title = link.title %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
-              {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            {% assign current_nav_url = page.url | replace: '/zh-CN/', '/' %}
-            {% assign nav_url = link.url %}
-            {% unless nav_url contains 'http' %}
-              {% assign nav_url = nav_url | prepend: base_path %}
-            {% endunless %}
-            {% if current_nav_url == link.url or current_nav_url == nav_url %}
-              <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}" aria-current="page">{{ link.title }}</a></li>
             {% else %}
-              <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+              {% assign domain = base_path %}
+              {% if is_chinese %}
+                {% assign chinese_url = link.url | append: 'zh-CN/' %}
+                {% assign chinese_page = site.pages | where: 'url', chinese_url | first %}
+                {% if chinese_page %}
+                  {% assign link_url = chinese_url %}
+                  {% assign link_title = link.title_zh | default: link.title %}
+                {% endif %}
+              {% endif %}
             {% endif %}
+            <li class="masthead__menu-item"><a href="{{ domain }}{{ link_url }}"{% if current_nav_url == link.url %} aria-current="page"{% endif %}>{{ link_title }}</a></li>
           {% endfor %}
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
+      {% if is_chinese %}
+        <a class="language-switch" href="{{ base_path }}{{ alternate_url }}" lang="en" hreflang="en" aria-label="Switch to English">English</a>
+      {% else %}
+        <a class="language-switch" href="{{ base_path }}{{ alternate_url }}" lang="zh-CN" hreflang="zh-CN" aria-label="切换到中文">中文</a>
+      {% endif %}
     </div>
   </div>
 </div>
