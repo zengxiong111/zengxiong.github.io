@@ -34,9 +34,9 @@ function updateNav() {
   } else {
 
     // There is space for another item in the nav
-    if(availableSpace > breaks[breaks.length-1]) {
+    while(breaks.length && availableSpace > breaks[breaks.length-1]) {
 
-      // Move the item to the visible list
+      // Restore every item that fits after widening the navigation.
       $hlinks.children().first().appendTo($vlinks);
       breaks.pop();
     }
@@ -52,7 +52,7 @@ function updateNav() {
   $btn.attr("count", breaks.length);
 
   // Recur if the visible list is still overflowing the nav
-  if($vlinks.width() > availableSpace) {
+  if($vlinks.width() > availableSpace && $vlinks.children('*:not(.masthead__menu-item--lg)').length) {
     updateNav();
   }
 
