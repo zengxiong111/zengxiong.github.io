@@ -16,6 +16,8 @@ author_profile: true
 
 </div>
 
+基于我们的项目经验，我维护了一门开源课程：<a href="https://github.com/zengxiong111/Foundation_of_Embodied_AI" target="_blank">Foundation of Embodied AI</a>。
+
 <div class="recruitment-notice" markdown="1">
 
 **我正在积极招募研究助理！** 请发送邮件至 zengx3@sustech.edu.cn！
