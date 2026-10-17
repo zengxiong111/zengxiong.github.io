@@ -30,10 +30,11 @@ TA for EECS 501 **Probability Theory and Random Process** (Fall 2024)<br>
 
  
 - [The Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html) by  Prof. Rich Sutton.
-- [Mathematical Foundations of Reinforcement Learning](https://raw.githubusercontent.com/MathFoundationRL/Book-Mathematical-Foundation-of-Reinforcement-Learning/refs/heads/main/Book-all-in-one.pdf) by Prof. Shiyu Zhao.
-- [Introduction to Flow Matching and Diffusion Models](https://diffusion.csail.mit.edu/2026/index.html) by Peter Holderrieth and Ezra Erives.
+- [Advanced Control for Robotics](http://www.wzhanglab.site/teaching/mee-5114-advanced-control-for-robotics/) by  Prof. Wei Zhang.
 - [Deep Reinforcement Learning](https://cs224r.stanford.edu/) by Prof. Chelsea Finn.
 - [Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse/) by Prof. Sergey Levine.
+- [Mathematical Foundations of Reinforcement Learning](https://raw.githubusercontent.com/MathFoundationRL/Book-Mathematical-Foundation-of-Reinforcement-Learning/refs/heads/main/Book-all-in-one.pdf) by Prof. Shiyu Zhao.
+- [Introduction to Flow Matching and Diffusion Models](https://diffusion.csail.mit.edu/2026/index.html) by Peter Holderrieth and Ezra Erives.
 - <a href="https://zengxiong111.github.io/zengxiong.github.io/files/A_Tutorial_for_MPPI-s.pdf"
    target="_blank">
   MPPI
