@@ -16,7 +16,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -33,6 +33,57 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Synchronize current Foundation of Embodied AI downloads
+        shell: bash
+        run: |
+          set -euo pipefail
+          UPSTREAM="$RUNNER_TEMP/foundation-embodied-course"
+          git clone --quiet --depth 1 https://github.com/zengxiong111/Foundation_of_Embodied_AI.git "$UPSTREAM"
+          python3 - "$UPSTREAM" <<'PY'
+          import json, sys
+          from pathlib import Path
+          upstream = Path(sys.argv[1]).resolve()
+          website = Path.cwd().resolve()
+          manifest = json.loads((upstream / "materials.json").read_text())
+          assert len(manifest["topics"]) == 13
+          copies = 0
+          for topic in manifest["topics"]:
+              for lang in ("zh", "en"):
+                  item = topic["documents"][lang]
+                  for ext in ("md", "pdf"):
+                      source = upstream / item[ext]
+                      destination = (website / item["site_" + ext]).resolve()
+                      if not destination.is_relative_to(website / "files"):
+                          raise RuntimeError("Unsafe website path: " + str(destination))
+                      if not source.is_file():
+                          raise FileNotFoundError(source)
+                      payload = source.read_bytes()
+                      if ext == "md" and payload.startswith(b"---\n"):
+                          payload = b"\n" + payload
+                      destination.parent.mkdir(parents=True, exist_ok=True)
+                      destination.write_bytes(payload)
+                      assert destination.read_bytes() == payload
+                      copies += 1
+          for lang in ("Chinese", "English"):
+              name = f"Foundation_of_Embodied_AI_Complete_{lang}.pdf"
+              src = upstream / "books" / name
+              assert src.is_file()
+              dst = website / "files" / name
+              dst.parent.mkdir(parents=True, exist_ok=True)
+              dst.write_bytes(src.read_bytes())
+              copies += 1
+          assert copies == 54, copies
+          print("Synced and verified", copies, "course files into website/files/")
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- files/
+          if git diff --cached --quiet; then
+            echo "Website already has all 54 current materials."
+          else
+            git commit -m "Publish 26 bilingual chapter PDFs and two complete course books"
+            git push origin HEAD:master
+          fi
       - name: Setup Ruby
         # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0
         uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
