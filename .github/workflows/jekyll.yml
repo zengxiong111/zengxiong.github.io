@@ -99,6 +99,31 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      - name: Verify 54 deployable course files
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          upstream = Path(os.environ["RUNNER_TEMP"]) / "foundation-embodied-course"
+          manifest = json.loads((upstream / "materials.json").read_text())
+          items = []
+          for topic in manifest["topics"]:
+              for lang in ("zh", "en"):
+                  docs = topic["documents"][lang]
+                  items.extend([docs["site_md"], docs["site_pdf"]])
+          for lang in ("Chinese", "English"):
+              items.append(f"files/Foundation_of_Embodied_AI_Complete_{lang}.pdf")
+          assert len(items) == 54
+          for item in items:
+              source = Path(item)
+              rendered = Path("_site") / item
+              if not rendered.is_file():
+                  raise RuntimeError("Published output missing: " + item)
+              if source.read_bytes() != rendered.read_bytes():
+                  raise RuntimeError("Rendered output differs: " + item)
+          print("Validated 54 byte-identical chapter/book downloads in _site")
+          PY
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
