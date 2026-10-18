@@ -3,9 +3,9 @@ permalink: /markdown/zh-CN/
 author_profile: true
 ---
 
-# 个人简介
+# 个人简介与学术服务
 
-教育经历、个人兴趣与学术服务。[English]({{ site.baseurl }}/markdown/)
+教育经历、个人兴趣与学术服务。
 
 ## 简介
 

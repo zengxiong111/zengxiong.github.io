@@ -25,14 +25,13 @@ redirect_from:
   <li class="teaching-entry"><span class="teaching-course"><span class="teaching-role">TA for</span> EECS 501 <strong>Probability Theory and Random Process</strong></span><span class="teaching-term">(Fall 2024)</span></li>
 </ul>
 
-
 ## Other Resources
 
 ### Robot Learning and Control
 
- 
-- [The Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html) by  Prof. Rich Sutton.
-- [Advanced Control for Robotics](http://www.wzhanglab.site/teaching/mee-5114-advanced-control-for-robotics/) by  Prof. Wei Zhang.
+
+- [The Bitter Lesson](http://www.incompleteideas.net/IncIdeas/BitterLesson.html) by Prof. Rich Sutton.
+- [Advanced Control for Robotics](http://www.wzhanglab.site/teaching/mee-5114-advanced-control-for-robotics/) by Prof. Wei Zhang.
 - [Deep Reinforcement Learning](https://cs224r.stanford.edu/) by Prof. Chelsea Finn.
 - [Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse/) by Prof. Sergey Levine.
 - [Mathematical Foundations of Reinforcement Learning](https://raw.githubusercontent.com/MathFoundationRL/Book-Mathematical-Foundation-of-Reinforcement-Learning/refs/heads/main/Book-all-in-one.pdf) by Prof. Shiyu Zhao.
@@ -41,8 +40,6 @@ redirect_from:
    target="_blank">
   MPPI
 </a>.
-
-
 
 ### Research and Education
 
@@ -56,9 +53,6 @@ redirect_from:
 - [Story of Prof. Steven M. LaValle](https://lavalle.pl/bio.html), the inventor of rapidly exploring random tree (RRT).
 - [Website](https://raffaello.name/business-research-art/) of Prof. Raffaello D'Andrea.
 - [How New Engineering Education Powers Innovation?](https://interactive.zaobao.com.sg/future365/2026/li-zexiang-new-engineering-education-en.html) by Prof. Zexiang Li.
-
-
-
 
 ### Management and Business
 

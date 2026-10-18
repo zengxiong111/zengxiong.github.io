@@ -3,6 +3,11 @@
 # English (default)
 # -----------------
 en: &DEFAULT_EN
+  profile_links_label        : "Follow"
+  scholar_label              : "Google Scholar"
+  sitemap_label              : "Sitemap"
+  last_updated_label         : "Site last updated"
+  fork_of_label              : "a fork of"
   page                       : "Page"
   pagination_previous        : "Previous"
   pagination_next            : "Next"
@@ -269,6 +274,11 @@ it-IT:
 # Chinese (simplified)
 # -----------------
 zh: &DEFAULT_ZH
+  profile_links_label        : "关注"
+  scholar_label              : "谷歌学术"
+  sitemap_label              : "网站地图"
+  last_updated_label         : "网站更新日期"
+  fork_of_label              : "基于"
   page                       : "页面"
   pagination_previous        : "上一页"
   pagination_next            : "下一页"
@@ -288,7 +298,7 @@ zh: &DEFAULT_ZH
   more_label                 : "了解更多"
   related_label              : "你可能感兴趣的"
   follow_label               : "关注："
-  feed_label                 : "打赏"
+  feed_label                 : "订阅"
   powered_by                 : "技术支持："
   website_label              : "网站"
   email_label                : "电子邮件"

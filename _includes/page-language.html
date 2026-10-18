@@ -1,0 +1,5 @@
+{% assign page_language = 'en' %}
+{% if page.url contains '/zh-CN/' %}
+  {% assign page_language = 'zh-CN' %}
+{% endif %}
+{% assign page_ui = site.data.ui-text[page_language] %}
