@@ -236,9 +236,9 @@ flowchart LR
 
 在机器人控制中，真实世界状态 $s_t$（物体速度、摩擦系数、接触模式等）一般无法被完整观测。机器人可以记录图像 $o_t^{\mathrm{cam}}$、关节反馈 $q_t$、实际发送的控制命令 $a_t$ 和任务目标 $g$。将一条示教定义为
 
-$
+$$
 \tau_i=\{g_i,(o_t^{\mathrm{cam}},q_t,a_t,r_t^{\mathrm{event}})_{t=0}^{T_i-1}\}.
-$
+$$
 
 事件标注 $r_t^{\mathrm{event}}$ 可以表示接触、滑落、恢复与任务完成，**不是必须使用的强化学习奖励**。不要把仿真器的真实物体位姿、示教者未来的动作或后处理的成功标签偷放到部署策略输入。若监督信号来自动作命令而观测来自延迟的反馈，应明确这一时序关系。
 
@@ -248,10 +248,10 @@ $
 
 策略从最近 $L$ 帧观测、当前本体状态和目标构造条件 $c_t=(o_{t-L+1:t},q_t,g)$，预测长度为 $H$ 的动作块
 
-$
+$$
 A_t=(a_t,a_{t+1},\ldots,a_{t+H-1}),\qquad
 p_\theta(A_t\mid c_t).
-$
+$$
 
 $H$ 是**预测长度**，不是必须开环执行的步数。实际执行 $h\le H$ 步后重新观测，构成滚动时域控制。策略查询周期、机器人低层控制周期、动作块执行长度必须分别记录。例如视觉为 30 Hz、低层伺服为 100 Hz 时，策略可以低于伺服频率运行，但中间的插值和超时机制不可省略。
 
@@ -263,10 +263,10 @@ $H$ 是**预测长度**，不是必须开环执行的步数。实际执行 $h\le
 
 对训练集中的动作分量计算 $\mu_D,\sigma_D$ 后归一化：
 
-$
+$$
 \tilde a=(a-\mu_D)/(\sigma_D+\varepsilon),\qquad
 a_{\rm deployed}=\tilde a(\sigma_D+\varepsilon)+\mu_D .
-$
+$$
 
 不同关节角、夹爪开合或末端旋转需要正确的单位与限幅。检查归一化统计是否意外使用测试集数据。
 
@@ -280,17 +280,17 @@ $
 
 给定示教数据分布 $d_E(c,a)$，最简单的确定性 BC 优化
 
-$
+$$
 \mathcal L_{\rm BC}(\theta)=\mathbb E_{(c,a)\sim d_E}\|\pi_\theta(c)-a\|_2^2.
-$
+$$
 
 它在均方损失下趋向条件均值 $\mathbb E[a\mid c]$。当专家行为近似单峰时，它是低成本、值得保留的强基线；当同一条件下“从左绕开”和“从右绕开”都是合理动作时，平均行为可能撞上障碍物。
 
 用概率模型更一般地写为最大似然：
 
-$
+$$
 \mathcal L_{\rm NLL}(\theta)=-\mathbb E_{(c,a)\sim d_E}\log p_\theta(a\mid c).
-$
+$$
 
 若 $p_\theta$ 为方差固定的各向同性高斯分布，NLL 与带常数系数的 MSE 等价。多峰分布需要混合密度模型或生成式动作策略，**不能只因为动作维度高就认定 BC 必然失败**。
 
@@ -300,11 +300,11 @@ $
 
 离线 BC 在专家访问的状态分布 $d_{\pi_E}$ 上训练，但部署后的数据来自 $d_{\pi_\theta}$，两者可能不同：
 
-$
+$$
 \min_\theta\,\mathbb E_{s\sim d_{\pi_E}}\ell(\pi_\theta(s),\pi_E(s))
 \quad\not\Rightarrow\quad
 \min_\theta\,\mathbb E_{s\sim d_{\pi_\theta}}\ell(\pi_\theta(s),\pi_E(s)).
-$
+$$
 
 一个小的接触误差可能触发物体滑动，使后续观察脱离训练分布。专家示教集中在成功轨迹时，模型可能根本没有见过“物体掉落后重新抓取”的状态。这解释了为什么测试需要扰动恢复回合，而不仅是随机抽样的动作回归误差。
 
@@ -314,11 +314,11 @@ $
 
 在带掩码的变长轨迹中，动作块回归可以写为
 
-$
+$$
 \mathcal L_{\rm chunk}=
 \frac{\sum_{t,k}m_{t,k}w_k\|\hat a_{t+k\mid t}-a_{t+k}\|_1}
 {\sum_{t,k}m_{t,k}w_k},
-$
+$$
 
 其中 $m_{t,k}\in\{0,1\}$ 排除越界步，$w_k$ 可以减小远期预测权重。可选的动作平滑正则为 $\lambda_s\sum_k\|\hat a_{k+1}-\hat a_k\|^2$，但精密插装、接触切换时动作变化可能是必要的，**过度平滑会抹掉真实接触事件**。比较正则前后成功率和力/速度峰值，而不是只看曲线是否光滑。
 
@@ -332,10 +332,10 @@ $
 
 DAgger 的要点不是简单再训练，而是让当前策略暴露它自己会遇到的状态，专家再标注这些状态。第 $i$ 轮执行混合策略 $\pi_i=\beta_i\pi_E+(1-\beta_i)\pi_{\theta_i}$，采集 $s\sim d_{\pi_i}$，专家提供动作 $\pi_E(s)$，然后更新
 
-$
+$$
 D_{i+1}=D_i\cup\{(s,\pi_E(s)):s\sim d_{\pi_i}\},\qquad
 \theta_{i+1}=\arg\min_\theta\sum_{(s,a)\in D_{i+1}}\ell(\pi_\theta(s),a).
-$
+$$
 
 $\beta_i$ 通常逐步降低。真实机器人上必须给专家接管、安全停止和强制限幅预留控制权；不能直接让未经审查的探索命令在硬件上自由执行。
 
@@ -357,11 +357,11 @@ $\beta_i$ 通常逐步降低。真实机器人上必须给专家接管、安全�
 
 Action Chunking with Transformers（ACT）通过 Transformer 预测整段关节命令，原始方案还使用条件变分自编码器处理示教的风格差异。训练时编码器近似 $q_\phi(z\mid A,c)$，解码器给出 $p_\theta(A\mid z,c)$，常见的损失为
 
-$
+$$
 \mathcal L_{\rm ACT}=
 \mathbb E_{z\sim q_\phi}\big[-\log p_\theta(A\mid z,c)\big]
 +\beta\,D_{\rm KL}(q_\phi(z\mid A,c)\|p(z)).
-$
+$$
 
 第二项把示教编码分布约束到先验 $p(z)$；推理阶段没有真实未来动作块 $A$ 可用，应从约定先验采样或使用其确定性代表。$\beta$ 过大可能造成后验塌缩，过小则易使训练与推理潜变量分布不一致。
 
@@ -371,17 +371,17 @@ $
 
 令 $A_0$ 为真实动作块、$\epsilon\sim\mathcal N(0,I)$、扩散时间 $k$，构造
 
-$
+$$
 A_k=\sqrt{\bar\alpha_k}A_0+\sqrt{1-\bar\alpha_k}\epsilon.
-$
+$$
 
 一个常见的条件噪声预测目标为
 
-$
+$$
 \mathcal L_{\rm diff}=
 \mathbb E_{A_0,c,k,\epsilon}
 \|\epsilon-\epsilon_\theta(A_k,k,c)\|_2^2.
-$
+$$
 
 推理时从高斯噪声迭代去噪得到动作块，并只执行其中一部分，再基于新观测重规划。计算量由去噪步数、动作维度和视觉编码器共同决定；“生成式”本身不保证实时。
 
@@ -391,11 +391,11 @@ $
 
 为便于解释，设数据端点 $A_1\sim p_{\rm data}(\cdot\mid c)$、噪声 $A_0\sim\mathcal N(0,I)$，选择直线路径 $A_\tau=(1-\tau)A_0+\tau A_1$。一个条件速度回归目标为
 
-$
+$$
 \mathcal L_{\rm FM}=
 \mathbb E_{c,A_0,A_1,\tau}
 \|v_\theta(A_\tau,\tau,c)-(A_1-A_0)\|_2^2.
-$
+$$
 
 采样时求解生成空间 ODE：$dA_\tau/d\tau=v_\theta(A_\tau,\tau,c)$。其中 $v_\theta$ 是**动作样本在生成时间 $\tau$ 上的变化方向**，不是机械臂关节速度 $\dot q$。不同论文的时间方向和路径不同；严格的连续性方程、条件期望推导及 OpenPI 的时间约定统一放在 [Flow Matching 专题](Flow_Matching_详细推导_精简版.md)，本章只说明与模仿学习的接口。
 
@@ -415,12 +415,12 @@ $
 
 可采用“视频中的手/工具位姿估计 → 相机与尺度对齐 → 目标机器人运动学重定向 → 接触时间段识别 → 物理回放与不可达轨迹修复 → 学习”的链条。人类手与灵巧手的自由度、连杆长度及摩擦条件不同，简单的关节角映射通常不足以复现接触。重定向的目标可包含手部追踪、接触位置和约束软惩罚：
 
-$
+$$
 \mathcal L_{\rm retarget}
 =w_p\|p_{\rm robot}-p_{\rm target}\|^2
 +w_R\,d_{SO(3)}(R_{\rm robot},R_{\rm target})^2
 +w_c\mathcal L_{\rm contact}+w_j\mathcal L_{\rm limits}.
-$
+$$
 
 这里 $\mathcal L_{\rm contact}$ 必须针对具体任务定义，例如接触点距离、接触法线、抓握保持或物体相对滑移；不等于“两个物体距离近”就保证存在力学接触。
 
@@ -480,11 +480,11 @@ $
 
 ### 8.1 数据集、闭环系统与行为策略
 
-将一个 episode 表示为 $\\tau_i=(g_i,\\{o_t,q_t,a_t,r_t,\\delta_t\\}_{t=0}^{T_i-1})$，其中 $o_t$ 可以包含头部和腕部图像，$q_t$ 是机器人反馈，$a_t$ 是**实际发出的控制命令**，$\\delta_t$ 标记终止或异常事件。目标数据集 $D=\\{\\tau_i\\}_{i=1}^N$ 应保留每个观测与控制信号的独立时间戳，而不是仅保存重采样后的视频帧。
+将一个 episode 表示为 $\tau_i=(g_i,\{o_t,q_t,a_t,r_t,\delta_t\}_{t=0}^{T_i-1})$，其中 $o_t$ 可以包含头部和腕部图像，$q_t$ 是机器人反馈，$a_t$ 是**实际发出的控制命令**，$\delta_t$ 标记终止或异常事件。目标数据集 $D=\{\tau_i\}_{i=1}^N$ 应保留每个观测与控制信号的独立时间戳，而不是仅保存重采样后的视频帧。
 
-区分三种策略：专家 $\\pi_E$、离线数据收集行为策略 $\\mu$ 和待学习策略 $\\pi_\\theta$。如果混入随机探索、失败恢复和多个操作者的数据，通常 $\\mu\\ne\\pi_E$；不能默认全部动作都是最优监督标签。对训练样本可设置质量权重 $w_i\\ge 0$，但需要在无权重的数据分布上进行独立评估。
+区分三种策略：专家 $\pi_E$、离线数据收集行为策略 $\mu$ 和待学习策略 $\pi_\theta$。如果混入随机探索、失败恢复和多个操作者的数据，通常 $\mu\ne\pi_E$；不能默认全部动作都是最优监督标签。对训练样本可设置质量权重 $w_i\ge 0$，但需要在无权重的数据分布上进行独立评估。
 
-时间对齐的因果约束是 $t_{\\mathrm{obs}}\\le t_{\\mathrm{act}}$，考虑感知和通信延迟 $d$ 时，策略真实使用的是 $\\pi_\\theta(a_t\\mid o_{t-d},q_{t-d},g)$。训练时使用未来帧会导致离线指标偏高但部署失败。
+时间对齐的因果约束是 $t_{\mathrm{obs}}\le t_{\mathrm{act}}$，考虑感知和通信延迟 $d$ 时，策略真实使用的是 $\pi_\theta(a_t\mid o_{t-d},q_{t-d},g)$。训练时使用未来帧会导致离线指标偏高但部署失败。
 
 <a id="course-section-44"></a>
 
@@ -493,28 +493,28 @@ $
 对于确定性动作回归，经典损失为
 
 $$
-\\mathcal L_{\\mathrm{BC}}(\\theta)=\\frac1{|D|}\\sum_{(o,a)\\in D}\\|\\pi_\\theta(o)-a\\|_2^2.
+\mathcal L_{\mathrm{BC}}(\theta)=\frac1{|D|}\sum_{(o,a)\in D}\|\pi_\theta(o)-a\|_2^2.
 $$
 
 当示教是多模态分布，例如抓取物体可以从左右两侧接近，单一均值动作可能落在两种模式之间。概率式 BC 优化
 
 $$
-\\mathcal L_{\\mathrm{NLL}}(\\theta)=-\\mathbb E_{(o,a)\\sim D}\\log\\pi_\\theta(a\\mid o,g).
+\mathcal L_{\mathrm{NLL}}(\theta)=-\mathbb E_{(o,a)\sim D}\log\pi_\theta(a\mid o,g).
 $$
 
-对高斯策略 $\\pi_\\theta=\\mathcal N(\\mu_\\theta,\\Sigma_\\theta)$，负对数似然包含 $\\frac12(a-\\mu_\\theta)^\\top\\Sigma_\\theta^{-1}(a-\\mu_\\theta)$ 与 $\\frac12\\log|\\Sigma_\\theta|$，因此固定协方差时才近似为加权 MSE。关节角、末端位姿和手指控制量的量纲不同，应先定义动作尺度或明确损失权重。
+对高斯策略 $\pi_\theta=\mathcal N(\mu_\theta,\Sigma_\theta)$，负对数似然包含 $\frac12(a-\mu_\theta)^\top\Sigma_\theta^{-1}(a-\mu_\theta)$ 与 $\frac12\log|\Sigma_\theta|$，因此固定协方差时才近似为加权 MSE。关节角、末端位姿和手指控制量的量纲不同，应先定义动作尺度或明确损失权重。
 
 <a id="course-section-45"></a>
 
 ### 8.3 分布偏移与 DAgger
 
-离线训练最小化专家访问分布 $d^{\\pi_E}$ 下的单步误差，闭环部署却访问 $d^{\\pi_\\theta}$。简单情况下误差会随时域 $T$ 复合累积，不能把单步高准确率直接等同于任务成功。
+离线训练最小化专家访问分布 $d^{\pi_E}$ 下的单步误差，闭环部署却访问 $d^{\pi_\theta}$。简单情况下误差会随时域 $T$ 复合累积，不能把单步高准确率直接等同于任务成功。
 
 DAgger 通过迭代方式缓解偏移：
 
 $$
-D_{k+1}=D_k\\cup\\{(o,\\pi_E(o)):o\\sim d^{\\pi_{\\theta_k}}\\},\\qquad
-\\theta_{k+1}=\\arg\\min_\\theta\\mathbb E_{(o,a)\\sim D_{k+1}}\\ell(\\pi_\\theta(o),a).
+D_{k+1}=D_k\cup\{(o,\pi_E(o)):o\sim d^{\pi_{\theta_k}}\},\qquad
+\theta_{k+1}=\arg\min_\theta\mathbb E_{(o,a)\sim D_{k+1}}\ell(\pi_\theta(o),a).
 $$
 
 关键是为学习器真正访问的状态提供专家标签；对机器人应设置接管、紧急停止、速度和力矩上限。仅仅对旧数据重复训练**不是** DAgger。
@@ -527,7 +527,7 @@ $$
 
 ### 9.1 预测长度和执行长度
 
-令 $A_t=(a_t,\\ldots,a_{t+H-1})$ 为长度为 $H$ 的动作块。策略输入 $c_t=(o_{t-k:t},q_t,g)$，输出 $\\hat A_t=f_\\theta(c_t)$。实际只执行前 $h\\le H$ 步再重新观测，从而平衡计算开销与闭环纠错能力。**区分**策略查询频率 $f_\\pi$、低层控制频率 $f_c$ 和执行时长 $h/f_c$。观测发生遮挡、物体掉落或接触变化时，应优先允许提前中止当前动作块。
+令 $A_t=(a_t,\ldots,a_{t+H-1})$ 为长度为 $H$ 的动作块。策略输入 $c_t=(o_{t-k:t},q_t,g)$，输出 $\hat A_t=f_\theta(c_t)$。实际只执行前 $h\le H$ 步再重新观测，从而平衡计算开销与闭环纠错能力。**区分**策略查询频率 $f_\pi$、低层控制频率 $f_c$ 和执行时长 $h/f_c$。观测发生遮挡、物体掉落或接触变化时，应优先允许提前中止当前动作块。
 
 <a id="course-section-48"></a>
 
@@ -536,10 +536,10 @@ $$
 ACT 以 Transformer/CVAE 预测动作块。其典型训练目标为
 
 $$
-\\mathcal L_{\\mathrm{ACT}}=
-\\mathbb E_{q_\\phi(z\\mid A,c)}
-\\|A-f_\\theta(c,z)\\|_1
-+\\beta D_{\\mathrm{KL}}\\!\\left(q_\\phi(z\\mid A,c)\\|p(z)\\right).
+\mathcal L_{\mathrm{ACT}}=
+\mathbb E_{q_\phi(z\mid A,c)}
+\|A-f_\theta(c,z)\|_1
++\beta D_{\mathrm{KL}}\!\left(q_\phi(z\mid A,c)\|p(z)\right).
 $$
 
 第一项拟合示教动作块，第二项让训练时使用的潜变量分布靠近推理先验。实践中还需明确多时刻预测重叠时如何做 temporal ensembling，以及不同接触阶段是否适合平均动作。
@@ -548,12 +548,12 @@ $$
 
 ### 9.3 Diffusion Policy 的去噪训练
 
-定义干净动作块 $A^0$ 和加噪变量 $A^k=\\sqrt{\\bar\\alpha_k}A^0+\\sqrt{1-\\bar\\alpha_k}\\epsilon$，$\\epsilon\\sim\\mathcal N(0,I)$。常见噪声预测目标是
+定义干净动作块 $A^0$ 和加噪变量 $A^k=\sqrt{\bar\alpha_k}A^0+\sqrt{1-\bar\alpha_k}\epsilon$，$\epsilon\sim\mathcal N(0,I)$。常见噪声预测目标是
 
 $$
-\\mathcal L_{\\mathrm{diff}}=
-\\mathbb E_{A^0,c,k,\\epsilon}
-\\left[\\|\\epsilon-\\epsilon_\\theta(A^k,k,c)\\|_2^2\\right].
+\mathcal L_{\mathrm{diff}}=
+\mathbb E_{A^0,c,k,\epsilon}
+\left[\|\epsilon-\epsilon_\theta(A^k,k,c)\|_2^2\right].
 $$
 
 生成时从噪声逐步迭代得到动作块；这种去噪步数属于**生成过程**，不等于机器人的控制步数。对不同推理步数，应报告真实硬件延迟和任务成功率。
@@ -562,14 +562,14 @@ $$
 
 ### 9.4 Flow Matching 形式的动作块学习
 
-以 $x_0\\sim\\mathcal N(0,I)$、$x_1=A$，定义 $x_s=(1-s)x_0+s x_1$ 和监督速度 $u=x_1-x_0$。一个常用的条件 Flow Matching 目标是
+以 $x_0\sim\mathcal N(0,I)$、$x_1=A$，定义 $x_s=(1-s)x_0+s x_1$ 和监督速度 $u=x_1-x_0$。一个常用的条件 Flow Matching 目标是
 
 $$
-\\mathcal L_{\\mathrm{FM}}=
-\\mathbb E_{s,x_0,x_1,c}\\|v_\\theta(x_s,s,c)-(x_1-x_0)\\|_2^2.
+\mathcal L_{\mathrm{FM}}=
+\mathbb E_{s,x_0,x_1,c}\|v_\theta(x_s,s,c)-(x_1-x_0)\|_2^2.
 $$
 
-推理可求解 $\\mathrm dx_s/\\mathrm ds=v_\\theta(x_s,s,c)$，从初始噪声生成动作块。该式采用噪声到数据的时间方向；具体模型若使用相反参数化，应相应调整速度符号。**完整推导、边缘速度场与条件期望证明统一放在 [Flow Matching 专章](Flow_Matching_详细推导_精简版.md)，这里聚焦数据接口和训练实施。**
+推理可求解 $\mathrm dx_s/\mathrm ds=v_\theta(x_s,s,c)$，从初始噪声生成动作块。该式采用噪声到数据的时间方向；具体模型若使用相反参数化，应相应调整速度符号。**完整推导、边缘速度场与条件期望证明统一放在 [Flow Matching 专章](Flow_Matching_详细推导_精简版.md)，这里聚焦数据接口和训练实施。**
 
 <a id="course-section-51"></a>
 
@@ -579,9 +579,9 @@ $$
 
 ### 10.1 轨迹质量、标签可靠性与事件分层
 
-建议将数据集划分为成功示教、专家纠错、失败恢复、不可模仿的失败四类。可记录二值接触标签 $c_t\\in\\{0,1\\}$，优先使用接触传感器或经过验证的物理事件作为标签；仅从图像推断的接触必须标明为估计。
+建议将数据集划分为成功示教、专家纠错、失败恢复、不可模仿的失败四类。可记录二值接触标签 $c_t\in\{0,1\}$，优先使用接触传感器或经过验证的物理事件作为标签；仅从图像推断的接触必须标明为估计。
 
-对于事件偏置采样，在接触切换时刻 $t_j$ 周围提高采样权重，例如 $w_t=1+\\lambda\\sum_j\\exp[-(t-t_j)^2/(2\\sigma^2)]$。这是一种**人为训练分布选择**，并不保证比均匀采样更优；需要做事件采样与均匀采样消融。
+对于事件偏置采样，在接触切换时刻 $t_j$ 周围提高采样权重，例如 $w_t=1+\lambda\sum_j\exp[-(t-t_j)^2/(2\sigma^2)]$。这是一种**人为训练分布选择**，并不保证比均匀采样更优；需要做事件采样与均匀采样消融。
 
 <a id="course-section-53"></a>
 
@@ -589,7 +589,7 @@ $$
 
 统一平台使用 Panda + 桌面 + 方块，保持相机标定、动作接口和控制频率固定。比较单步 BC、chunk BC、ACT、Diffusion Policy、Flow Matching。消融实验逐次只改变数据量、执行长度 $h$、示教失败恢复数据比例、视觉噪声或推理预算。
 
-在 $N$ 次独立测试中，成功率估计 $\\hat p=\\frac1N\\sum_i\\mathbf1[\\mathrm{success}_i]$。报告置信区间、训练任务与测试任务的对象/场景拆分、接触失败率、干扰恢复率、每次推理延迟以及完整 episode 时长。训练 MSE 只作诊断，不能替代闭环成功率。
+在 $N$ 次独立测试中，成功率估计 $\hat p=\frac1N\sum_i\mathbf1[\mathrm{success}_i]$。报告置信区间、训练任务与测试任务的对象/场景拆分、接触失败率、干扰恢复率、每次推理延迟以及完整 episode 时长。训练 MSE 只作诊断，不能替代闭环成功率。
 
 <a id="course-section-54"></a>
 

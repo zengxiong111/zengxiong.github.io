@@ -236,9 +236,9 @@ Check timestamps, command/feedback confusion, camera extrinsics, action scale, l
 
 In real manipulation the full world state $s_t$ (object motion, friction, contact modes) is usually not observed. We record images $o_t^{\mathrm{cam}}$, joint feedback $q_t$, actual actuator commands $a_t$, and a goal $g$. A demonstration may be represented as
 
-$
+$$
 \tau_i=\{g_i,(o_t^{\mathrm{cam}},q_t,a_t,r_t^{\mathrm{event}})_{t=0}^{T_i-1}\}.
-$
+$$
 
 The event label $r_t^{\mathrm{event}}$ may encode contact, slip, recovery, or completion; it need not be an RL reward. Ground-truth simulated object poses, future expert commands, or post-hoc outcome labels must not leak into the deployed policy observations. Keep issued commands distinct from delayed joint feedback.
 
@@ -248,10 +248,10 @@ The event label $r_t^{\mathrm{event}}$ may encode contact, slip, recovery, or co
 
 Construct conditioning information $c_t=(o_{t-L+1:t},q_t,g)$ from an observation window, current proprioception and goal. The policy predicts an $H$-step sequence:
 
-$
+$$
 A_t=(a_t,a_{t+1},\ldots,a_{t+H-1}),\qquad
 p_\theta(A_t\mid c_t).
-$
+$$
 
 Prediction horizon $H$ is **not** the number of steps that must run open-loop. Execute only $h\le H$ steps, observe, then replan. Document control interval, inference call interval, queueing and interpolation. For example, 30-Hz vision and 100-Hz servo feedback do not imply that the large VLA must run at 100 Hz; it does require a safe interpolation, hold and timeout policy.
 
@@ -263,10 +263,10 @@ At action time $t_k^a$, training inputs must already have been available. Accoun
 
 Estimate action normalization statistics only on the training set:
 
-$
+$$
 \tilde a=(a-\mu_D)/(\sigma_D+\varepsilon),\qquad
 a_{\rm deployed}=\tilde a(\sigma_D+\varepsilon)+\mu_D.
-$
+$$
 
 Different joints, gripper apertures, rotations and force commands require consistent units and independent safety limits. Never use test data to fit normalization parameters.
 
@@ -280,15 +280,15 @@ Different joints, gripper apertures, rotations and force commands require consis
 
 Given expert samples $(c,a)\sim d_E$, a deterministic baseline minimizes
 
-$
+$$
 \mathcal L_{\rm BC}(\theta)=\mathbb E_{(c,a)\sim d_E}\|\pi_\theta(c)-a\|_2^2.
-$
+$$
 
 Under squared loss it converges toward the conditional mean $\mathbb E[a\mid c]$. This works for sufficiently unimodal behavior. If going left and going right around an obstacle are equally valid, the mean could collide with the obstacle. A probabilistic policy instead minimizes the negative log-likelihood
 
-$
+$$
 \mathcal L_{\rm NLL}(\theta)=-\mathbb E_{(c,a)\sim d_E}\log p_\theta(a\mid c).
-$
+$$
 
 For a Gaussian distribution with fixed isotropic variance, NLL is MSE up to scaling and constants. Mixtures or generative action distributions can represent multiple modes. **High dimensionality alone is not proof that ordinary BC is inadequate.**
 
@@ -298,11 +298,11 @@ For a Gaussian distribution with fixed isotropic variance, NLL is MSE up to scal
 
 Offline BC learns on the expert occupancy $d_{\pi_E}$, while the deployed policy visits $d_{\pi_\theta}$:
 
-$
+$$
 \min_\theta\mathbb E_{s\sim d_{\pi_E}}\ell(\pi_\theta(s),\pi_E(s))
 \quad\not\Rightarrow\quad
 \min_\theta\mathbb E_{s\sim d_{\pi_\theta}}\ell(\pi_\theta(s),\pi_E(s)).
-$
+$$
 
 A small contact error may move the object to a state absent from expert training data. Collect intervention and recovery data; evaluate under deliberate safe perturbations, not solely on shuffled held-out action labels.
 
@@ -312,11 +312,11 @@ A small contact error may move the object to a state absent from expert training
 
 For variable-length episodes use a validity mask $m_{t,k}$ and optional horizon weight $w_k$:
 
-$
+$$
 \mathcal L_{\rm chunk}=
 \frac{\sum_{t,k}m_{t,k}w_k\|\hat a_{t+k\mid t}-a_{t+k}\|_1}
 {\sum_{t,k}m_{t,k}w_k}.
-$
+$$
 
 A smoothness penalty $\lambda_s\sum_k\|\hat a_{k+1}-\hat a_k\|^2$ may suppress unwanted oscillation, yet can also erase necessary changes at contact onset or release. Measure task success and contact-force peaks before choosing it based on visual smoothness.
 
@@ -330,10 +330,10 @@ A smoothness penalty $\lambda_s\sum_k\|\hat a_{k+1}-\hat a_k\|^2$ may suppress u
 
 DAgger gathers the states the current learner actually visits and requests safe expert labels. At iteration $i$, a mixture $\pi_i=\beta_i\pi_E+(1-\beta_i)\pi_{\theta_i}$ visits $s\sim d_{\pi_i}$; the expert supplies $\pi_E(s)$:
 
-$
+$$
 D_{i+1}=D_i\cup\{(s,\pi_E(s)):s\sim d_{\pi_i}\},\qquad
 \theta_{i+1}=\arg\min_\theta\sum_{(s,a)\in D_{i+1}}\ell(\pi_\theta(s),a).
-$
+$$
 
 The expert mixing probability $\beta_i$ is often decreased gradually. Hardware requires human intervention authority, velocity/force limits and emergency stops. Merely retraining from static offline trajectories is not DAgger.
 
@@ -355,11 +355,11 @@ Compare uniform time sampling against event-biased sampling. A weighted loss is 
 
 Action Chunking with Transformers (ACT) predicts a sequence of commands with a Transformer. Its original formulation uses a conditional variational autoencoder (CVAE) to represent variation in demonstrations. An encoder approximates $q_\phi(z\mid A,c)$, and a decoder models $p_\theta(A\mid z,c)$:
 
-$
+$$
 \mathcal L_{\rm ACT}=
 \mathbb E_{z\sim q_\phi}[-\log p_\theta(A\mid z,c)]
 +\beta D_{\rm KL}(q_\phi(z\mid A,c)\|p(z)).
-$
+$$
 
 The KL term regularizes the posterior against the latent prior. At inference there is no future ground-truth action chunk $A$; use the declared prior or a deterministic representative. Large $\beta$ can cause posterior collapse; tiny $\beta$ can create a mismatch between training posterior and inference prior.
 
@@ -369,16 +369,16 @@ The KL term regularizes the posterior against the latent prior. At inference the
 
 Let $A_0$ be a demonstrated action chunk, $\epsilon\sim\mathcal N(0,I)$, and $k$ the diffusion step. Construct
 
-$
+$$
 A_k=\sqrt{\bar\alpha_k}A_0+\sqrt{1-\bar\alpha_k}\epsilon
-$
+$$
 
 and fit the conditional noise prediction objective
 
-$
+$$
 \mathcal L_{\rm diff}=
 \mathbb E_{A_0,c,k,\epsilon}\|\epsilon-\epsilon_\theta(A_k,k,c)\|_2^2.
-$
+$$
 
 At deployment, iterative denoising produces an action chunk. Execute a subset and replan from the next observation. The denoising step count, visual encoder and network architecture all affect latency; "generative" does not imply real-time.
 
@@ -388,11 +388,11 @@ At deployment, iterative denoising produces an action chunk. Execute a subset an
 
 Use data endpoint $A_1\sim p_{\rm data}(\cdot\mid c)$ and noise $A_0\sim\mathcal N(0,I)$. For a straight interpolation $A_\tau=(1-\tau)A_0+\tau A_1$, one possible training loss is
 
-$
+$$
 \mathcal L_{\rm FM}=
 \mathbb E_{c,A_0,A_1,\tau}
 \|v_\theta(A_\tau,\tau,c)-(A_1-A_0)\|_2^2.
-$
+$$
 
 Sample by solving $dA_\tau/d\tau=v_\theta(A_\tau,\tau,c)$. This vector field is a derivative in **generative time**, not the robot's physical $\dot q$. Path choices and time orientations vary by implementation. The continuity equation, conditional-expectation argument and OpenPI time convention are derived exclusively in the [Flow Matching tutorial](Flow_Matching_Step_by_Step_Derivation_EN.md); this chapter focuses on the imitation-learning interface.
 
@@ -412,12 +412,12 @@ Use the same demonstrations, observation encoder, action representation, predict
 
 A realistic pipeline is hand/tool pose recovery → scale and frame calibration → embodiment-specific retargeting → contact event detection → short physics replay and trajectory repair → policy training. Humans and robot hands differ in kinematics, reachability and contact friction. One task-dependent objective is
 
-$
+$$
 \mathcal L_{\rm retarget}
 =w_p\|p_{\rm robot}-p_{\rm target}\|^2+
 w_R d_{SO(3)}(R_{\rm robot},R_{\rm target})^2+
 w_c\mathcal L_{\rm contact}+w_j\mathcal L_{\rm limits}.
-$
+$$
 
 Define $\mathcal L_{\rm contact}$ for the task, e.g. contact point error, surface normals, grasp maintenance or object slip. Mere proximity does not certify physical contact.
 
@@ -477,9 +477,9 @@ This chapter bridges [camera calibration](Robot_Camera_Calibration_Tutorial_EN.m
 
 ### 8.1 Episodes, Behavior Policies, and Causality
 
-Represent an episode by $\\tau_i=(g_i,\\{o_t,q_t,a_t,r_t,\\delta_t\\}_{t=0}^{T_i-1})$ and a dataset by $D=\\{\\tau_i\\}_{i=1}^N$. Preserve camera and control timestamps separately. The logged label $a_t$ must specify the **actual command** rather than confusing commands with measured joint positions. Separate the expert $\\pi_E$, the collection policy $\\mu$, and the learner $\\pi_\\theta$; a mixed collection policy is not automatically an expert.
+Represent an episode by $\tau_i=(g_i,\{o_t,q_t,a_t,r_t,\delta_t\}_{t=0}^{T_i-1})$ and a dataset by $D=\{\tau_i\}_{i=1}^N$. Preserve camera and control timestamps separately. The logged label $a_t$ must specify the **actual command** rather than confusing commands with measured joint positions. Separate the expert $\pi_E$, the collection policy $\mu$, and the learner $\pi_\theta$; a mixed collection policy is not automatically an expert.
 
-For a causal controller, $t_{\\mathrm{obs}}\\le t_{\\mathrm{act}}$. With observation and communication delay $d$, the deployed conditioning resembles $\\pi_\\theta(a_t\\mid o_{t-d},q_{t-d},g)$. Using future frames during offline training leaks information into the policy.
+For a causal controller, $t_{\mathrm{obs}}\le t_{\mathrm{act}}$. With observation and communication delay $d$, the deployed conditioning resembles $\pi_\theta(a_t\mid o_{t-d},q_{t-d},g)$. Using future frames during offline training leaks information into the policy.
 
 <a id="course-section-44"></a>
 
@@ -488,26 +488,26 @@ For a causal controller, $t_{\\mathrm{obs}}\\le t_{\\mathrm{act}}$. With observa
 Deterministic behavioral cloning minimizes
 
 $$
-\\mathcal L_{\\mathrm{BC}}(\\theta)=\\frac1{|D|}\\sum_{(o,a)\\in D}\\|\\pi_\\theta(o)-a\\|_2^2.
+\mathcal L_{\mathrm{BC}}(\theta)=\frac1{|D|}\sum_{(o,a)\in D}\|\pi_\theta(o)-a\|_2^2.
 $$
 
 A multimodal task, such as approaching an object from either side, may make the conditional mean unsafe. Stochastic BC instead minimizes
 
 $$
-\\mathcal L_{\\mathrm{NLL}}=-\\mathbb E_{(o,a)\\sim D}\\log\\pi_\\theta(a\\mid o,g).
+\mathcal L_{\mathrm{NLL}}=-\mathbb E_{(o,a)\sim D}\log\pi_\theta(a\mid o,g).
 $$
 
-For a Gaussian policy, the objective contains $\\frac12(a-\\mu_\\theta)^\\top\\Sigma_\\theta^{-1}(a-\\mu_\\theta)+\\frac12\\log|\\Sigma_\\theta|$. MSE is an appropriate special case only when covariance assumptions are fixed. Normalize action units across joints, end-effector pose and hands.
+For a Gaussian policy, the objective contains $\frac12(a-\mu_\theta)^\top\Sigma_\theta^{-1}(a-\mu_\theta)+\frac12\log|\Sigma_\theta|$. MSE is an appropriate special case only when covariance assumptions are fixed. Normalize action units across joints, end-effector pose and hands.
 
 <a id="course-section-45"></a>
 
 ### 8.3 Compounding Error and DAgger
 
-Offline BC fits the state distribution $d^{\\pi_E}$ of collected demonstrations, whereas deployment visits $d^{\\pi_\\theta}$. Small one-step deviations can compound with horizon. DAgger collects learner-visited states and asks the expert for corresponding actions:
+Offline BC fits the state distribution $d^{\pi_E}$ of collected demonstrations, whereas deployment visits $d^{\pi_\theta}$. Small one-step deviations can compound with horizon. DAgger collects learner-visited states and asks the expert for corresponding actions:
 
 $$
-D_{k+1}=D_k\\cup\\{(o,\\pi_E(o)):o\\sim d^{\\pi_{\\theta_k}}\\},\\qquad
-\\theta_{k+1}=\\arg\\min_\\theta\\mathbb E_{(o,a)\\sim D_{k+1}}\\ell(\\pi_\\theta(o),a).
+D_{k+1}=D_k\cup\{(o,\pi_E(o)):o\sim d^{\pi_{\theta_k}}\},\qquad
+\theta_{k+1}=\arg\min_\theta\mathbb E_{(o,a)\sim D_{k+1}}\ell(\pi_\theta(o),a).
 $$
 
 Expert relabeling is essential. Retraining on an unchanged offline dataset is not DAgger. Human intervention and physical safety limits are necessary on robots.
@@ -520,7 +520,7 @@ Expert relabeling is essential. Retraining on an unchanged offline dataset is no
 
 ### 9.1 Prediction Versus Execution Horizon
 
-Let $A_t=(a_t,\\ldots,a_{t+H-1})$ be a predicted action chunk. Conditioning $c_t=(o_{t-k:t},q_t,g)$ leads to $\\hat A_t=f_\\theta(c_t)$. Execute only the first $h\\le H$ steps and replan. Distinguish policy inference rate $f_\\pi$, servo rate $f_c$ and execution time $h/f_c$. A controller must be able to interrupt a chunk after slip, tracking loss, or unexpected contact.
+Let $A_t=(a_t,\ldots,a_{t+H-1})$ be a predicted action chunk. Conditioning $c_t=(o_{t-k:t},q_t,g)$ leads to $\hat A_t=f_\theta(c_t)$. Execute only the first $h\le H$ steps and replan. Distinguish policy inference rate $f_\pi$, servo rate $f_c$ and execution time $h/f_c$. A controller must be able to interrupt a chunk after slip, tracking loss, or unexpected contact.
 
 <a id="course-section-48"></a>
 
@@ -529,7 +529,7 @@ Let $A_t=(a_t,\\ldots,a_{t+H-1})$ be a predicted action chunk. Conditioning $c_t
 In its original formulation, ACT uses a Transformer and a CVAE-like latent variable. A representative training objective is
 
 $$
-\\mathcal L_{\\mathrm{ACT}}=\\mathbb E_{q_\\phi(z\\mid A,c)}\\|A-f_\\theta(c,z)\\|_1+\\beta D_{\\mathrm{KL}}\\left(q_\\phi(z\\mid A,c)\\|p(z)\\right).
+\mathcal L_{\mathrm{ACT}}=\mathbb E_{q_\phi(z\mid A,c)}\|A-f_\theta(c,z)\|_1+\beta D_{\mathrm{KL}}\left(q_\phi(z\mid A,c)\|p(z)\right).
 $$
 
 The reconstruction term fits chunked actions; the KL term aligns the training posterior with the inference prior. Temporal ensembling between overlapping predictions should be evaluated particularly around discontinuous contact events.
@@ -538,10 +538,10 @@ The reconstruction term fits chunked actions; the KL term aligns the training po
 
 ### 9.3 Diffusion Policy
 
-Given a clean chunk $A^0$ and noise $\\epsilon\\sim\\mathcal N(0,I)$, define $A^k=\\sqrt{\\bar\\alpha_k}A^0+\\sqrt{1-\\bar\\alpha_k}\\epsilon$. A common noise prediction objective is
+Given a clean chunk $A^0$ and noise $\epsilon\sim\mathcal N(0,I)$, define $A^k=\sqrt{\bar\alpha_k}A^0+\sqrt{1-\bar\alpha_k}\epsilon$. A common noise prediction objective is
 
 $$
-\\mathcal L_{\\mathrm{diff}}=\\mathbb E_{A^0,c,k,\\epsilon}\\|\\epsilon-\\epsilon_\\theta(A^k,k,c)\\|_2^2.
+\mathcal L_{\mathrm{diff}}=\mathbb E_{A^0,c,k,\epsilon}\|\epsilon-\epsilon_\theta(A^k,k,c)\|_2^2.
 $$
 
 Iterative denoising generates a chunk. Denoising steps are **generative compute steps**, not robot servo updates. Compare runtime and episode success under a fixed hardware budget.
@@ -550,13 +550,13 @@ Iterative denoising generates a chunk. Denoising steps are **generative compute 
 
 ### 9.4 Flow Matching for Action Chunks
 
-Sample $x_0\\sim\\mathcal N(0,I)$ and take $x_1=A$. For the linear interpolation $x_s=(1-s)x_0+s x_1$, train
+Sample $x_0\sim\mathcal N(0,I)$ and take $x_1=A$. For the linear interpolation $x_s=(1-s)x_0+s x_1$, train
 
 $$
-\\mathcal L_{\\mathrm{FM}}=\\mathbb E_{s,x_0,x_1,c}\\|v_\\theta(x_s,s,c)-(x_1-x_0)\\|_2^2.
+\mathcal L_{\mathrm{FM}}=\mathbb E_{s,x_0,x_1,c}\|v_\theta(x_s,s,c)-(x_1-x_0)\|_2^2.
 $$
 
-Inference solves $\\mathrm dx_s/\\mathrm ds=v_\\theta(x_s,s,c)$. This notation integrates noise to data; implementations with reversed time require corresponding sign changes. **Full conditional/marginal velocity field derivations live in the [Flow Matching chapter](Flow_Matching_Step_by_Step_Derivation_EN.md)**. Here we focus on demonstration supervision and robot action interfaces.
+Inference solves $\mathrm dx_s/\mathrm ds=v_\theta(x_s,s,c)$. This notation integrates noise to data; implementations with reversed time require corresponding sign changes. **Full conditional/marginal velocity field derivations live in the [Flow Matching chapter](Flow_Matching_Step_by_Step_Derivation_EN.md)**. Here we focus on demonstration supervision and robot action interfaces.
 
 <a id="course-section-51"></a>
 
@@ -566,9 +566,9 @@ Inference solves $\\mathrm dx_s/\\mathrm ds=v_\\theta(x_s,s,c)$. This notation i
 
 ### 10.1 Contacts, Failures, and Event-Aware Sampling
 
-Maintain separate labels for successful expert behavior, expert recovery, informative failures, and unsafe failures not suitable for imitation. A contact label $c_t\\in\\{0,1\\}$ should come from a sensor or validated physical event; vision-only inferred contact must be labeled as estimated.
+Maintain separate labels for successful expert behavior, expert recovery, informative failures, and unsafe failures not suitable for imitation. A contact label $c_t\in\{0,1\}$ should come from a sensor or validated physical event; vision-only inferred contact must be labeled as estimated.
 
-An optional event-biased sampler uses $w_t=1+\\lambda\\sum_j\\exp[-(t-t_j)^2/(2\\sigma^2)]$ around contact transition times $t_j$. This modifies the training distribution and is not necessarily better than uniform sampling. Compare both methods experimentally.
+An optional event-biased sampler uses $w_t=1+\lambda\sum_j\exp[-(t-t_j)^2/(2\sigma^2)]$ around contact transition times $t_j$. This modifies the training distribution and is not necessarily better than uniform sampling. Compare both methods experimentally.
 
 <a id="course-section-53"></a>
 
@@ -576,7 +576,7 @@ An optional event-biased sampler uses $w_t=1+\\lambda\\sum_j\\exp[-(t-t_j)^2/(2\
 
 Use the shared Panda + table + cube task, with fixed cameras, controls, randomization seeds, and evaluation splits. Compare one-step BC, chunk BC, ACT, Diffusion Policy, and Flow Matching while separately ablating dataset size, execution horizon, recovery examples, perception noise, and inference budget.
 
-Over $N$ test episodes, report $\\hat p=\\frac1N\\sum_i\\mathbf1[\\mathrm{success}_i]$ with uncertainty intervals, object and scene holdout protocols, contact failures, recovery, inference latency and total episode duration. Training action MSE alone is insufficient.
+Over $N$ test episodes, report $\hat p=\frac1N\sum_i\mathbf1[\mathrm{success}_i]$ with uncertainty intervals, object and scene holdout protocols, contact failures, recovery, inference latency and total episode duration. Training action MSE alone is insufficient.
 
 <a id="course-section-54"></a>
 
