@@ -64,15 +64,7 @@ jobs:
                       destination.write_bytes(payload)
                       assert destination.read_bytes() == payload
                       copies += 1
-          for lang in ("Chinese", "English"):
-              name = f"Foundation_of_Embodied_AI_Complete_{lang}.pdf"
-              src = upstream / "books" / name
-              assert src.is_file()
-              dst = website / "files" / name
-              dst.parent.mkdir(parents=True, exist_ok=True)
-              dst.write_bytes(src.read_bytes())
-              copies += 1
-          assert copies == (4 * len(manifest["topics"]) + 2), copies
+          assert copies == (4 * len(manifest["topics"])), copies
           print("Synced and verified", copies, "course files into website/files/")
           PY
           git config user.name "github-actions[bot]"
@@ -81,7 +73,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "Website already has all current course materials."
           else
-            git commit -m "Publish 28 bilingual chapter PDFs and two complete course books"
+            git commit -m "Publish bilingual chapter materials"
             git push origin HEAD:master
           fi
       - name: Setup Ruby
@@ -112,9 +104,7 @@ jobs:
               for lang in ("zh", "en"):
                   docs = topic["documents"][lang]
                   items.extend([docs["site_md"], docs["site_pdf"]])
-          for lang in ("Chinese", "English"):
-              items.append(f"files/Foundation_of_Embodied_AI_Complete_{lang}.pdf")
-          assert len(items) == (4 * len(manifest["topics"]) + 2)
+          assert len(items) == (4 * len(manifest["topics"]))
           for item in items:
               source = Path(item)
               rendered = Path("_site") / item
@@ -122,7 +112,7 @@ jobs:
                   raise RuntimeError("Published output missing: " + item)
               if source.read_bytes() != rendered.read_bytes():
                   raise RuntimeError("Rendered output differs: " + item)
-          print("Validated", len(items), "byte-identical chapter/book downloads in _site")
+          print("Validated", len(items), "byte-identical chapter downloads in _site")
           PY
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
@@ -151,7 +141,7 @@ jobs:
         run: |
           git clone --quiet --depth 1 https://github.com/zengxiong111/Foundation_of_Embodied_AI.git upstream
 
-      - name: Verify every public Markdown, PDF, and complete-book download
+      - name: Verify every public chapter Markdown and PDF download
         shell: bash
         run: |
           python3 - <<'PY'
@@ -174,11 +164,7 @@ jobs:
                       if ext == "md" and data.startswith(b"---\n"):
                           data = b"\n" + data
                       expected.append((base + quote(doc["site_" + ext]), hashlib.sha256(data).hexdigest()))
-          for lang in ("Chinese", "English"):
-              name = f"Foundation_of_Embodied_AI_Complete_{lang}.pdf"
-              data = (root / "books" / name).read_bytes()
-              expected.append((base + quote("files/" + name), hashlib.sha256(data).hexdigest()))
-          assert len(config["topics"]) == 14 and len(expected) == 58
+          assert len(config["topics"]) == 14 and len(expected) == 56
 
           pending = expected
           failures = {}
@@ -196,9 +182,9 @@ jobs:
                       failures[url] = str(error)
                       retry.append((url, digest))
               pending = retry
-              print(f"Check {attempt}: {len(expected) - len(pending)}/58 public files verified.", flush=True)
+              print(f"Check {attempt}: {len(expected) - len(pending)}/56 public files verified.", flush=True)
               if not pending:
-                  print("PASS: all 58 online Markdown/PDF/book files exactly match authoritative Git source.")
+                  print("PASS: all 56 online chapter Markdown/PDF files exactly match authoritative Git source.")
                   break
               if attempt < 15:
                   time.sleep(20)
