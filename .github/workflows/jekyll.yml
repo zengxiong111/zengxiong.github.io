@@ -45,7 +45,7 @@ jobs:
           upstream = Path(sys.argv[1]).resolve()
           website = Path.cwd().resolve()
           manifest = json.loads((upstream / "materials.json").read_text())
-          assert len(manifest["topics"]) == 13
+          assert len(manifest["topics"]) == 14
           copies = 0
           for topic in manifest["topics"]:
               for lang in ("zh", "en"):
@@ -72,14 +72,14 @@ jobs:
               dst.parent.mkdir(parents=True, exist_ok=True)
               dst.write_bytes(src.read_bytes())
               copies += 1
-          assert copies == 54, copies
+          assert copies == (4 * len(manifest["topics"]) + 2), copies
           print("Synced and verified", copies, "course files into website/files/")
           PY
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -- files/
           if git diff --cached --quiet; then
-            echo "Website already has all 54 current materials."
+            echo "Website already has all current course materials."
           else
             git commit -m "Publish 26 bilingual chapter PDFs and two complete course books"
             git push origin HEAD:master
@@ -99,7 +99,7 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
-      - name: Verify 54 deployable course files
+      - name: Verify all current deployable course files
         shell: bash
         run: |
           python3 - <<'PY'
@@ -114,7 +114,7 @@ jobs:
                   items.extend([docs["site_md"], docs["site_pdf"]])
           for lang in ("Chinese", "English"):
               items.append(f"files/Foundation_of_Embodied_AI_Complete_{lang}.pdf")
-          assert len(items) == 54
+          assert len(items) == (4 * len(manifest["topics"]) + 2)
           for item in items:
               source = Path(item)
               rendered = Path("_site") / item
@@ -122,7 +122,7 @@ jobs:
                   raise RuntimeError("Published output missing: " + item)
               if source.read_bytes() != rendered.read_bytes():
                   raise RuntimeError("Rendered output differs: " + item)
-          print("Validated 54 byte-identical chapter/book downloads in _site")
+          print("Validated", len(items), "byte-identical chapter/book downloads in _site")
           PY
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
