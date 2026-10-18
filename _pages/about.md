@@ -1,4 +1,6 @@
 ---
+browser_title: "Home"
+description: "Xiong Zeng's research in robot learning, dexterous manipulation, reinforcement learning, and learning for dynamics and control."
 permalink: /
 author_profile: true
 redirect_from:
@@ -23,7 +25,7 @@ Based on our project experience, I maintain an open-source course: <a href="http
 
 <div class="recruitment-notice" markdown="1">
 
-**I am actively recruiting RAs!** Please send emails to zengx3@sustech.edu.cn!
+**I am actively recruiting RAs!** For RA applications, email <a href="mailto:{{ site.author.recruitment_email }}">{{ site.author.recruitment_email }}</a>.
 
 </div>
 

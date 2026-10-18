@@ -1,4 +1,6 @@
 ---
+browser_title: "个人简介与学术服务"
+description: "曾雄的教育经历、个人兴趣与学术服务，包括期刊和会议审稿及技术委员会工作。"
 permalink: /markdown/zh-CN/
 author_profile: true
 ---

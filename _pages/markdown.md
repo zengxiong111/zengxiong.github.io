@@ -1,4 +1,6 @@
 ---
+browser_title: "Bio and Service"
+description: "Xiong Zeng's education, personal interests, and academic service, including journal and conference reviewing and technical committees."
 permalink: /markdown/
 author_profile: true
 redirect_from:

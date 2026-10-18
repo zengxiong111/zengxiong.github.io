@@ -3,6 +3,7 @@
 # English (default)
 # -----------------
 en: &DEFAULT_EN
+  contact_email_label        : "Email (general)"
   profile_links_label        : "Follow"
   scholar_label              : "Google Scholar"
   sitemap_label              : "Sitemap"
@@ -274,6 +275,7 @@ it-IT:
 # Chinese (simplified)
 # -----------------
 zh: &DEFAULT_ZH
+  contact_email_label        : "联系邮箱"
   profile_links_label        : "关注"
   scholar_label              : "谷歌学术"
   sitemap_label              : "网站地图"

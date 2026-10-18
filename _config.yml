@@ -7,11 +7,11 @@
 # server process.
 
 # Basic Site Settings
-locale                   : "Shenzhen, China"
+locale                   : "en-US"
 title                    : "Xiong Zeng"
 title_separator          : "-"
 name                     : &name "Xiong Zeng (曾雄)"
-description              : &description "personal description"
+description              : &description "Xiong Zeng's academic website: robot learning, dynamics, and control."
 # url                      : https://zengxiong111.github.io/zengxiong.github.io/ # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 # baseurl                  : "" # the subpath of your site, e.g. "/blog"
 url: "https://zengxiong111.github.io"
@@ -30,6 +30,7 @@ author:
   location         : "Shenzhen, China"
   employer         : "CLEAR Lab"
   # uri              : # URL
+  recruitment_email: "zengx3@sustech.edu.cn"
   email            : "zengxion@umich.edu" 
 
   # Academic websites

@@ -1,4 +1,6 @@
 ---
+browser_title: "发表成果"
+description: "曾雄关于机器人学习、系统辨识与数据驱动控制的论文及预印本。"
 layout: single
 title: 发表成果
 permalink: /publications/zh-CN/

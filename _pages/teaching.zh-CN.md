@@ -1,4 +1,6 @@
 ---
+browser_title: "教学"
+description: "曾雄在南方科技大学和密歇根大学的教学，以及机器人学习、科研、教育、管理与商业资源。"
 layout: single
 permalink: /teaching/zh-CN/
 author_profile: true

@@ -415,3 +415,34 @@ h3 {
     padding-right: 0.5em;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .page__title {
+    margin-bottom: 0.5em;
+  }
+
+  .page__content > h2:first-child {
+    margin-top: 0.5em;
+  }
+
+  .page__content > h1 + h2 {
+    margin-top: 1em;
+  }
+
+  .sidebar .author__urls li {
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+
+  .sidebar .author__urls a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    margin-bottom: 0;
+    padding: 0 0.25em;
+  }
+
+  .language-switch {
+    min-height: 44px;
+  }
+}

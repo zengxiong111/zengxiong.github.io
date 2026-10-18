@@ -1,4 +1,6 @@
 ---
+browser_title: "首页"
+description: "曾雄的研究方向：机器人学习、灵巧操作、强化学习以及动力学与控制学习。"
 permalink: /zh-CN/
 author_profile: true
 ---
@@ -20,7 +22,7 @@ author_profile: true
 
 <div class="recruitment-notice" markdown="1">
 
-**我正在积极招募研究助理！** 请发送邮件至 zengx3@sustech.edu.cn！
+**我正在积极招募研究助理！** 申请研究助理请发送邮件至 <a href="mailto:{{ site.author.recruitment_email }}">{{ site.author.recruitment_email }}</a>。
 
 </div>
 

@@ -1,4 +1,6 @@
 ---
+browser_title: "Teaching"
+description: "Xiong Zeng's teaching at SUSTech and the University of Michigan, with resources on robot learning, research, education, management, and business."
 layout: single
 permalink: /teaching/
 author_profile: true
