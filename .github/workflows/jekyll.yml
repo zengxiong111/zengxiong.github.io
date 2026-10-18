@@ -81,7 +81,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "Website already has all current course materials."
           else
-            git commit -m "Publish 26 bilingual chapter PDFs and two complete course books"
+            git commit -m "Publish 28 bilingual chapter PDFs and two complete course books"
             git push origin HEAD:master
           fi
       - name: Setup Ruby
