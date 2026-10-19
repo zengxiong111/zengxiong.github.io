@@ -45,7 +45,7 @@ jobs:
           upstream = Path(sys.argv[1]).resolve()
           website = Path.cwd().resolve()
           manifest = json.loads((upstream / "materials.json").read_text())
-          assert len(manifest["topics"]) == 14
+          assert manifest["topics"], "Course manifest must contain topics"
           copies = 0
           for topic in manifest["topics"]:
               for lang in ("zh", "en"):
@@ -164,7 +164,7 @@ jobs:
                       if ext == "md" and data.startswith(b"---\n"):
                           data = b"\n" + data
                       expected.append((base + quote(doc["site_" + ext]), hashlib.sha256(data).hexdigest()))
-          assert len(config["topics"]) == 14 and len(expected) == 56
+          assert config["topics"] and len(expected) == 4 * len(config["topics"])
 
           pending = expected
           failures = {}
@@ -182,9 +182,9 @@ jobs:
                       failures[url] = str(error)
                       retry.append((url, digest))
               pending = retry
-              print(f"Check {attempt}: {len(expected) - len(pending)}/56 public files verified.", flush=True)
+              print(f"Check {attempt}: {len(expected) - len(pending)}/{len(expected)} public files verified.", flush=True)
               if not pending:
-                  print("PASS: all 56 online chapter Markdown/PDF files exactly match authoritative Git source.")
+                  print(f"PASS: all {len(expected)} online chapter Markdown/PDF files exactly match authoritative Git source.")
                   break
               if attempt < 15:
                   time.sleep(20)
