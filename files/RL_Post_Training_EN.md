@@ -1,264 +1,446 @@
-# Reinforcement Learning Post-Training for Embodied Foundation Models
 
-**Algorithms, RLinf Infrastructure, and the Boundaries of Real-Robot Deployment · October 2026**
+---
+subtitle: "SFT and RL for VLA / WAM"
+author: "Foundation of Embodied AI · Xiong Zeng and contributors"
+date: "2026-10-20"
+---
 
-[Course repository](https://github.com/zengxiong111/Foundation_of_Embodied_AI) · [中文 Markdown](RL_Post_Training_ZH.md) · [RLinf documentation](https://rlinf.readthedocs.io/en/latest/)
+# Post-Training for Embodied Foundation Models: SFT and RL
 
-> **Scope.** This tutorial studies RL improvement of **pretrained** Diffusion Policies, Flow Matching policies, and vision-language-action (VLA) models. The narrative follows **trainable interfaces → algorithms and experience → infrastructure → physical deployment**. PPO, SAC, and actor–critic appear only where needed. Training low-level controllers from scratch and executable tutorials are out of scope.
+**Supervised Fine-Tuning and Reinforcement Learning for Vision–Language–Action Models and World Action Models**  
+**Objectives, trainable interfaces, implementation boundaries, and deployment · October 2026**
+
+[Course repository](https://github.com/zengxiong111/Foundation_of_Embodied_AI) · [WAM-RL paper](https://arxiv.org/abs/2606.17906) · [RLinf documentation](https://rlinf.readthedocs.io/en/latest/) · [简体中文](Embodied_Post_Training_ZH.md) · [PDF](https://zengxiong111.github.io/zengxiong.github.io/files/Embodied_Post_Training_EN.pdf)
+
+> **Scope.** This course starts from **pretrained models** and distinguishes supervised fine-tuning (SFT) from reinforcement learning (RL) post-training. It examines VLA and WAM architectures separately. The VLA RL material retains the six methods and RLinf infrastructure discussion from the original tutorial; the WAM part follows Qian et al., *WAM-RL* (2026). Low-level controller training from scratch and executable labs are outside the scope.
 >
-> **Evidence boundary (as of 19 October 2026).** We distinguish *documented system recipes*, *integration requirements inferred from those recipes*, and *unsolved research questions*. Support for model A, algorithm B, and robot C individually is **not evidence that A × B × C works as a validated combination**. No independent reproduction or real-robot verification is claimed.
+> **Evidence boundary.** Benchmark outcomes apply to the specified model and evaluation settings. Neither a WAM-RL result nor support for different components in one repository implies universal WAM superiority or plug-and-play compatibility. Extension proposals are distinguished from demonstrated capabilities; no independent reproduction or physical-robot validation is claimed.
 >
-> **Attribution.** Adapted from the [Foundation of Embodied AI](https://github.com/zengxiong111/Foundation_of_Embodied_AI) teaching materials by Xiong Zeng and contributors ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)). Papers and third-party projects retain their original licenses.
+> **Attribution.** Adapted from Xiong Zeng and contributors, [Foundation of Embodied AI](https://github.com/zengxiong111/Foundation_of_Embodied_AI) ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)); WAM-RL methods and metrics are attributed to [Qian et al.](https://arxiv.org/abs/2606.17906).
 
-## 1. Starting from a pretrained generative robot policy
+## Contents
 
-Imitation learning establishes initial manipulation competence. RL post-training then exploits interaction and reward to improve task completion, precision, robustness, failure recovery, and efficiency. The object being optimized is an existing policy—not a controller initialized from scratch.
+- [1. What is post-training?](#post-section-01)
+- [2. SFT and RL objectives](#post-section-02)
+- [3. VLA SFT post-training](#post-section-03)
+- [4. VLA RL post-training: six routes retained from the original tutorial](#post-section-04)
+- [5. WAM architecture and SFT post-training](#post-section-05)
+- [6. WAM RL post-training: the WAM-RL case study](#post-section-06)
+- [7. Systematic VLA versus WAM post-training comparison](#post-section-07)
+- [8. Shared online RL and actor–critic semantics](#post-section-08)
+- [9. RLinf infrastructure: retain VLA capabilities, identify WAM integration requirements](#post-section-09)
+- [10. Real-robot deployment and unresolved questions](#post-section-10)
+- [11. Decision guide](#post-section-11)
+- [12. Primary papers and official resources](#post-section-12)
+
+<a id="post-section-01"></a>
+
+## 1. What is post-training?
+
+**Pretraining** builds broad visual, linguistic, and motor priors. **Post-training** adapts an existing model with weights $\theta_0$ to specific tasks, robot embodiments, data distributions, or feedback. SFT versus RL describes the **learning signal**; VLA versus WAM describes the **architecture**. They are orthogonal axes.
+
+| Architecture | SFT: supervised target data | RL: environment interaction and reward |
+|:---|:---|:---|
+| **VLA** | Fit expert actions by updating an action expert, backbone, or adapter | Optimize the generator, or freeze it and learn noise-, feature-, or action-level actors |
+| **WAM** | Learn future-video/world-state prediction and the video-to-action mapping | Improve the actor's execution fidelity; WAM-RL also adapts the world model through online Video SFT |
 
 ```mermaid
 flowchart LR
-  D["Demonstrations / offline data"] --> P["Imitation pretraining"]
-  P --> B["Diffusion / Flow / VLA"]
-  B --> I["Select trainable interface"]
-  I --> T["Interaction + RL update"]
-  T --> E["Independent evaluation + safe deployment"]
-  E -.->|feedback| T
+  P["Foundation-model pretraining"] --> S["SFT: demonstrations / successes"]
+  S --> R["RL: interaction and reward"]
+  R -.->|"new high-quality rollouts"| S
+  S --> V["independent evaluation and deployment"]
+  R --> V
 ```
 
-*Figure 1. RL post-training starts with a pretrained model. Training reward cannot replace independent evaluation or runtime safety.*
+*Figure 1. SFT and RL can alternate or be interleaved. SFT followed by RL is a common recipe, not a universal sequencing requirement.*
 
-Let $o_t$ be the observation, $g_t$ a task goal or language instruction, and $A_t$ a generated action chunk:
+Let $o_t$ denote observation, $g_t$ the goal or language instruction, and $A_t=(a_t,\ldots,a_{t+H-1})$ a candidate action chunk of length $H$. The number of low-level steps actually executed before replanning is $K$, which need **not equal $H$**. For either architecture, we must identify the supervised target, parameter update scope, reward origin, replay semantics, and skill-preservation constraints.
+
+<a id="post-section-02"></a>
+
+## 2. SFT and RL objectives
+
+### 2.1 SFT: predict the demonstrated action or future
+
+For an explicit conditional action distribution, the VLA behavior-cloning objective is
 
 $$
-\pi_{\theta_0}(A_t\mid o_t,g_t),\qquad A_t=(a_t,\ldots,a_{t+H-1}),
+\mathcal L_{\mathrm{SFT}}^{\mathrm{VLA}}(\theta)
+=-\mathbb E_{(o,g,A)\sim\mathcal D_{\mathrm{sup}}}
+\log\pi_\theta(A\mid o,g).
 $$
 
-where $\theta_0$ is the pretrained parameter set and $H$ the generated action horizon. Diffusion and Flow policies may sample continuous actions iteratively; a VLA may also contain a vision-language backbone, a separate Action Expert, and additional output heads. The canonical return objective is
+Diffusion and flow action experts usually use a **denoising or velocity-matching objective**, rather than the above likelihood in its naive form. A representative conditional flow-matching loss for $x_\tau=(1-\tau)x_0+\tau x_1$ is
 
 $$
-J(\pi)=\mathbb{E}_{\tau\sim\pi}\left[\sum_{t=0}^{T}\gamma^t r_t\right].
+\mathcal L_{\mathrm{FM}}=\mathbb E_{x_0,x_1,\tau,c}
+\big[\|v_\theta(x_\tau,\tau,c)-(x_1-x_0)\|_2^2\big],
 $$
 
-Post-training must also preserve useful pretrained competencies. Crucially, **the exact $\log\pi(A\mid o,g)$ or KL divergence of an implicit generative policy cannot generally be assumed available**. Standard PPO/SAC therefore cannot be applied to every generative action head without an appropriate policy interface.
+where $c=(o,g)$ and $x_1$ is the target action chunk or future-video sample. Other probability paths and flow parameterizations exist. SFT may specialize a pretrained policy to a domain, a robot, or a skill; SFT on **new successful rollouts during RL** is also post-training.
 
-## 2. First ask: which part of the policy is updated?
+### 2.2 RL: learn from the quality of outcomes
 
-Two routes organize the methods: **update the pretrained generator / Action Expert**, or **freeze it and learn a separate adapter**. The boundary is not absolute; LoRA, partial fine-tuning, and hybrid residual approaches can combine the routes.
+The standard discounted-return objective is
+
+$$
+J(\pi)=\mathbb E_{\tau\sim\pi}
+\left[\sum_{t=0}^{T}\gamma^t r_t\right].
+$$
+
+SFT answers, “What should the model imitate?” RL answers, “Which behavior produces more return in the environment?” RL can improve beyond the demonstration support but requires useful exploration, credible reward, suitable value estimates, and interaction. Imitation constraints, reference-policy regularization, and periodic SFT may mitigate forgetting during RL.
+
+**Do not conflate Online with On-policy.** Online means new environment data are collected during learning. Off-policy means the learner may also reuse transitions from earlier behavior policies. Likewise, Online Video SFT inside an RL training loop does not mean the world model receives a policy-gradient update.
+
+<a id="post-section-03"></a>
+
+## 3. VLA SFT post-training
+
+### 3.1 Which parameters are updated?
+
+A typical VLA pipeline is **image + language + robot state → visual-language representation → action chunk**. An action-token head commonly uses cross-entropy, whereas a continuous diffusion/flow expert typically uses denoising/flow matching. These are not interchangeable log-probability interfaces.
+
+| Parameterization | What changes? | Main cost or risk |
+|:---|:---|:---|
+| **Full fine-tuning** | All selected pretrained parameters | High memory and compute; representation and skill drift |
+| **LoRA / adapters** | Low-rank or additional modules | Limited adaptation capacity or unsuitable insertion points |
+| **Action Expert only** | Motor-generation network; backbone remains fixed | Cannot fix all vision/language domain gaps |
+| **Frozen backbone + new head** | An embodiment-specific action interface | Requires correct action semantics and time scales |
+
+### 3.2 Data, time alignment, and evaluation
+
+A useful supervised sample includes $(o_t,g_t,A_t)$ along with embodiment information, action units (joint versus end-effector versus finger commands), normalization, acquisition rates, camera calibration, and timestamps. Multi-task SFT requires a sensible mixture across robots, instructions, successes, and recovery segments. **Only imitating idealized successful demonstrations is often insufficient for recovery**.
+
+The practical logic is: **multimodal data → spatial/temporal alignment → chunked supervision → selective fine-tuning → independent closed-loop evaluation**. SFT can be connected to RL only if observation, executed action, termination, reward, and model-version semantics agree. A lower supervised loss is not a substitute for real task success or contact safety.
+
+<a id="post-section-04"></a>
+
+## 4. VLA RL post-training: six routes retained from the original tutorial
+
+A major obstacle is that a diffusion/flow policy may not expose a tractable **marginal action log-probability or policy KL**. Ordinary Gaussian PPO/SAC cannot be directly bolted onto an arbitrary generative head. The first organizing question is **what actually receives the RL update?**
 
 ```mermaid
 flowchart TB
-  P["Pretrained Diffusion / Flow / VLA"] --> Q{"Update the base generator?"}
-  Q --> U["Yes: generator / Expert update"]
-  Q --> F["No: frozen generator + adapter"]
-  U --> A["DPPO: diffusion policy gradient"]
-  U --> B["OGPO: off-policy generative update"]
-  U --> C["Q-VGM: value-guided Flow"]
-  F --> D["DSRL: noise / latent actor"]
-  F --> E["Residual RL: action correction"]
-  F --> R["RL Token: feature actor-critic"]
+  P["Pretrained VLA / Diffusion / Flow"] --> Q{"Update the base generator?"}
+  Q --> U["Update generator / action expert"]
+  Q --> F["Freeze generator; train other modules"]
+  U --> A["DPPO · OGPO · Q-VGM"]
+  F --> B["DSRL · Residual RL · RL Token"]
 ```
 
-*Figure 2. The branches describe distinct trainable interfaces, not sequential stages of training.*
+*Figure 2. Alternative trainable interfaces, not six sequential optimization stages. LoRA and hybrid approaches can cross the two branches.*
 
-Full versus LoRA fine-tuning describes the **parameter scope**; velocity matching versus policy gradients describes the **learning objective**; on-policy versus off-policy describes the **relationship between the behavior data and policy updates**. These should not be collapsed into one mutually exclusive taxonomy.
+### 4.1 Directly update the generator or action expert
 
-## 3. Three independent decisions
+**DPPO — diffusion policy gradients.** [DPPO](https://arxiv.org/abs/2409.00588) incorporates the denoising chain into a policy-optimization formulation instead of pretending the final diffusion action is a simple Gaussian policy. PPO's clipped surrogate provides intuition:
 
-| Axis | Essential question | Representative choices |
+$$
+L_{\mathrm{clip}}=\mathbb E\left[\min\left(
+\rho\hat A,\operatorname{clip}(\rho,1-\epsilon,1+\epsilon)\hat A\right)\right].
+$$
+
+This is **not DPPO's complete loss**. On-policy rollouts, repeated denoising, gradient cost, and potential degradation of pretrained skills matter.
+
+**OGPO — off-policy replay for generative policy improvement.** [OGPO](https://arxiv.org/abs/2605.03065) learns an off-policy critic from older and new trajectories and passes value information to the generator: **replay → critic/advantage → generator update**. PPO-like loss components do not make the algorithm on-policy PPO. Critic bias, behavior-policy shift, and long generation-chain optimization are important.
+
+**Q-VGM — Q-guided flow matching.** [Q-VGM](https://arxiv.org/abs/2606.08015) constructs a local value-guided velocity-matching objective for the Flow Action Expert without backpropagating through the full generation trajectory. Its value learning combines offline IQL and online TD estimation. **The pretrained generator is updated** in this route.
+
+### 4.2 Freeze the generator and optimize auxiliary modules
+
+**DSRL — noise/latent actor.** [DSRL](https://arxiv.org/abs/2506.15799) learns a smaller proposal policy while keeping the generator fixed:
+
+$$
+z\sim q_\phi(z\mid o,g),\qquad
+A=G_{\theta_0}(o,g,z),\quad \theta_0\ \mathrm{fixed}.
+$$
+
+This preserves the base generator and reduces trainable parameters, but reachable behavior remains constrained by the **frozen generator's action support**. A noise interface validated for a specific diffusion model cannot automatically be transferred to all VLA/flow models.
+
+**Residual RL — restricted corrections in action space.** Let the frozen policy produce $A_0$ and a small actor produce $\Delta A_\phi$:
+
+$$
+A_{\mathrm{cmd}}=\operatorname{Safe}(A_0+\lambda\Delta A_\phi).
+$$
+
+Residual RL is an **architecture**, not one specified on- or off-policy algorithm. Safe action scaling, coordinate frames, chunk boundaries, and contact stability matter, especially for dexterous manipulation.
+
+**RL Token — lightweight feature-based actor–critic.** [RL Token](https://arxiv.org/abs/2604.23073) constructs a compact VLA feature interface and then supports online off-policy actor–critic updates with the main representation network frozen. Creating this feature interface may itself require demonstration-based adaptation. It should not be confused with an action residual.
+
+### 4.3 VLA RL method-selection table
+
+| Method | RL update target | Common data setup | Main constraint |
+|:---|:---|:---|:---|
+| **DPPO** | Diffusion generator | Mostly on-policy | High rollout/denoising cost |
+| **OGPO** | Generative policy | Online off-policy | Replay drift and critic reliability |
+| **Q-VGM** | Flow velocity field | Offline-to-online | Accurate local Q gradients |
+| **DSRL** | Noise/latent actor | Can be off-policy | Frozen generator, limited action support |
+| **Residual RL** | Action-correction actor | Algorithm-dependent | Chunk alignment and contact safety |
+| **RL Token** | Feature actor–critic | Online off-policy | Feature compatibility and preliminary adaptation |
+
+First choose a **trainable interface**, then an **optimization objective and data regime**. Full/partial updates, velocity matching versus policy gradients, and on-policy versus off-policy are distinct classification axes.
+
+<a id="post-section-05"></a>
+
+## 5. WAM architecture and SFT post-training
+
+### 5.1 World prediction and executable action are distinct roles
+
+In the **World–Action** architecture studied by WAM-RL, a world model forecasts future visual observations or their latent representations, and an actor maps the predicted information to motor commands:
+
+$$
+\underbrace{\hat X_{t+1:t+H},\ z_t=f_\theta(X_{\le t},g)}_{\text{World Model}}
+\quad\longrightarrow\quad
+\underbrace{A_t=\pi_\phi(z_t,o_t,g)}_{\text{Action Model}}.
+$$
+
+$X$ denotes a video/observation sequence. Not every model labeled “WAM” has identical modules; this is the **working decomposition for WAM-RL**. It explicitly couples “what the future might look like” and “which actions realize it.”
+
+```mermaid
+flowchart LR
+  I["Current video / goal"] --> W["World Model"]
+  W --> P["Imagined future / latent"]
+  P --> A["Action Model"]
+  A --> E["Robot execution"]
+  E --> O["Observed video"]
+  O -.->|"Video SFT + KL"| W
+  O -.->|"Reconstruction reward + RL"| A
+```
+
+*Figure 3. WAM-RL combines online Video SFT for the world model and reconstruction-reward RL for the actor.*
+
+### 5.2 Two possible supervised interfaces
+
+General WAM SFT can include **video prediction/world dynamics supervision** and **action mapping supervision**, or a joint video-and-action generative objective. Consequently, “WAM SFT only trains videos” is not a universal claim. The specific **online post-training** recipe in WAM-RL adapts the world model using successful rollout videos while optimizing the actor through RL.
+
+The paper's video objective is
+
+$$
+\mathcal L_{\mathrm{video}}=
+\mathbb E_{X_{1:T}\sim\mathcal D_{\mathrm{success}}}
+\big[\ell(f_\theta(X_{<t}),X_t)\big],
+$$
+
+where $\ell$ can be a reconstruction or flow-matching loss. A trajectory labeled ultimately successful may nevertheless contain a failed grasp followed by a corrective retry: such segments expose the model to **recovery dynamics**. Successful-only filtering still leaves many failure modes underrepresented.
+
+### 5.3 Latent KL regularization to protect actor compatibility
+
+The actor depends on features produced by the world model. Updating the world model can shift those features and destabilize an actor trained on the old representation. WAM-RL constructs **diagonal Gaussian proxies** for deterministic latent features:
+
+$$
+q_\theta(z_t)=\mathcal N(z_t,\Sigma_\theta),\qquad
+q_0(z_t)=\mathcal N(z_t^0,\Sigma_0),
+$$
+
+with $z_t=f_\theta(X_{<t})$, $z_t^0=f_{\theta_0}(X_{<t})$, a frozen reference world model $\theta_0$, an EMA estimate of current feature-scale covariance, and a fixed reference covariance. **The Gaussian assumption is a tractable surrogate**, not a claim that these deterministic features naturally follow known distributions.
+
+$$
+\mathcal L_{\mathrm{WM}}
+=\mathcal L_{\mathrm{video}}
++\lambda_{\mathrm{KL}}\mathbb E_t
+\big[D_{\mathrm{KL}}(q_\theta(z_t)\|q_0(z_t))\big].
+$$
+
+The analytical Gaussian KL penalizes abrupt feature drift and helps the world model and actor remain compatible. The tradeoff is that stronger regularization can limit the world model's ability to depart from the pretrained distribution.
+
+<a id="post-section-06"></a>
+
+## 6. WAM RL post-training: the WAM-RL case study
+
+### 6.1 Reward: realize the imagined future
+
+The world model predicts $\hat X_{t+1:t+H}$. Actions are executed to obtain $X_{t+1:t+H}$. WAM-RL builds a dense reconstruction reward:
+
+$$
+r_t^{\mathrm{recon}}
+=\operatorname{sim}(\hat X_{t+1:t+H},X_{t+1:t+H}).
+$$
+
+The study compares pixel MSE, optical-flow MSE, DINOv2 feature error, and V-JEPA2 feature error. A negative pixel MSE is one natural similarity score. **Reconstruction consistency is not itself task success**: executing an incorrect world-model prediction faithfully does not guarantee satisfying the user's objective. The quality and task relevance of the imagined plan therefore constrain this reward.
+
+### 6.2 RL for a flow-based actor via Flow-SDE
+
+A deterministic flow ODE is not automatically a stochastic policy with a convenient action likelihood. WAM-RL uses a Flow-SDE construction to introduce noise and tractable sampling transitions:
+
+$$
+dx_\tau=v_\phi(x_\tau,\tau)\,d\tau+\sigma\,dW_\tau,
+$$
+
+$$
+p_\phi(x_{i-1}\mid x_i)
+=\mathcal N(x_{i-1};\mu_\phi(x_i,i),\sigma^2 I).
+$$
+
+The log-probabilities of a **sampled path** can then be accumulated for policy-gradient optimization:
+
+$$
+\nabla_\phi J\approx\mathbb E
+\big[\nabla_\phi\log p_\phi(\text{sampling path}\mid s_t)\,\hat A_t\big].
+$$
+
+This deliberate distinction matters: a joint sampling-path density should not automatically be equated with the exact marginal log-probability of the final action. Implementations must optimize the quantity justified by their stochastic generation formulation; generic PPO on any deterministic flow head is not sufficient.
+
+### 6.3 Coordinated updates, not a single RL loss for everything
+
+The conceptual training loop consists of four activities:
+
+1. **Predict:** the world model generates an imagined future and the actor maps its representation to actions.
+2. **Interact:** execute actions and record synchronized video, action, and task outcomes.
+3. **Actor RL:** compare imagined and executed video, compute dense reward/advantages, and update the action model.
+4. **Online World Model Video SFT:** use successful trajectories to refine predictions while keeping latent statistics close to a reference through KL.
+
+Thus, WAM-RL is **joint post-training/co-adaptation**, not the claim that policy gradients update every component. Its world-model update is supervised; its actor update is reinforcement-based.
+
+### 6.4 Reported results and their limits
+
+The following are the paper's **reported success rates in specified benchmark settings**:
+
+| Method | LIBERO-Object | RLBench Water Plants |
+|:---|---:|---:|
+| Pretrained WA base | 68% | 19% |
+| Actor-only RL ($\pi_{\mathrm{RL}}$) | 78% | 18% |
+| **WAM-RL (actor RL + online world-model SFT)** | **82%** | **22%** |
+
+These results support the claim that actor-only learning may be limited when long-horizon errors are dominated by the predictive world model. They do **not** establish universal WAM superiority to VLA, or universal post-training superiority to all task-specialized alternatives. The authors implement WAM-RL on **Genie Envisioner-ACT** and report **eight NVIDIA A800 GPUs for eight hours** for their training setting; that configuration is not a general minimum requirement for WAMs.
+
+In a **separate reward ablation setting** on RLBench Water Plants, Pixel MSE, Optical Flow MSE, DINO MSE, and V-JEPA2 yield **21%, 19%, 16%, and 17%**, compared with 19% for base and 18% for actor-only in that table. The ablation's Pixel MSE **21% must not be silently substituted for the main table's WAM-RL 22%**. Greater separation between successful and failed trajectory rewards (optical flow) did not translate into the highest task success; alignment with the world-model objective also matters.
+
+The paper explicitly notes two limitations: KL-constrained video adaptation may restrict capability growth, and reconstruction rewards based on hand-designed metrics or pretrained features may insufficiently discriminate task success from failure. Scalable video updating, safe real-robot learning, reliable contact rewards, and long-term cross-embodiment adaptation remain research questions.
+
+<a id="post-section-07"></a>
+
+## 7. Systematic VLA versus WAM post-training comparison
+
+| Dimension | VLA post-training | WAM post-training (WAM-RL as example) |
 |:---|:---|:---|
-| Pretrained model | Which existing policy is being adapted? | Diffusion, Flow Matching, VLA with Action Expert |
-| Trainable interface | Which parameters receive RL signals? | Generator, LoRA, noise actor, action residual, feature actor |
-| Experience and optimizer | Does new interaction continue, and can old data be replayed? | Online / offline; on-policy / off-policy; replay buffer |
+| **Architecture** | Visual-language features → action head/chunk | World prediction → latent → action model |
+| **SFT target** | Expert action tokens or continuous generative action loss | Future video/dynamics and optionally supervised action mapping |
+| **RL update** | Generator, adapter, noise actor, feature actor, or residual | Actor execution fidelity; world model adapted with Video SFT |
+| **RL reward** | Task success, progress, contact, learned value, etc. | Imagined-versus-realized visual reconstruction consistency |
+| **Stability concern** | Policy likelihood, critic bias, forgetting | These issues plus world/actor latent mismatch |
+| **Inference compute** | Depends on VLM/expert and sampling steps | Typically adds future generation, depending on architecture/horizon |
+| **Training compute** | Model gradients plus rollouts/replay | Additionally maintains/updates a video world model |
+| **Hypothesized advantage** | Direct action-generation interface | Explicit future prediction may support recovery and long-horizon decisions |
+| **Principal risk** | Contact precision, OOD behavior, chunk drift | Prediction errors, reward misalignment, latent drift, video latency |
 
-**Online is not synonymous with on-policy.** Online denotes a training process in which new interaction is continuously collected; off-policy permits the reuse of experience from older behavior policies. A real-robot learner that continually gathers trajectories and trains an SAC-style critic from a replay buffer is performing **online off-policy RL**. PPO is conventionally on-policy and SAC off-policy, but generative-policy methods need algorithm-specific modifications.
+**Compute claims require matched conditions.** Compare parameter counts, frame resolution, predicted horizon, denoising steps, batch size, hardware, GPU-hours, robot-hours, and actual success gains. A single paper's 8×A800 result does not provide a fair VLA-versus-WAM compute ranking. A high success rate on one benchmark does not imply that a WAM always needs less SFT/RL than a VLA.
 
-## 4. Route I: updating the pretrained generator
+<a id="post-section-08"></a>
 
-### 4.1 DPPO: diffusion-process policy gradients
+## 8. Shared online RL and actor–critic semantics
 
-[DPPO](https://arxiv.org/abs/2409.00588) incorporates the denoising process of a Diffusion Policy into RL optimization. It does not simply treat the resulting chunk distribution as an ordinary Gaussian actor with an immediately tractable log-probability. The familiar PPO clipped surrogate is
-
-$$
-L_{\mathrm{clip}}=\mathbb{E}\!\left[\min\big(\rho\hat A,\;\operatorname{clip}(\rho,1-\epsilon,1+\epsilon)\hat A\big)\right].
-$$
-
-This is **not the complete DPPO objective**. Main costs include on-policy rollouts, multi-step denoising and gradient computation, optimization variability, and interference with previously learned skills.
-
-### 4.2 OGPO: off-policy experience reuse with generator updates
-
-[OGPO](https://arxiv.org/abs/2605.03065) trains an off-policy critic from historical and fresh trajectories, then propagates value information into a generative policy. The key pathway is **replay → critic / advantage → generator update**. PPO-inspired design terms do not make OGPO equivalent to on-policy PPO. Important failure modes are policy-distribution shift, critic error, and optimization cost through the generation process.
-
-### 4.3 Q-VGM: value-guided Flow Matching
-
-[Q-VGM](https://arxiv.org/abs/2606.08015) converts action-value gradients into local velocity-matching targets, updating a Flow Action Expert without differentiating through its entire iterative sampling trajectory. The paper combines offline IQL and online TD-style value learning. **It updates the pretrained generator; it is not a frozen-Flow method.**
-
-The distinction among these methods is *where the policy-improvement gradient enters*: sequential diffusion-process gradients, generative-process optimization with replay, or local critic-guided velocity updates.
-
-## 5. Route II: freezing the generator and learning a small module
-
-### 5.1 DSRL: reinforcement learning in noise or latent space
-
-[DSRL](https://arxiv.org/abs/2506.15799) fixes the generative policy and trains a compact actor to steer an injected noise or latent variable:
-
-$$
-z\sim q_{\phi}(z\mid o,g),\qquad A=G_{\theta_0}(o,g,z),\qquad \theta_0\ \mathrm{fixed}.
-$$
-
-This reduces the number of trainable parameters and protects the fixed generator, but improvements are restricted to actions **reachable under that generator's interface**. RLinf's [DSRL example](https://rlinf.readthedocs.io/en/latest/rst_source/examples/embodied/dsrl.html) uses a frozen $\pi_0$; this alone does not establish drop-in support for every $\pi_{0.5}$, Flow policy, or robot.
-
-### 5.2 Residual RL: bounded action corrections
-
-The frozen base produces $A_0$ and a small actor produces $\Delta A_\phi$. Before execution, they must be aligned in action scale, reference frame, and chunk timing, then passed through an execution-time safety interface:
-
-$$
-A_{\mathrm{cmd}}=\operatorname{Safe}\!\left(A_0+\lambda\Delta A_{\phi}\right).
-$$
-
-Residual RL is an **architectural pattern**, not a fixed choice of on-policy or off-policy optimizer. It is often straightforward to integrate, but usually only modifies actions near those proposed by the base policy; ill-conditioned residuals can destabilize contact-rich manipulation.
-
-### 5.3 RL Token: actor–critic control on VLA features
-
-[RL Token](https://arxiv.org/abs/2604.23073) first constructs a compact, accessible VLA feature interface and then trains a lightweight off-policy actor–critic while freezing the principal feature model. RLinf's [RLT documentation](https://rlinf.readthedocs.io/en/latest/rst_source/examples/embodied/rlt.html) explicitly separates representation bootstrapping on demonstrations from the subsequent online RL stage. A token-space actor is not synonymous with action residuals; constructing the feature interface may require preliminary adaptation.
-
-## 6. The actor–critic and online off-policy loop
-
-A standard off-policy learner stores $\mathcal D=\{(o_t,A_t,r_t,o_{t+1},d_t)\}$ and updates a critic. A deliberately simplified one-step Bellman target is
-
-$$
-y_t=r_t+\gamma(1-d_t)\;\mathbb E_{A'\sim\pi}\big[Q_{\bar\psi}(o_{t+1},A')\big].
-$$
-
-If a chunk executes $K$ low-level actions before the next policy decision, the proper decision-time target instead has the form
+An off-policy experience store can contain $\mathcal D=\{(o_t,A_t,r_t,o_{t+K},d_{t+K},K)\}$. A **pedagogical** chunk-aware Bellman target is
 
 $$
 y_t^{(K)}=\sum_{j=0}^{K-1}\gamma^j r_{t+j}
-+\gamma^K(1-d_{t+K})\mathbb E_{A'\sim\pi}\big[Q_{\bar\psi}(o_{t+K},A')\big].
++\gamma^K(1-d_{t+K})\mathbb E_{A'\sim\pi}
+\big[Q_{\bar\psi}(o_{t+K},A')\big].
 $$
 
-A model may **generate $H$ actions but execute only $K$**. Replay transitions, rewards, timestamps, overlapping chunks, and critic targets must reflect the *executed* $K$. These expressions are teaching abstractions, not the full SAC, OGPO, or Q-VGM losses.
+The generated action chunk length $H$ and physically executed length $K$ are not the same variable. Replay, discounting, timestamps, chunk overrides, and critic targets should refer to executed steps. This is an illustrative Bellman expression, **not the full objective of SAC, OGPO, Q-VGM, or WAM-RL**.
 
 ```mermaid
 flowchart LR
-  P["Current policy / version v"] --> W["Simulation / robot rollout"]
-  W --> D["Validated data + replay"]
-  D --> C["Critic / advantage"]
-  C --> U["Actor / Expert update"]
-  U -.->|checked version v+1| P
-  U --> V["Independent evaluation / regression"]
+  P["Policy version v"] --> R["Sim/real rollout"]
+  R --> D["Versioned, timestamped replay"]
+  D --> L["Learner: SFT / critic / RL"]
+  L --> G["Independent evaluation gate"]
+  G -.->|"promote v+1 if passed"| P
 ```
 
-*Figure 3. An online off-policy actor–learner loop. Replay is useful, but executed actions and checkpoint versions must remain traceable.*
+*Figure 4. Model synchronization, data semantics, and independent deployment gates are part of post-training, not guaranteed by a learning loss.*
 
-Four distinctions should remain explicit: training reward versus runtime safety, simulated versus physical data, actor versus critic updates, and VLA inference rate versus low-level robot control rate.
+<a id="post-section-09"></a>
 
-## 7. Choosing a post-training route
+## 9. RLinf infrastructure: retain VLA capabilities, identify WAM integration requirements
 
-| Method | RL-updated component | Common data mode | Important prerequisites and risks |
-|:---|:---|:---|:---|
-| **DPPO** | Diffusion generator | Primarily on-policy | Generator access; denoising and rollout cost |
-| **OGPO** | Generative policy | Online off-policy | Replay useful; critic bias and distribution shift |
-| **Q-VGM** | Flow Action Expert | Offline-to-online | Trainable velocity network and trustworthy Q gradient |
-| **DSRL** | Noise / latent actor | May be off-policy | Frozen generator; limited reachable action set |
-| **Residual RL** | Action-correction actor | Algorithm dependent | Temporal and unit alignment, contact safety |
-| **RL Token** | Feature actor–critic | Online off-policy | Exposed VLA features, feature bootstrapping, latency |
+[RLinf](https://github.com/RLinf/RLinf) provides components for model training, rollout scheduling, actor–learner workflows, SFT/RL, evaluation, and several physical-robot pathways. It is a useful infrastructure example, **not proof of universal compatibility** across arbitrary models, algorithms, and robot hardware.
 
-Choose the **trainable interface first**, then the **optimizer and experience pipeline**. A repository that contains both SAC and a Flow model does not imply that arbitrary Flow/VLA policies can be trained with SAC by changing one configuration file.
+### 9.1 Documented VLA-side recipes and limitations
 
-## 8. Evaluation: benchmark performance is not deployability
-
-Beyond return and success rate, report **physical robot-hours, reset and human-intervention overhead, GPU-hours and memory, mean and tail inference latency, chunk-boundary discontinuities, safety interventions, disturbance recovery, out-of-distribution generalization, and retention of old tasks**. Off-policy systems should also record offline/online replay fractions, data and model versions, critic calibration, and behavior-policy drift.
-
-Five common but incorrect equivalences are: **online = on-policy; frozen generator = no trainable components; velocity matching = full fine-tuning; a PPO/GRPO recipe = an online off-policy recipe; simulation success = physical safety**.
-
-## 9. RLinf: from reusable RL infrastructure to physical deployment
-
-The preceding methods explain **how a policy can improve**. In practice, the policy must interact through a system linking models, simulators, experience, optimization, robot control, and evaluation. [RLinf](https://github.com/RLinf/RLinf) is a useful representative infrastructure: it has scalable VLA RL examples and selected physical online-learning workflows, but it is not a universal plug-and-play solution to all foundation-policy post-training problems.
-
-### 9.1 Documented capabilities, with their actual scope
-
-| Capability | Public reference workflow | Scope to preserve |
+| Public recipe / capability | What it supports | What it does not establish |
 |:---|:---|:---|
-| **On-policy VLA RL** | [$\pi_0 / \pi_{0.5}$ + PPO/GRPO](https://rlinf.readthedocs.io/en/latest/rst_source/examples/embodied/pi0.html) on LIBERO and related simulators | Specific tested recipes—not generic off-policy Flow fine-tuning |
-| **Frozen-policy off-policy RL** | [DSRL with frozen $\pi_0$](https://rlinf.readthedocs.io/en/latest/rst_source/examples/embodied/dsrl.html), small noise actor + SAC | Tied to the exposed noise interface; adaptation to new models needs proof |
-| **Flow + SAC** | [SAC-Flow](https://rlinf.readthedocs.io/en/latest/rst_source/examples/embodied/sac_flow.html) in ManiSkill and Franka peg insertion | Trains a specialized Flow actor; not evidence of frozen $\pi_{0.5}$ + SAC |
-| **Feature actor–critic** | [RLT / RL Token](https://rlinf.readthedocs.io/en/latest/rst_source/examples/embodied/rlt.html), ManiSkill and Franka | Needs representation bootstrapping and consistent feature/action semantics |
-| **Physical data and learning** | [RLinf-USER](https://arxiv.org/abs/2602.07837), [multi-robot training](https://rlinf.readthedocs.io/en/latest/rst_source/guides/realworld_robot.html) | Async collection and scheduling exist; new hardware still needs adapters |
-| **Overlapped inference and control** | [RTC](https://rlinf.readthedocs.io/en/latest/rst_source/guides/rtc.html) with $\pi_{0.5}$ in LIBERO / Franka evaluation | Hides inference waiting; does not guarantee hard real-time control |
-| **Custom robots and tasks** | [Add a Robot](https://rlinf.readthedocs.io/en/latest/rst_source/extending/new_robot.html), [New Task](https://rlinf.readthedocs.io/en/latest/rst_source/extending/new_task.html) | A structured extension path exists; drivers, control, and safety remain engineering work |
+| [$\pi_0/\pi_{0.5}$ PPO/GRPO](https://rlinf.readthedocs.io/en/latest/rst_source/examples/embodied/pi0.html) | Specific on-policy VLA RL settings | General off-policy adaptation of any flow VLA |
+| [DSRL with frozen $\pi_0$](https://rlinf.readthedocs.io/en/latest/rst_source/examples/embodied/dsrl.html) | Noise-actor updates while base policy is frozen | Drop-in noise interface for any new model |
+| [SAC-Flow](https://rlinf.readthedocs.io/en/latest/rst_source/examples/embodied/sac_flow.html) | SAC on a dedicated flow actor | Verified frozen-$\pi_{0.5}$ SAC training |
+| [RLT / RL Token](https://rlinf.readthedocs.io/en/latest/rst_source/examples/embodied/rlt.html) | Feature preparation and lightweight actor–critic | Residual RL without representation adaptation |
+| [Real-robot guidance](https://rlinf.readthedocs.io/en/latest/rst_source/guides/realworld_robot.html) | Examples of real-data and multi-robot workflows | Automatic adaptation to arbitrary hands/arms |
+| [RTC](https://rlinf.readthedocs.io/en/latest/rst_source/guides/rtc.html) | Overlap of policy inference and robot execution | Hard real-time guarantees or safe motor control |
+| [Adding a Robot](https://rlinf.readthedocs.io/en/latest/rst_source/extending/new_robot.html) | Extension interfaces for hardware and tasks | Universal ready-made robot SDK integration |
 
-RLinf also includes SFT, evaluation, simulator integration, and multiple learner backends. Its [real-robot guide](https://rlinf.readthedocs.io/en/latest/rst_source/examples/real_world_index.html) now covers platforms such as Franka, Turtle2, GimArm, and DOS-W1 at different levels of workflow maturity. It is **wrong to claim that RLinf has no physical robot, no off-policy RL, or no RTC support**. The important distinction is between a checked-in combination and a new, untested cross-product.
+It is incorrect to say that RLinf supports **only RL**, or that it categorically lacks **off-policy training or real robots**. It is equally incorrect to infer that **WAM-RL is already integrated end-to-end** merely because RLinf has VLA, SFT, and RL capabilities. A new WAM interface would require verification of future-video supervision, imagined and realized video alignment, latent extraction, frozen reference/KL statistics, actor gradients, and multi-model resource scheduling.
 
-### 9.2 Remaining training-side limitations
+### 9.2 Incremental engineering requirements for WAM-RL
 
-| Gap | Why infrastructure alone is insufficient | What to validate for a new model |
+| Subsystem | Frequent VLA requirement | Additional WAM-RL requirement |
 |:---|:---|:---|
-| **Model–algorithm compatibility** | $\pi_{0.5}$+PPO/GRPO, $\pi_0$+DSRL, and specialized Flow+SAC are different recipes | Action head, noise and density interfaces, log-prob availability, frozen parameter scope, gradient path |
-| **General online off-policy Flow/VLA RL** | Replay-based value learning and generative actor updates must fit the target policy | True target-model updates, replay sampling, actor/critic cadence, behavior-policy records, action support |
-| **Reliable visual/contact critics** | Sparse rewards, occlusion, and off-policy error can compound into value bias | OOD Q calibration, twin/ensemble critics, successful/failed physical trajectories |
-| **Correct action-chunk semantics** | Generated horizon $H$ need not equal executed steps $K$; RTC adds timing and async complexity | $K$-step reward/discount, termination flags, timestamps, overwritten actions, version alignment |
-| **Compute costs and reproducibility** | Large VLA actor–rollout–learner systems still face inference throughput, communication, and memory limits | GPU-hours per success gain, worker backpressure, FSDP settings, checkpoint conversion, normalization |
-| **Multitask retention** | Online improvement on a few tasks may erode broad pretrained competence | Held-out tasks, regression suites, behavior constraints, SFT/replay mixture |
+| **Data** | Observation, executed action, reward, termination | Imagined video, realized video, successful-rollout filtering |
+| **Learners** | Expert/actor and critic optimization | Coupled video SFT and actor RL updates |
+| **Representation** | Compatible action and vision features | Stable world-model latent contract; reference/KL |
+| **Reward** | Task completion, progress, contact | Time-aligned reconstruction similarity |
+| **Inference** | Action chunks and perhaps RTC | Future generation, latency/cache/memory budget |
+| **Evaluation** | Skill success, recovery, regression | Prediction error, execution match, actual task outcome |
 
-The first two are principally **limitations of documented end-to-end combinations**; the others are **research and reliability challenges that need task-specific engineering**, not necessarily missing functions in the repository.
+This table is an **integration checklist inferred from WAM-RL**, not a source-code audit claiming each component is absent from RLinf.
 
-### 9.3 Remaining deployment-side limitations
+### 9.3 Retain the original RLinf training-side limitations
 
-Simulation success is insufficient to guarantee stable closed-loop operation on real hardware. RLinf's [robot extension architecture](https://rlinf.readthedocs.io/en/latest/rst_source/extending/new_robot.html) reduces integration work, but it does not remove these system boundaries.
-
-| Gap | Typical failure mode | Deployment acceptance metric |
+| Gap | Why it does not disappear automatically | Checks for a new model |
 |:---|:---|:---|
-| **Unlisted robot hardware** | Vendor SDK, CAN/RS485, ROS, and arm/hand action semantics differ from sample systems | Units, joint/task frames, update rates, reset and fault-recovery contracts |
-| **Inference and network jitter** | VLA inference may run more slowly than low-level control; RTC masks only part of the wait | End-to-end latency, P95/P99 jitter, timeout fallback, continuous servo behavior |
-| **Chunk stitching and contact** | Delayed observations or conflicting chunks disrupt insertion or grasp stability | Transition discontinuity, force/current limits, recovery time under perturbation |
-| **Independent runtime safety** | Reward optimization cannot replace collision checks, E-stop, limits, loss-of-link behavior, or human takeover | Hardware watchdogs, bounded actions, safe override, audited rollback |
-| **Perception and reward quality** | Calibration drift, unsynchronized cameras, and false success labels can mislead learning | Sensor synchronization, independent success checks, reward error, confidence/OOD tests |
-| **Cost of physical data** | Manual resets, breakage, human labor, and limited robot uptime constrain collection | Robot-hours, reset-hours, intervention count, recovery success |
-| **Checkpoint promotion and rollback** | Asynchronous learner checkpoints may degrade safety while replay contains older semantics | Versioned normalization/data, offline gating, independent hardware tests, rollback plan |
+| **Model × algorithm compatibility** | $\pi_{0.5}$ + PPO/GRPO, frozen $\pi_0$ + DSRL, and dedicated Flow + SAC are distinct recipes | Path likelihood, gradients, parameter freezing, sampling noise |
+| **Generic online off-policy flow/VLA** | Experience reuse requires a critic and a compatible generative-policy update | Updated tensors, policy lineage, replay mixture |
+| **Contact-aware critic reliability** | Occlusion, sparse feedback, and OOD replay can amplify Q errors | Q calibration, failures, success labels, risk constraints |
+| **Action chunk semantics** | Generated $H$ and executed $K$ may differ | $K$-step return, $\gamma^K$, termination, timestamps, overrides |
+| **Compute and throughput** | VLA inference, environment throughput, distributed learners, and robot resets all matter | GPU-/robot-hours, worker backpressure, checkpoints, reproducibility |
+| **Multi-task skill preservation** | Task-specific online RL may damage old behaviors | Held-out regression, SFT/replay mixing, rollback |
 
-**RTC is an inference-latency mitigation method, not a hard real-time safety controller.** A Franka demonstration establishes feasibility for that setup, not automatic deployment on a novel manipulator or dexterous hand. RLinf's [RTC guide](https://rlinf.readthedocs.io/en/latest/rst_source/guides/rtc.html) also discusses the additional residual overhead of asynchronous communication.
+These gaps span **limits of validated model/algorithm combinations** and **open reliability problems**. They must not be collapsed into the claim that RLinf simply lacks a code feature. A WAM additionally requires dual-learner coordination, latent compatibility, and trustworthy reconstruction rewards.
 
-### 9.4 A complete training-to-deployment loop
+<a id="post-section-10"></a>
 
-```mermaid
-flowchart TB
-  M["Pretrained VLA / Flow / Diffusion"] --> I["Trainable interface + model adapter"]
-  I --> T["RLinf actor / critic / learner"]
-  T <-->|timestamped, versioned replay| D["Experience + reward validation"]
-  T -.->|candidate checkpoint| V["Independent evaluation / skill regression"]
-  V -->|gate passed| P["Deployment inference: chunks / RTC"]
-  P --> S["Limits / watchdog / E-stop / control"]
-  S --> R["Simulator or physical robot"]
-  R -->|executed action, state, reward| D
-```
+## 10. Real-robot deployment and unresolved questions
 
-*Figure 4. RLinf supplies important training-system components. Hardware drivers, safe execution, reliable rewards, and physical feedback still require end-to-end validation.*
+A training reward is not a safety controller. Simulated rollouts must not be silently identified with physical interactions, and large-model inference is distinct from high-frequency servo control. For a platform with **manipulator + dexterous hand + head/wrist cameras**, coordinate calibration, sensor timestamps, chunk arbitration, finger safety, and reset/recovery are first-class requirements.
 
-For a custom **robot arm + dexterous hand + head/wrist cameras**, a defensible integration sequence has four acceptance gates: verify observations, frames, normalization, and chunk semantics; verify policy inference, control latency, and hardware safety; verify replay, critic learning, and asynchronous checkpoint versions; only then permit online RL to generate a deployable candidate. More GPUs or a more sophisticated optimizer will not repair failed sensor/control contracts.
-
-**Transition to open problems.** RLinf helps organize *how to collect, update, and deploy*. It does not provide a general guarantee that enough informative physical data can be acquired, values are reliable, generative updates are safe, or the deployed system remains dependable over long time horizons.
-
-## 10. Open research questions at the learning–systems boundary
-
-| Research question | Fundamental challenge | Required evidence |
-|:---|:---|:---|
-| **Improve with less physical data** | Sparse rewards, nonstationary environments, costly resets, off-policy shift | Robot-hours per success gain, replay efficiency, multi-scene statistics |
-| **Frozen foundation policies + online off-policy RL** | Can a compact actor improve policy performance without losing generality, and overcome a fixed action support? | Against full/LoRA adaptation, DSRL, RL Token, residual RL; old-skill retention |
-| **Trustworthy critics and rewards for contact** | Visual reward proxies may miss true contact, while Q values amplify mistakes | Real failure data, Q error, false-positive success rate, contact recovery |
-| **Fast feedback with smooth, safe actuation** | Asynchronous chunks, network latency, slow VLAs, and fast servo loops conflict | P95/P99 delay, chunk boundaries, safety events, recovery time |
-| **Sim/world-model to real generalization** | Friction, compliance, long-horizon synthetic error, and model exploitation | Novel objects, poses, lighting, real insertion/slip and recovery tests |
-| **Continual learning and comparable reporting** | Learning new skills can forget old ones; hardware and evaluation costs vary | Cross-task regression, compute/robot budget, intervention and failure accounting |
-
-High-value future work is not limited to designing a new policy-gradient loss. It must jointly address **reusable interaction, calibrated value estimation, controlled generative-policy updates, monitored physical interaction, and safe deployment**. Read [RLinf-USER](https://arxiv.org/abs/2602.07837), [RECAP](https://arxiv.org/abs/2511.14759), and [WoVR](https://arxiv.org/abs/2602.13977) for complementary perspectives.
-
-## 11. Primary literature and official resources
-
-| Topic | Recommended sources |
+| Risk domain | Independent checks and metrics |
 |:---|:---|
-| **RL foundations** | [PPO](https://arxiv.org/abs/1707.06347) · [SAC](https://arxiv.org/abs/1801.01290) |
-| **Generator updates** | [DPPO](https://arxiv.org/abs/2409.00588) · [OGPO](https://arxiv.org/abs/2605.03065) · [Q-VGM](https://arxiv.org/abs/2606.08015) |
-| **Frozen/auxiliary interfaces** | [DSRL](https://arxiv.org/abs/2506.15799) · [RL Token](https://arxiv.org/abs/2604.23073) |
-| **RLinf system** | [Repository](https://github.com/RLinf/RLinf) · [Docs](https://rlinf.readthedocs.io/en/latest/) · [RLinf-USER](https://arxiv.org/abs/2602.07837) |
-| **Documented recipes** | [$\pi_0 / \pi_{0.5}$ RL](https://rlinf.readthedocs.io/en/latest/rst_source/examples/embodied/pi0.html) · [DSRL](https://rlinf.readthedocs.io/en/latest/rst_source/examples/embodied/dsrl.html) · [SAC-Flow](https://rlinf.readthedocs.io/en/latest/rst_source/examples/embodied/sac_flow.html) · [RLT](https://rlinf.readthedocs.io/en/latest/rst_source/examples/embodied/rlt.html) |
-| **Real robots and deployment** | [Real-World Robots](https://rlinf.readthedocs.io/en/latest/rst_source/examples/real_world_index.html) · [Add a Robot](https://rlinf.readthedocs.io/en/latest/rst_source/extending/new_robot.html) · [RTC](https://rlinf.readthedocs.io/en/latest/rst_source/guides/rtc.html) |
-| **Simulators and world models** | [Isaac Lab](https://developer.nvidia.com/isaac/lab) · [ManiSkill](https://github.com/haosulab/ManiSkill) · [WoVR](https://arxiv.org/abs/2602.13977) |
+| **Timing** | Mean/P95/P99 latency, network jitter, chunk discontinuities, servo frequency |
+| **Runtime safety** | Joint/current limits, collision checks, watchdog, emergency stop, rollback |
+| **Reward validity** | Independent success evaluator; false positives and correlation with reconstruction reward |
+| **Continual learning** | Replay/model lineage, old-skill regression, GPU/robot-hours, reset overhead |
+| **New robot integration** | Vendor SDK, CAN/RS485/ROS, action units, reset and failure recovery |
+| **Multimodal perception** | Calibration, camera clocks, occlusion, reward uncertainty, OOD detection |
+| **Deployment versioning** | Independent candidate-policy gating, safe rollout and rollback |
+| **WAM-specific** | Prediction horizon versus execution delay, latent drift, misleading imagined futures |
 
-**Core message.** Identify the pretrained policy and its trainable interface first; then verify that sampling, optimization, control, and deployment form a genuinely reliable loop. RLinf can eliminate substantial system duplication, but does not replace scientific validation or physical-robot safety engineering.
+Avoid five incorrect equivalences: **Online = On-policy; Frozen generator = no training; Velocity matching = full fine-tuning; PPO/GRPO examples = online off-policy recipes; Simulated success = real-robot safety.** None is valid.
+
+Research opportunities include **data-efficient real-robot online off-policy VLA updates**, **expanding control capability beyond frozen generator support**, **contact-aware critics**, **stable WAM world/actor co-adaptation**, **long-horizon video prediction under real-time constraints**, and **multi-robot continual learning**. None follows automatically from a documented training recipe.
+
+<a id="post-section-11"></a>
+
+## 11. Decision guide
+
+| Starting point | Primary post-training route | What to verify |
+|:---|:---|:---|
+| VLA lacks demonstration-based task competence | **VLA SFT** | Action semantics, head objective, prior-skill retention |
+| VLA has a skill but low task success | **VLA RL**: DPPO / OGPO / Q-VGM / DSRL / Residual / RL Token | Critic quality, rollout cost, executable chunk |
+| WAM predicts inaccurate futures | **World Model SFT**, possibly with online successful videos | Prediction fidelity and actor latent compatibility |
+| WAM predicts adequately but acts unreliably | **Actor RL**, e.g., reconstruction reward | Time alignment, genuine task outcomes |
+| WAM suffers from long-horizon prediction drift | **Coordinated World Model Video SFT + Actor RL** | KL strength, synchronized updates, closed-loop success |
+
+**Takeaway.** SFT learns from high-quality targets; RL improves policy performance using feedback. VLA post-training primarily exposes **action-generation and auxiliary actor interfaces**. WAM-RL explicitly coordinates **world prediction and executable action**, while preserving the difference between a supervised world-model update and a reinforcement-based actor update.
+
+<a id="post-section-12"></a>
+
+## 12. Primary papers and official resources
+
+| Topic | Resources |
+|:---|:---|
+| **Foundations** | [PPO](https://arxiv.org/abs/1707.06347) · [SAC](https://arxiv.org/abs/1801.01290) · [Diffusion Policy](https://diffusion-policy.cs.columbia.edu/) |
+| **Update the generator** | [DPPO](https://arxiv.org/abs/2409.00588) · [OGPO](https://arxiv.org/abs/2605.03065) · [Q-VGM](https://arxiv.org/abs/2606.08015) |
+| **Frozen/auxiliary actor** | [DSRL](https://arxiv.org/abs/2506.15799) · [RL Token](https://arxiv.org/abs/2604.23073) |
+| **WAM and post-training** | [DreamZero](https://dreamzero0.github.io/) · [WAM-RL](https://arxiv.org/abs/2606.17906) |
+| **Training/deployment infrastructure** | [RLinf](https://github.com/RLinf/RLinf) · [RLinf-USER](https://arxiv.org/abs/2602.07837) · [RTC](https://rlinf.readthedocs.io/en/latest/rst_source/guides/rtc.html) |
+
+*Materials checked through 20 October 2026. Mathematical formulations are pedagogical unless explicitly attributed; research results retain the original benchmark context.*
