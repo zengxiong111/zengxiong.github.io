@@ -8,8 +8,6 @@ redirect_from:
   - /about.html
 ---
 
-# Research
-
 <div class="research-current" markdown="1">
 
 I'm a postdoctoral researcher at <a href="https://www.wzhanglab.site/" style="color: blue;text-decoration: none;" target="_blank">CLEAR Lab</a>. Currently, I focus on rigorous **robot learning system design**:

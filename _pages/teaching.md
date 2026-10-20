@@ -10,8 +10,6 @@ redirect_from:
 
 <p align="center"><strong><em>“Stay curious, stay young, stay brave.”</em></strong></p>
 
-# Teaching
-
 ## Teaching at SUSTech
 
 <ul class="teaching-list">

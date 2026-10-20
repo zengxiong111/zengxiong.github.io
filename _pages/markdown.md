@@ -9,10 +9,6 @@ redirect_from:
   - /service/
 ---
 
-# Bio and Service
-
-Education, personal interests, and academic service.
-
 ## Bio
 
 <div class="bio-timeline">

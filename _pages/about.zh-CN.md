@@ -5,8 +5,6 @@ permalink: /zh-CN/
 author_profile: true
 ---
 
-# 研究方向
-
 <div class="research-current" markdown="1">
 
 我是 <a href="https://www.wzhanglab.site/" style="color: blue;text-decoration: none;" target="_blank">CLEAR Lab</a> 的博士后研究员。目前，我专注于严谨的**机器人学习系统设计**：

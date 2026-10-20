@@ -8,8 +8,6 @@ author_profile: true
 
 <p align="center"><strong><em>“保持好奇，保持年轻，保持勇敢。”</em></strong></p>
 
-# 教学
-
 ## 南方科技大学教学
 
 <ul class="teaching-list">

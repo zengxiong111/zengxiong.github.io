@@ -2,7 +2,6 @@
 browser_title: "Publications"
 description: "Publications and preprints by Xiong Zeng on robot learning, system identification, and data-driven control."
 layout: single
-title: Publications
 permalink: /publications/
 author_profile: true
 ---
