@@ -1,0 +1,16 @@
+/* Locally served typefaces used by the Berkeley deep RL course website. */
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/WorkSans-variable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/Raleway-variable.woff2") format("woff2");
+}

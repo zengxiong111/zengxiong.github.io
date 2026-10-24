@@ -99,9 +99,11 @@ h3 {
 }
 
 .greedy-nav {
+  font-family: $header-font-family;
   background: #fff;
 
   a {
+    font-family: $header-font-family;
     color: #253344;
 
     &:hover,
