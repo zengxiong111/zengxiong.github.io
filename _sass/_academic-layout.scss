@@ -448,3 +448,28 @@ h3 {
     min-height: 44px;
   }
 }
+
+.research-details {
+  margin: 0.5em 0;
+
+  > summary {
+    display: list-item;
+    min-height: 44px;
+    padding: 0.35em 0;
+    color: #245c91;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:focus-visible {
+      outline: 3px solid #245c91;
+      outline-offset: 3px;
+    }
+  }
+
+  &[open] > summary {
+    margin-bottom: 0.6em;
+  }
+}

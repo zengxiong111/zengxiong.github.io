@@ -28,6 +28,9 @@ author_profile: true
 
 我的博士研究聚焦于动力学与控制学习的统计基本极限及相关算法设计，包括：
 
+<details class="research-details" markdown="1">
+<summary>查看详情</summary>
+
 - Koopman 可观测量学习 [<a href="https://scholar.google.com/citations?user=v4lWTTwAAAAJ&hl=en" style="color: blue;text-decoration: none;" target="_blank">即将发表</a>]、
 - 协同稳定化 [<a href="https://arxiv.org/abs/2609.23692" style="color: blue;text-decoration: none;" target="_blank">CDC 2026</a>]、
 - 直接数据驱动控制 [<a href="https://web.eecs.umich.edu/~necmiye/pubs/ZengBO_acc25.pdf" style="color: blue;text-decoration: none;" target="_blank">ACC 2025</a>、<a href="https://arxiv.org/abs/2412.19705" style="color: blue;text-decoration: none;" target="_blank">TAC 2026</a>、<a href="https://a2c2.org/paper-award/o-hugo-schuck-best-paper-award#recipients" style="color: blue;text-decoration: none;" target="_blank">**O. Hugo Schuck 最佳论文奖**</a>]、
@@ -35,6 +38,8 @@ author_profile: true
 - 学习稳定化 [<a href="https://arxiv.org/abs/2311.11151" style="color: blue;text-decoration: none;" target="_blank">CDC 2023</a>]。
 
 您可以查看<a href="https://zengxiong111.github.io/zengxiong.github.io/files/phd_propsoal_Xiong_Zeng_part.pdf" target="_blank" style="color: blue;text-decoration: none;">我的博士提案幻灯片</a>，了解详细介绍。
+
+</details>
 
 </div>
 
