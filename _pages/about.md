@@ -13,7 +13,7 @@ redirect_from:
 I'm a postdoctoral researcher at <a href="https://www.wzhanglab.site/" style="color: blue;text-decoration: none;" target="_blank">CLEAR Lab</a>. Currently, I focus on rigorous **robot learning system design**:
 
 - Real2Sim2Real training for (tactile) dexterous hands (Tron2 Dual Arm + Brainco Revo 3 Hand + Tujian Tactile Glove);
-- Reinforcement learning post-training for embodied foundation models;
+- Simulation reinforcement learning post-training for embodied foundation models;
 - Recursive self-improvement for humanoid locomotion reinforcement learning training;
 - <a href="https://arxiv.org/abs/2607.00836" style="color: blue;text-decoration: none;" target="_blank">World (action) models</a>.
 
