@@ -354,3 +354,7 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
+# Keep downloadable course Markdown as static files, without Liquid rendering.
+optional_front_matter:
+  enabled: false
