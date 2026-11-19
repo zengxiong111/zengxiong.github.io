@@ -23,7 +23,7 @@ Based on our project experience, I maintain an open-source course: <a href="http
 
 <div class="recruitment-notice" markdown="1">
 
-**We are actively recruiting RAs!** For RA applications, email <a href="mailto:{{ site.author.recruitment_email }}">{{ site.author.recruitment_email }}</a>.
+**We are actively recruiting RAs!** For RA applications, email zengx3@sustech.edu.cn.
 
 </div>
 
