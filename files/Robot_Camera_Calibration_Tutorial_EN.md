@@ -149,7 +149,7 @@ $$
 For example, if FoundationPose estimates an object pose ${}^C T_O$ in the camera frame, a base-frame controller needs
 
 $$
-\boxed{{}^B T_O={}^B T_C\,{}^C T_O.}
+\boxed{ {}^B T_O={}^B T_C\,{}^C T_O.}
 $$
 
 One of the principal objectives of calibration is therefore to obtain an accurate ${}^B T_C$.
@@ -276,7 +276,7 @@ $$
 which gives
 
 $$
-\boxed{{}^B T_C={}^B T_T({}^C T_T)^{-1}.}
+\boxed{ {}^B T_C={}^B T_T({}^C T_T)^{-1}.}
 $$
 
 **Procedure:** Fix the board; measure or touch-probe ${}^B T_T$; acquire a clear image; detect corresponding corners; run PnP; compute ${}^B T_C$; validate at other known target positions.
@@ -376,7 +376,7 @@ Both the base-to-camera transform ${}^B T_C$ and the gripper-to-target transform
 Let $H$ denote the terminal link frame of the head kinematic chain, $C_h$ the head optical frame, and $q_h$ the head-joint vector. The camera pose is
 
 $$
-\boxed{{}^B T_{C_h}(q_h)={}^B T_H(q_h)\,{}^H T_{C_h}.}
+\boxed{ {}^B T_{C_h}(q_h)={}^B T_H(q_h)\,{}^H T_{C_h}.}
 $$
 
 - ${}^B T_H(q_h)$ is a **dynamic** transform from head forward kinematics.
@@ -404,7 +404,7 @@ For an initial screwdriver-grasping experiment with a fixed head viewpoint, cali
 Let $C_w$ be the wrist camera and $q_a$ the arm configuration:
 
 $$
-\boxed{{}^B T_{C_w}(q_a)={}^B T_G(q_a)\,{}^G T_{C_w}.}
+\boxed{ {}^B T_{C_w}(q_a)={}^B T_G(q_a)\,{}^G T_{C_w}.}
 $$
 
 The first term is obtained from FK; the second is estimated through eye-in-hand calibration. If the camera is mounted on `wrist_link` rather than the precise terminal frame used for FK, consistently compose the corresponding link transforms.
@@ -416,7 +416,7 @@ The first term is obtained from FK; the second is estimated through eye-in-hand 
 Once each camera's base-frame pose is known,
 
 $$
-\boxed{{}^{C_h}T_{C_w}=({}^B T_{C_h})^{-1}\,{}^B T_{C_w}.}
+\boxed{ {}^{C_h}T_{C_w}=({}^B T_{C_h})^{-1}\,{}^B T_{C_w}.}
 $$
 
 A separate two-camera calibration is not always necessary, although observing the same target from both cameras is an excellent consistency check. Since the head and arm move, the relative camera-to-camera transform is generally **time-varying**.
@@ -977,9 +977,9 @@ Head RGB-D / Wrist RGB
 **Prioritize three transforms:**
 
 $$
-\boxed{{}^B T_{C_h}(q_h)},\qquad
-\boxed{{}^G T_{C_w}},\qquad
-\boxed{{}^G T_{\mathrm{TCP}}}.
+\boxed{ {}^B T_{C_h}(q_h)},\qquad
+\boxed{ {}^G T_{C_w}},\qquad
+\boxed{ {}^G T_{\mathrm{TCP}}}.
 $$
 
 Combined with FK, TF2, and synchronized timestamps, these connect head perception, wrist vision, and grasp control in one consistent coordinate system.
